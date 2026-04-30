@@ -4,7 +4,7 @@
  * Cara setup:
  * 1. Buat Google Sheet baru di akun ops.sismed@gmail.com
  *    Nama: "HANDIA Her Prime - Pendaftaran Webinar"
- *    Header row 1 (kolom A-G): Timestamp | Nama | Email | WhatsApp | Usia | Topik | IP
+ *    Header row 1 (kolom A-G): Timestamp | Nama | Email | WhatsApp | Usia | Sesi | Topik
  * 2. Buka https://script.google.com → New Project
  * 3. Hapus kode default, paste seluruh isi file ini
  * 4. Ganti SHEET_ID di bawah dengan ID Sheet kamu
@@ -16,6 +16,11 @@
  *    - Klik Deploy
  * 7. Authorize akses (akun ops.sismed@gmail.com)
  * 8. Copy "Web app URL" yang muncul → kasih ke Claude
+ *
+ * UPDATE (v2): Tambah kolom "Sesi" untuk track pilihan multi-sesi peserta.
+ * Untuk update Apps Script existing: paste kode ini, save, lalu
+ * Deploy → Manage deployments → klik pencil icon → New version → Deploy
+ * (URL endpoint tetap sama, gak perlu ganti di index.html)
  */
 
 const SHEET_ID = 'GANTI_DENGAN_ID_SHEET_KAMU';
@@ -32,8 +37,8 @@ function doPost(e) {
       data.email || '',
       data.whatsapp || '',
       data.usia || '',
-      data.topik || '',
-      ''
+      data.sesi || '',
+      data.topik || ''
     ]);
 
     return ContentService

@@ -4,6 +4,27 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Her Prime: Menopause Glow-Up Series — HANDIA × Gayatri</title>
+<meta name="description" content="Tiga sesi webinar gratis untuk wanita 35–60 tahun. Edukasi perimenopause & menopause dari dokter spesialis, dalam bahasa hangat dan tidak menghakimi." />
+<meta name="keywords" content="webinar menopause, perimenopause, HRT, hot flash, kesehatan wanita, HANDIA, Gayatri, Her Prime" />
+<meta name="theme-color" content="#6B8B77" />
+<meta name="author" content="HANDIA × Gayatri" />
+
+<!-- Open Graph / Facebook / WhatsApp -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://handia-webinar.vercel.app/" />
+<meta property="og:title" content="Her Prime: Menopause Glow-Up Series — HANDIA × Gayatri" />
+<meta property="og:description" content="Tiga sesi webinar gratis dari dokter spesialis. Untuk wanita 35–60 tahun yang sedang melalui perimenopause atau menopause." />
+<meta property="og:image" content="https://handia-webinar.vercel.app/image/menopause-mastery-banner.png" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Her Prime: Menopause Glow-Up Series — HANDIA × Gayatri" />
+<meta name="twitter:description" content="Tiga sesi webinar gratis dari dokter spesialis. Untuk wanita 35–60 tahun yang sedang melalui perimenopause atau menopause." />
+<meta name="twitter:image" content="https://handia-webinar.vercel.app/image/menopause-mastery-banner.png" />
+
+<!-- Favicon (inline SVG, no extra request) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%236B8B77'/%3E%3Ctext x='50' y='68' font-family='Cormorant Garamond, serif' font-size='62' fill='%23FBF9F5' text-anchor='middle' font-weight='500'%3EH%3C/text%3E%3C/svg%3E" />
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -398,6 +419,44 @@
     border:1px solid var(--gold);
     font-weight:500;
   }
+  .session-card .doctor-attr{
+    margin-top:1.5rem;
+    padding-top:1.2rem;
+    border-top:1px dashed rgba(184,175,166,.4);
+    display:flex;align-items:center;gap:.7rem;
+    position:relative;
+    z-index:2;
+  }
+  .session-card .doctor-mini{
+    width:36px;height:36px;
+    border-radius:50%;
+    background:linear-gradient(135deg,var(--sage-soft),var(--beige));
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.1rem;
+    color:var(--sage-deep);
+    font-style:italic;
+    flex-shrink:0;
+    border:2px solid var(--paper);
+    box-shadow:0 4px 12px rgba(58,61,56,.06);
+  }
+  .session-card .doctor-info{
+    line-height:1.3;
+  }
+  .session-card .doctor-info .doctor-label{
+    font-size:.62rem;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--warm-grey);
+    font-weight:500;
+    margin-bottom:.15rem;
+  }
+  .session-card .doctor-info .doctor-name{
+    font-family:'Cormorant Garamond',serif;
+    font-size:.95rem;
+    color:var(--ink);
+    font-weight:500;
+  }
 
   /* ===== WHY JOIN ===== */
   .why{
@@ -492,47 +551,127 @@
     font-weight:500;
   }
 
-  /* ===== SPEAKER ===== */
-  .speaker{
+  /* ===== SPEAKERS (3 doctors) ===== */
+  .speakers{
     padding:6rem 3rem;
     background:var(--cream);
-    text-align:center;
     position:relative;
     z-index:2;
   }
-  .speaker-content{
-    max-width:600px;
+  .speakers-header{
+    max-width:1200px;
+    margin:0 auto 3.5rem;
+    text-align:center;
+  }
+  .speakers-header h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(2.2rem,3.5vw,3.4rem);
+    line-height:1.15;
+    font-weight:400;
+    margin-bottom:1.2rem;
+    letter-spacing:-.01em;
+  }
+  .speakers-header h2 .italic{color:var(--sage-deep)}
+  .speakers-header > p{
+    color:var(--ink-soft);
+    line-height:1.7;
+    max-width:640px;
     margin:0 auto;
   }
-  .speaker-avatar{
-    width:130px;height:130px;
+  .speakers-banner{
+    max-width:780px;
+    margin:0 auto 3.5rem;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 30px 60px rgba(58,61,56,.12);
+    aspect-ratio:9/16;
+    max-height:520px;
+    background:#1a2f24;
+  }
+  .speakers-banner img{
+    width:100%;height:100%;
+    object-fit:cover;
+    display:block;
+  }
+
+  .doctor-grid{
+    max-width:1200px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:2rem;
+  }
+  .doctor-card{
+    background:var(--paper);
+    border-radius:14px;
+    padding:2.2rem 1.8rem;
+    text-align:center;
+    border:1px solid rgba(184,175,166,.2);
+    transition:all .5s ease;
+    position:relative;
+    overflow:hidden;
+  }
+  .doctor-card:hover{
+    transform:translateY(-6px);
+    border-color:var(--sage);
+    box-shadow:0 20px 50px rgba(58,61,56,.08);
+  }
+  .doctor-avatar{
+    width:110px;height:110px;
     border-radius:50%;
-    margin:0 auto 1.8rem;
+    margin:0 auto 1.4rem;
     background:linear-gradient(135deg,var(--sage-soft),var(--beige));
     display:flex;align-items:center;justify-content:center;
     border:3px solid var(--paper);
-    box-shadow:0 12px 30px rgba(58,61,56,.1);
+    box-shadow:0 8px 24px rgba(58,61,56,.1);
     font-family:'Cormorant Garamond',serif;
-    font-size:2.8rem;
+    font-size:2.4rem;
     color:var(--sage-deep);
     font-style:italic;
+    overflow:hidden;
   }
-  .speaker h3{
-    font-family:'Cormorant Garamond',serif;
-    font-size:2rem;
+  .doctor-avatar img{
+    width:100%;height:100%;
+    object-fit:cover;
+    border-radius:50%;
+  }
+  .doctor-card .session-badge{
+    display:inline-block;
+    font-size:.62rem;
+    letter-spacing:.25em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    background:var(--paper);
+    padding:.4rem .9rem;
+    border-radius:50px;
+    border:1px solid var(--gold);
     font-weight:500;
+    margin-bottom:1rem;
+  }
+  .doctor-card h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.35rem;
+    font-weight:500;
+    color:var(--ink);
+    line-height:1.25;
     margin-bottom:.4rem;
   }
-  .speaker .role{
-    font-size:.78rem;
-    letter-spacing:.2em;
+  .doctor-card .specialist{
+    font-size:.72rem;
+    letter-spacing:.18em;
     text-transform:uppercase;
     color:var(--sage-deep);
-    margin-bottom:1.5rem;
+    margin-bottom:1.2rem;
+    font-weight:500;
   }
-  .speaker p{
+  .doctor-card .topic{
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-size:1rem;
     color:var(--ink-soft);
-    line-height:1.7;
+    line-height:1.4;
+    padding-top:1rem;
+    border-top:1px dashed rgba(184,175,166,.4);
   }
 
   /* ===== CTA REGISTRATION ===== */
@@ -620,6 +759,65 @@
   }
   .form-row input::placeholder{color:var(--warm-grey);font-weight:300}
 
+  /* Checkbox group for sesi */
+  .session-options{
+    display:grid;
+    gap:.7rem;
+  }
+  .session-option{
+    display:flex;
+    align-items:flex-start;
+    gap:.85rem;
+    padding:1rem 1.1rem;
+    background:var(--cream);
+    border:1px solid rgba(184,175,166,.4);
+    border-radius:8px;
+    cursor:pointer;
+    transition:all .25s ease;
+  }
+  .session-option:hover{
+    border-color:var(--sage);
+    background:var(--paper);
+  }
+  .session-option input[type="checkbox"]{
+    flex-shrink:0;
+    width:18px;height:18px;
+    margin-top:2px;
+    accent-color:var(--sage-deep);
+    cursor:pointer;
+  }
+  .session-option .opt-text{
+    flex:1;
+  }
+  .session-option .opt-title{
+    font-size:.9rem;
+    color:var(--ink);
+    font-weight:400;
+    line-height:1.35;
+    margin-bottom:.15rem;
+  }
+  .session-option .opt-meta{
+    font-size:.75rem;
+    color:var(--warm-grey);
+    font-style:italic;
+    font-family:'Cormorant Garamond',serif;
+  }
+  .session-option:has(input:checked){
+    border-color:var(--sage-deep);
+    background:var(--paper);
+    box-shadow:0 0 0 3px rgba(143,175,154,.12);
+  }
+  .session-option.recommended .opt-title::after{
+    content:" Direkomendasikan";
+    font-size:.62rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    margin-left:.5rem;
+    font-weight:500;
+    font-style:normal;
+  }
+
   .form-submit{
     width:100%;
     padding:1.15rem;
@@ -673,11 +871,30 @@
     color:var(--sage-soft);
     margin-bottom:1.5rem;
   }
+  footer .contact{
+    margin-top:1.6rem;
+    padding-top:1.6rem;
+    border-top:1px solid rgba(184,175,166,.2);
+    display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;
+    font-size:.82rem;
+    color:var(--sage-soft);
+  }
+  footer .contact a{
+    color:var(--sage-soft);
+    text-decoration:none;
+    transition:color .25s ease;
+    border-bottom:1px solid transparent;
+  }
+  footer .contact a:hover{
+    color:var(--paper);
+    border-bottom-color:var(--sage-soft);
+  }
   footer .meta{
     font-size:.72rem;
     letter-spacing:.15em;
     color:var(--warm-grey);
     text-transform:uppercase;
+    margin-top:1.5rem;
   }
 
   /* ===== ANIMATIONS ===== */
@@ -712,7 +929,9 @@
     .why{padding:4rem 1.5rem}
     .why-grid{grid-template-columns:1fr;gap:3rem}
     .why-visual{aspect-ratio:1/1}
-    .speaker{padding:4rem 1.5rem}
+    .speakers{padding:4rem 1.5rem}
+    .speakers-banner{margin-bottom:2.5rem;aspect-ratio:9/13}
+    .doctor-grid{grid-template-columns:1fr;gap:1.5rem}
     .cta-section{padding:4rem 1.5rem}
     .form-card{padding:2rem 1.5rem}
     .about{padding:1rem 1.5rem 4rem}
@@ -831,7 +1050,7 @@
         <path d="M0,120 Q50,95 100,120 T200,115" stroke="#8FAF9A" stroke-width="1.5" fill="none" opacity=".5"/>
         <path d="M0,140 Q50,120 100,140 T200,135" stroke="#B8AFA6" stroke-width="1.5" fill="none" opacity=".5"/>
       </svg>
-      <div class="session-num">— Sesi 01</div>
+      <div class="session-num">— Sesi 01 · Menopause Mastery</div>
       <h3>Gejala, Pengobatan & Self-Care Rituals Pada Menopause</h3>
       <div class="date">Bulan Depan · 19.30 WIB</div>
       <ul>
@@ -841,6 +1060,13 @@
         <li>Self-care rituals harian untuk kualitas hidup lebih baik</li>
         <li>Kapan saatnya konsultasi ke dokter</li>
       </ul>
+      <div class="doctor-attr">
+        <div class="doctor-mini">N</div>
+        <div class="doctor-info">
+          <div class="doctor-label">Pembicara</div>
+          <div class="doctor-name">dr. Nuri Dyah Anggraini, SpOG</div>
+        </div>
+      </div>
     </article>
 
     <!-- Session 2 -->
@@ -849,7 +1075,7 @@
         <path d="M0,100 Q50,70 100,100 T200,90" stroke="#8FAF9A" stroke-width="1.5" fill="none" opacity=".4"/>
         <path d="M0,120 Q50,95 100,120 T200,115" stroke="#B8AFA6" stroke-width="1.5" fill="none" opacity=".4"/>
       </svg>
-      <div class="session-num">— Sesi 02</div>
+      <div class="session-num">— Sesi 02 · Intimate Comfort</div>
       <h3>Solusi Miss V Kering & Bebas Nyeri di Perimenopause</h3>
       <div class="date">Akan Diumumkan</div>
       <ul>
@@ -859,6 +1085,13 @@
         <li>Meluruskan mitos kesehatan intim wanita usia matang</li>
         <li>Tips kenyamanan dan kualitas hidup intim sehari-hari</li>
       </ul>
+      <div class="doctor-attr">
+        <div class="doctor-mini">Y</div>
+        <div class="doctor-info">
+          <div class="doctor-label">Pembicara</div>
+          <div class="doctor-name">dr. Yudhistya, SpOG Subsp Urogine-RE</div>
+        </div>
+      </div>
     </article>
 
     <!-- Session 3 -->
@@ -867,7 +1100,7 @@
         <path d="M0,100 Q50,70 100,100 T200,90" stroke="#8FAF9A" stroke-width="1.5" fill="none" opacity=".4"/>
         <path d="M0,120 Q50,95 100,120 T200,115" stroke="#CBBA55" stroke-width="1.5" fill="none" opacity=".4"/>
       </svg>
-      <div class="session-num">— Sesi 03</div>
+      <div class="session-num">— Sesi 03 · Hormone Harmony</div>
       <h3>HRT sebagai Solusi Cerdas & Aman pada Perimenopause</h3>
       <div class="date">Akan Diumumkan</div>
       <ul>
@@ -877,6 +1110,13 @@
         <li>Jenis-jenis HRT dan cara pemberian yang tersedia</li>
         <li>Proses konsultasi, resep, dan monitoring yang benar</li>
       </ul>
+      <div class="doctor-attr">
+        <div class="doctor-mini">R</div>
+        <div class="doctor-info">
+          <div class="doctor-label">Pembicara</div>
+          <div class="doctor-name">dr. Syah Rini Wisdayanti, SpOG</div>
+        </div>
+      </div>
     </article>
   </div>
 </section>
@@ -961,23 +1201,51 @@
   </div>
 </section>
 
-<!-- ===== SPEAKER ===== -->
-<section class="speaker">
-  <div class="speaker-content">
-    <div class="section-eyebrow">Dibawakan Oleh</div>
-    <div class="speaker-avatar">dr</div>
-    <h3>Dokter Spesialis HANDIA</h3>
-    <div class="role">Dokter Spesialis Kandungan & Konsultan</div>
-    <p>Setiap sesi dibawakan langsung oleh dokter spesialis dengan pengalaman menangani perempuan di fase perimenopause dan menopause. Profil lengkap pembicara akan diumumkan menjelang setiap sesi.</p>
+<!-- ===== SPEAKERS ===== -->
+<section class="speakers">
+  <div class="speakers-header">
+    <div class="section-eyebrow">Tiga Dokter Spesialis</div>
+    <h2>Dibawakan oleh dokter yang ngerti,<br><span class="serif italic">dalam bahasa yang manusiawi.</span></h2>
+    <p>Setiap sesi dipimpin satu dokter spesialis dengan fokus topik yang mendalam — bukan presentasi kaku, tapi obrolan hangat yang berbasis bukti.</p>
+  </div>
+
+  <div class="speakers-banner">
+    <img src="image/menopause-mastery-banner.png" alt="Tiga dokter spesialis Her Prime Series — dr. Nuri, dr. Yudhistya, dr. Syah Rini" loading="lazy">
+  </div>
+
+  <div class="doctor-grid">
+    <article class="doctor-card">
+      <div class="doctor-avatar">N</div>
+      <div class="session-badge">Sesi 01 · Menopause Mastery</div>
+      <h3>dr. Nuri Dyah Anggraini</h3>
+      <div class="specialist">SpOG · Spesialis Kandungan</div>
+      <p class="topic">Gejala, pengobatan & self-care rituals pada menopause — apa yang sebenarnya terjadi di tubuh dan apa yang bisa dilakukan.</p>
+    </article>
+
+    <article class="doctor-card">
+      <div class="doctor-avatar">Y</div>
+      <div class="session-badge">Sesi 02 · Intimate Comfort</div>
+      <h3>dr. Yudhistya</h3>
+      <div class="specialist">SpOG Subsp Urogine-RE</div>
+      <p class="topic">Solusi Miss V kering & bebas nyeri di perimenopause — kesehatan intim yang sering tidak dibicarakan terbuka.</p>
+    </article>
+
+    <article class="doctor-card">
+      <div class="doctor-avatar">R</div>
+      <div class="session-badge">Sesi 03 · Hormone Harmony</div>
+      <h3>dr. Syah Rini Wisdayanti</h3>
+      <div class="specialist">SpOG · Spesialis Kandungan</div>
+      <p class="topic">HRT sebagai solusi cerdas & aman pada perimenopause — meluruskan mitos & memahami pilihan yang ada.</p>
+    </article>
   </div>
 </section>
 
 <!-- ===== CTA REGISTRATION ===== -->
 <section class="cta-section" id="daftar">
   <div class="cta-container">
-    <div class="section-eyebrow">Pendaftaran Sesi 01</div>
+    <div class="section-eyebrow">Pendaftaran Webinar</div>
     <h2>Amankan tempat kamu, <span class="serif italic">gratis.</span></h2>
-    <p>Kapasitas terbatas 100 peserta. Link Zoom akan dikirim H-1 ke email & WhatsApp yang kamu daftarkan.</p>
+    <p>Kapasitas terbatas 100 peserta per sesi. Link Zoom akan dikirim H-1 ke email & WhatsApp yang kamu daftarkan.</p>
 
     <form class="form-card" onsubmit="handleSubmit(event)">
       <div class="form-row">
@@ -1005,16 +1273,37 @@
         </select>
       </div>
       <div class="form-row">
-        <label>Topik yang Paling Ingin Kamu Pahami</label>
-        <select name="topik">
-          <option value="">Pilih satu (opsional)</option>
-          <option>Memahami gejala saya saat ini</option>
-          <option>Pilihan pengobatan yang aman</option>
-          <option>Self-care & gaya hidup</option>
-          <option>HRT — apakah cocok untuk saya?</option>
-          <option>Kesehatan intim di usia matang</option>
-          <option>Belum yakin, ingin tahu semuanya</option>
-        </select>
+        <label>Sesi yang Ingin Diikuti</label>
+        <div class="session-options">
+          <label class="session-option recommended">
+            <input type="checkbox" name="sesi" value="Semua sesi">
+            <div class="opt-text">
+              <div class="opt-title">Semua sesi (3 webinar)</div>
+              <div class="opt-meta">Gambaran utuh — gejala, intim, & HRT</div>
+            </div>
+          </label>
+          <label class="session-option">
+            <input type="checkbox" name="sesi" value="Sesi 1 - Menopause Mastery">
+            <div class="opt-text">
+              <div class="opt-title">Sesi 1 — Menopause Mastery</div>
+              <div class="opt-meta">dr. Nuri · Gejala, pengobatan & self-care</div>
+            </div>
+          </label>
+          <label class="session-option">
+            <input type="checkbox" name="sesi" value="Sesi 2 - Intimate Comfort">
+            <div class="opt-text">
+              <div class="opt-title">Sesi 2 — Intimate Comfort</div>
+              <div class="opt-meta">dr. Yudhistya · Solusi Miss V kering & nyeri</div>
+            </div>
+          </label>
+          <label class="session-option">
+            <input type="checkbox" name="sesi" value="Sesi 3 - Hormone Harmony">
+            <div class="opt-text">
+              <div class="opt-title">Sesi 3 — Hormone Harmony</div>
+              <div class="opt-meta">dr. Syah Rini · HRT — solusi cerdas & aman</div>
+            </div>
+          </label>
+        </div>
       </div>
       <button type="submit" class="form-submit">Konfirmasi Pendaftaran →</button>
       <p class="form-note">Data kamu hanya digunakan untuk keperluan webinar. Kami menjaga kerahasiaannya.</p>
@@ -1031,7 +1320,11 @@
 <footer>
   <div class="logo-foot">HANDIA</div>
   <div class="tagline">A quiet presence that understands before you even explain.</div>
-  <div class="meta">© 2026 HANDIA × Gayatri  ·  Her Prime Series  ·  All Rights Reserved</div>
+  <div class="contact">
+    <span>Pertanyaan? Hubungi <strong>Akmal (EO &amp; Moderator)</strong></span>
+    <a href="mailto:ops.sismed@gmail.com">ops.sismed@gmail.com</a>
+  </div>
+  <div class="meta">© 2026 HANDIA × Gayatri  ·  Her Prime Series  ·  Diadakan oleh SISMED</div>
 </footer>
 
 <script>
@@ -1047,7 +1340,24 @@
     btn.textContent = 'Mengirim…';
     btn.style.opacity = '.7';
 
-    const data = Object.fromEntries(new FormData(form).entries());
+    const formData = new FormData(form);
+    const data = {};
+    for (const key of new Set(formData.keys())) {
+      const values = formData.getAll(key);
+      data[key] = values.length > 1 ? values.join(', ') : values[0];
+    }
+
+    if (!data.sesi) {
+      btn.textContent = 'Pilih minimal 1 sesi ↑';
+      btn.style.background = '#b85450';
+      btn.style.opacity = '1';
+      setTimeout(()=>{
+        btn.textContent = original;
+        btn.style.background = '';
+        btn.disabled = false;
+      }, 3000);
+      return;
+    }
 
     try {
       await fetch(FORM_ENDPOINT, {
