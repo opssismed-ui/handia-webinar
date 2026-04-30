@@ -1,5 +1,4 @@
 {
-  "name": "handia-webinar",
   "version": 2,
   "buildCommand": null,
   "outputDirectory": null,
@@ -26,8 +25,5 @@
         }
       ]
     }
-  ],
-  "env": {
-    "FORM_ENDPOINT": "@form_endpoint"
-  }
+  ]
 }
