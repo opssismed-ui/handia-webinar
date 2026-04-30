@@ -1,0 +1,131 @@
+═══════════════════════════════════════════════════════════════════════════════
+  HANDIA HER PRIME WEBINAR — GITHUB + VERCEL DEPLOYMENT CHEATSHEET
+═══════════════════════════════════════════════════════════════════════════════
+
+FOLDER CONTENTS:
+  ✓ index.html         → Landing page (semua dalam 1 file)
+  ✓ .gitignore        → Git exclude rules
+  ✓ README.md         → Project overview & customization guide
+  ✓ SETUP.md          → Detailed step-by-step setup instructions
+  ✓ vercel.json       → Vercel config (security headers + env)
+
+═══════════════════════════════════════════════════════════════════════════════
+  QUICK START (5 MENIT)
+═══════════════════════════════════════════════════════════════════════════════
+
+1. SETUP LOKAL:
+   $ cd ~/path/ke/folder
+   $ git init
+   $ # Copy files di atas ke folder ini
+   $ git add .
+   $ git commit -m "Initial: HANDIA Her Prime landing page"
+
+2. SETUP GITHUB:
+   a) Buka https://github.com/new
+   b) Nama repo: handia-webinar
+   c) Public + Create
+   d) Copy instruksi "push existing repository"
+   e) Jalankan di terminal:
+      $ git branch -M main
+      $ git remote add origin https://github.com/YOUR-USERNAME/handia-webinar.git
+      $ git push -u origin main
+
+3. DEPLOY KE VERCEL:
+   Opsi A (No CLI):
+   a) Buka https://vercel.com → Sign up dengan GitHub
+   b) New Project → Pilih repo handia-webinar
+   c) Deploy
+   d) Selesai! Dapat URL dalam 30 detik
+   
+   Opsi B (CLI):
+   $ npm install -g vercel
+   $ vercel
+   $ (follow prompts)
+
+4. LIVE!
+   URL: handia-webinar.vercel.app
+   Akses dari browser → jadi live di internet ✓
+
+═══════════════════════════════════════════════════════════════════════════════
+  UPDATE KAPAN SAJA
+═══════════════════════════════════════════════════════════════════════════════
+
+  Edit file lokal:
+  $ git add .
+  $ git commit -m "Update: [apa yang diubah]"
+  $ git push
+  
+  → Vercel auto-deploy dalam 30 detik ✓
+
+═══════════════════════════════════════════════════════════════════════════════
+  CUSTOMIZE
+═══════════════════════════════════════════════════════════════════════════════
+
+TANGGAL SESI:
+  Line ~780 dalam index.html:
+  <div class="date">Bulan Depan · 19.30 WIB</div>
+
+WARNA BRAND:
+  Line ~70 dalam index.html, section :root:
+  --sage:#8FAF9A;
+  --gold:#CBBA55;
+  (etc)
+
+FORM ENDPOINT:
+  Line ~1050, onsubmit="handleSubmit(event)"
+  Ganti dengan backend endpoint kalau sudah ada
+
+KONTEN UMUM:
+  Edit langsung di HTML, push, live!
+
+═══════════════════════════════════════════════════════════════════════════════
+  CUSTOM DOMAIN (OPTIONAL)
+═══════════════════════════════════════════════════════════════════════════════
+
+  1. Beli domain (~Rp50-150k/tahun) di Namecheap/IDwebhost
+  2. Di Vercel dashboard: Settings → Domains → Add
+  3. Follow nameserver instructions
+  4. 5-10 menit live ✓
+
+═══════════════════════════════════════════════════════════════════════════════
+  TROUBLESHOOTING
+═══════════════════════════════════════════════════════════════════════════════
+
+Git error "not a git repository":
+  $ git init
+
+Push error "Permission denied":
+  → Setup SSH key (https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
+
+Vercel deployment gagal:
+  → Check build logs di Vercel dashboard
+  → Pastikan index.html ada di repo root
+  → Re-trigger deploy dari dashboard
+
+Halaman tidak update:
+  → Hard refresh: Ctrl+Shift+R (Win) atau Cmd+Shift+R (Mac)
+  → Tunggu 30-60 detik deployment
+
+═══════════════════════════════════════════════════════════════════════════════
+  RESOURCES
+═══════════════════════════════════════════════════════════════════════════════
+
+  GitHub:     https://github.com
+  Vercel:     https://vercel.com
+  Git Docs:   https://git-scm.com/doc
+  Troubleshooting detail → Baca SETUP.md
+
+═══════════════════════════════════════════════════════════════════════════════
+  BIAYA
+═══════════════════════════════════════════════════════════════════════════════
+
+  Vercel:           GRATIS selamanya
+  Custom domain:    ~Rp24k/tahun
+  Total:            GRATIS atau Rp2k/bulan (domain)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+  📧 Pertanyaan? Hubungi tim dev atau buka GitHub issue.
+  🚀 Ready to deploy? Follow Quick Start di atas!
+
+═══════════════════════════════════════════════════════════════════════════════
