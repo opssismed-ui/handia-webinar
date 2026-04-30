@@ -982,19 +982,19 @@
     <form class="form-card" onsubmit="handleSubmit(event)">
       <div class="form-row">
         <label>Nama Lengkap</label>
-        <input type="text" placeholder="Nama panggilan kamu" required>
+        <input type="text" name="nama" placeholder="Nama panggilan kamu" required>
       </div>
       <div class="form-row">
         <label>Email Aktif</label>
-        <input type="email" placeholder="email@contoh.com" required>
+        <input type="email" name="email" placeholder="email@contoh.com" required>
       </div>
       <div class="form-row">
         <label>Nomor WhatsApp</label>
-        <input type="tel" placeholder="08xx xxxx xxxx" required>
+        <input type="tel" name="whatsapp" placeholder="08xx xxxx xxxx" required>
       </div>
       <div class="form-row">
         <label>Rentang Usia</label>
-        <select required>
+        <select name="usia" required>
           <option value="">Pilih rentang usia</option>
           <option>35–40 tahun</option>
           <option>41–45 tahun</option>
@@ -1006,7 +1006,7 @@
       </div>
       <div class="form-row">
         <label>Topik yang Paling Ingin Kamu Pahami</label>
-        <select>
+        <select name="topik">
           <option value="">Pilih satu (opsional)</option>
           <option>Memahami gejala saya saat ini</option>
           <option>Pilihan pengobatan yang aman</option>
@@ -1035,17 +1035,48 @@
 </footer>
 
 <script>
-  function handleSubmit(e){
+  const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzzQFFkhpul2A4JVy9taVmvKa-1PzGBtRUBe5-zWit79maTnuLrhFEbyfEdeT1KBkrRjg/exec';
+
+  async function handleSubmit(e){
     e.preventDefault();
-    const btn = e.target.querySelector('.form-submit');
+    const form = e.target;
+    const btn = form.querySelector('.form-submit');
     const original = btn.textContent;
-    btn.textContent = 'Terima kasih — cek email kamu ✓';
-    btn.style.background = '#6B8B77';
-    setTimeout(()=>{
-      btn.textContent = original;
-      btn.style.background = '';
-      e.target.reset();
-    }, 3500);
+
+    btn.disabled = true;
+    btn.textContent = 'Mengirim…';
+    btn.style.opacity = '.7';
+
+    const data = Object.fromEntries(new FormData(form).entries());
+
+    try {
+      await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(data)
+      });
+
+      btn.textContent = 'Terima kasih — cek email kamu ✓';
+      btn.style.background = '#6B8B77';
+      btn.style.opacity = '1';
+      form.reset();
+
+      setTimeout(()=>{
+        btn.textContent = original;
+        btn.style.background = '';
+        btn.disabled = false;
+      }, 4000);
+    } catch (err) {
+      btn.textContent = 'Gagal kirim — coba lagi';
+      btn.style.background = '#b85450';
+      btn.style.opacity = '1';
+      setTimeout(()=>{
+        btn.textContent = original;
+        btn.style.background = '';
+        btn.disabled = false;
+      }, 3500);
+    }
   }
 </script>
 
