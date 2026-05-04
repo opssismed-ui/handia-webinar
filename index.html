@@ -591,22 +591,6 @@
     max-width:640px;
     margin:0 auto;
   }
-  .speakers-banner{
-    max-width:780px;
-    margin:0 auto 3.5rem;
-    border-radius:14px;
-    overflow:hidden;
-    box-shadow:0 30px 60px rgba(58,61,56,.12);
-    aspect-ratio:9/16;
-    max-height:520px;
-    background:#1a2f24;
-  }
-  .speakers-banner img{
-    width:100%;height:100%;
-    object-fit:cover;
-    display:block;
-  }
-
   .doctor-grid{
     max-width:1200px;
     margin:0 auto;
@@ -1015,26 +999,74 @@
     .hero{
       grid-template-columns:1fr;
       padding:7rem 1.5rem 3rem;
-      gap:3rem;
+      gap:2.5rem;
+      min-height:auto;
     }
-    .hero-visual{order:-1;max-width:340px}
+    .hero-visual{
+      order:-1;
+      max-width:380px;
+      max-height:520px;
+    }
+    .hero h1{font-size:clamp(2.4rem,8vw,3.6rem)}
+    .hero-meta{flex-wrap:wrap;gap:1.5rem}
+    .hero-stats{gap:1.2rem;font-size:.78rem}
+    .hero-stat .stat-num{font-size:1.3rem}
     .lineup{padding:4rem 1.5rem}
     .lineup-header{
       grid-template-columns:1fr;
       gap:1.5rem;
     }
     .session-grid{grid-template-columns:1fr;gap:1.5rem}
+    .session-card{padding:2rem 1.6rem}
+    .session-card h3{min-height:auto;font-size:1.4rem}
+    .session-card .doctor-name{font-size:.88rem;line-height:1.35}
     .why{padding:4rem 1.5rem}
     .why-grid{grid-template-columns:1fr;gap:3rem}
-    .why-visual{aspect-ratio:1/1}
+    .why-visual{aspect-ratio:4/5;max-height:460px}
     .speakers{padding:4rem 1.5rem}
-    .speakers-banner{margin-bottom:2.5rem;aspect-ratio:9/13}
-    .doctor-grid{grid-template-columns:1fr;gap:1.5rem}
+    .speakers-header{margin-bottom:2.5rem}
+    .doctor-grid{grid-template-columns:1fr;gap:1.5rem;max-width:420px}
+    .doctor-card{padding:2rem 1.6rem}
+    .doctor-card h3{font-size:1.25rem}
     .cta-section{padding:4rem 1.5rem}
     .form-card{padding:2rem 1.5rem}
     .about{padding:1rem 1.5rem 4rem}
-    .hero-meta{flex-wrap:wrap;gap:1.5rem}
     .nav-cta{padding:.6rem 1.2rem;font-size:.7rem}
+    footer .contact{flex-direction:column;gap:.6rem}
+  }
+
+  /* Smaller mobile (< 480px) */
+  @media(max-width:480px){
+    nav{padding:1rem 1rem}
+    .logo{font-size:1.3rem;letter-spacing:.28em}
+    .nav-cta{padding:.55rem 1rem;font-size:.65rem;letter-spacing:.15em}
+    .hero{padding:6rem 1.2rem 2.5rem}
+    .hero h1{font-size:2.2rem;line-height:1.05}
+    .hero-eyebrow{font-size:.65rem;margin-bottom:1.5rem}
+    .hero-sub{font-size:1rem}
+    .hero-meta{gap:1rem}
+    .meta-item .value{font-size:1rem}
+    .hero-stats{gap:.9rem;flex-wrap:wrap}
+    .hero-stat{font-size:.74rem}
+    .hero-stat .stat-num{font-size:1.15rem}
+    .hero-poster-badge{font-size:.6rem;padding:.45rem .8rem;top:1rem;left:1rem}
+    .btn-primary{padding:1rem 1.8rem;font-size:.74rem;letter-spacing:.16em}
+    .divider{padding:3rem 1rem 2rem}
+    .divider .ornament{font-size:.92rem}
+    .section-eyebrow{font-size:.65rem;letter-spacing:.28em}
+    .about h2,.lineup-header h2,.why-text h2,.speakers-header h2,.cta-section h2{
+      font-size:1.85rem;line-height:1.2
+    }
+    .lineup,.why,.speakers,.cta-section{padding:3rem 1.2rem}
+    .session-card{padding:1.8rem 1.4rem}
+    .session-card h3{font-size:1.25rem}
+    .doctor-card{padding:1.8rem 1.4rem}
+    .doctor-avatar{width:120px;height:120px}
+    .form-card{padding:1.6rem 1.2rem}
+    .form-row label{font-size:.66rem}
+    .session-option{padding:.85rem .9rem}
+    .session-option .opt-title{font-size:.85rem}
+    footer{padding:2.5rem 1.2rem}
   }
 </style>
 </head>
@@ -1265,10 +1297,6 @@
     <div class="section-eyebrow">Tiga Dokter Spesialis</div>
     <h2>Dibawakan oleh dokter yang ngerti,<br><span class="serif italic">dalam bahasa yang manusiawi.</span></h2>
     <p>Setiap sesi dipimpin satu dokter spesialis dengan fokus topik yang mendalam — bukan presentasi kaku, tapi obrolan hangat yang berbasis bukti.</p>
-  </div>
-
-  <div class="speakers-banner">
-    <img src="image/menopause-mastery-banner.png" alt="Tiga dokter spesialis Her Prime Series — dr. Nuri, dr. Yudhistya, dr. Syah Rini" loading="lazy">
   </div>
 
   <div class="doctor-grid">
