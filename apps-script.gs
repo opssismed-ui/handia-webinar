@@ -1,35 +1,60 @@
 /**
- * HANDIA Her Prime — Webinar Registration Endpoint
+ * HANDIA Her Prime — Webinar Registration Endpoint (v4 — auto-headers)
  *
- * Cara setup:
+ * SIMPLIFIED SETUP:
  * 1. Buat Google Sheet baru di akun ops.sismed@gmail.com
  *    Nama: "HANDIA Her Prime - Pendaftaran Webinar"
- *    Header row 1 (kolom A-H): Timestamp | Nama | Email | WhatsApp | Usia | Sesi | Topik | Pertanyaan
- * 2. Buka https://script.google.com → New Project
- * 3. Hapus kode default, paste seluruh isi file ini
- * 4. Ganti SHEET_ID di bawah dengan ID Sheet kamu
+ *    (TIDAK perlu setup header manual — script akan auto-bikin di submission pertama)
+ * 2. Buka https://script.google.com → buka project "HANDIA Webinar Endpoint"
+ * 3. Hapus semua kode lama, paste seluruh isi file ini
+ * 4. Pastikan SHEET_ID di bawah masih sesuai Sheet kamu
  *    (ID ada di URL Sheet: docs.google.com/spreadsheets/d/[SHEET_ID]/edit)
- * 5. Save (Ctrl+S), kasih nama project: "HANDIA Webinar Endpoint"
- * 6. Deploy → New deployment → Type: Web app
- *    - Execute as: Me (ops.sismed@gmail.com)
- *    - Who has access: Anyone
- *    - Klik Deploy
- * 7. Authorize akses (akun ops.sismed@gmail.com)
- * 8. Copy "Web app URL" yang muncul → kasih ke Claude
+ * 5. Save (Ctrl+S)
+ * 6. Deploy → Manage deployments → ✏️ pencil icon (existing deployment) →
+ *    Version: New version → Deploy
+ *    (URL endpoint TIDAK berubah — gak perlu ganti di index.html)
  *
- * UPDATE (v3): Tambah kolom "Pertanyaan" untuk survey topik/keluhan peserta.
- * Untuk update Apps Script existing: paste kode ini, save, lalu
- * Deploy → Manage deployments → klik pencil icon → New version → Deploy
- * (URL endpoint tetap sama, gak perlu ganti di index.html)
+ * KENAPA v4 LEBIH BAIK:
+ * - Auto-bikin header row pertama kalau Sheet masih kosong
+ * - Header otomatis bold + warna beige + freeze row 1
+ * - Tahan banting kalau ada field baru di form di masa depan
+ * - Gak perlu lagi setup manual setiap kali ada perubahan field
  */
 
 const SHEET_ID = 'GANTI_DENGAN_ID_SHEET_KAMU';
 const SHEET_NAME = 'Sheet1';
 
+const HEADERS = [
+  'Timestamp',
+  'Nama',
+  'Email',
+  'WhatsApp',
+  'Usia',
+  'Sesi',
+  'Pertanyaan'
+];
+
 function doPost(e) {
   try {
     const data = JSON.parse(e.postData.contents);
     const sheet = SpreadsheetApp.openById(SHEET_ID).getSheetByName(SHEET_NAME);
+
+    // Auto-setup header kalau Sheet masih kosong
+    if (sheet.getLastRow() === 0) {
+      sheet.appendRow(HEADERS);
+      sheet.getRange(1, 1, 1, HEADERS.length)
+        .setFontWeight('bold')
+        .setBackground('#F0E9DE')
+        .setFontColor('#3A3D38');
+      sheet.setFrozenRows(1);
+      sheet.setColumnWidth(1, 160); // Timestamp
+      sheet.setColumnWidth(2, 180); // Nama
+      sheet.setColumnWidth(3, 200); // Email
+      sheet.setColumnWidth(4, 140); // WhatsApp
+      sheet.setColumnWidth(5, 100); // Usia
+      sheet.setColumnWidth(6, 220); // Sesi
+      sheet.setColumnWidth(7, 320); // Pertanyaan
+    }
 
     sheet.appendRow([
       new Date(),
@@ -38,7 +63,6 @@ function doPost(e) {
       data.whatsapp || '',
       data.usia || '',
       data.sesi || '',
-      data.topik || '',
       data.pertanyaan || ''
     ]);
 
@@ -54,6 +78,9 @@ function doPost(e) {
 
 function doGet() {
   return ContentService
-    .createTextOutput(JSON.stringify({ status: 'ok', message: 'HANDIA Webinar Endpoint is live' }))
+    .createTextOutput(JSON.stringify({
+      status: 'ok',
+      message: 'HANDIA Webinar Endpoint v4 — auto-headers active'
+    }))
     .setMimeType(ContentService.MimeType.JSON);
 }
