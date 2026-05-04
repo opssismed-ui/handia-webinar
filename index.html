@@ -839,6 +839,34 @@
     transform:translateY(-2px);
     box-shadow:0 12px 30px rgba(107,139,119,.3);
   }
+  .form-row textarea{
+    padding:.95rem 1.1rem;
+    border:1px solid rgba(184,175,166,.4);
+    border-radius:8px;
+    background:var(--cream);
+    font-family:'Inter Tight',sans-serif;
+    font-size:.95rem;
+    color:var(--ink);
+    transition:all .3s ease;
+    font-weight:300;
+    resize:vertical;
+    min-height:100px;
+    line-height:1.6;
+  }
+  .form-row textarea:focus{
+    outline:none;
+    border-color:var(--sage);
+    background:var(--paper);
+    box-shadow:0 0 0 4px rgba(143,175,154,.1);
+  }
+  .form-row textarea::placeholder{color:var(--warm-grey);font-weight:300}
+  .form-label-hint{
+    font-size:.68rem;
+    color:var(--warm-grey);
+    font-style:italic;
+    margin-top:.2rem;
+    font-family:'Cormorant Garamond',serif;
+  }
   .form-note{
     text-align:center;
     font-size:.78rem;
@@ -1089,7 +1117,7 @@
         <div class="doctor-mini">Y</div>
         <div class="doctor-info">
           <div class="doctor-label">Pembicara</div>
-          <div class="doctor-name">dr. Yudhistya, SpOG Subsp Urogine-RE</div>
+          <div class="doctor-name">dr. Yudhistya Ngudi Insan Ksyatria, Sp.OG</div>
         </div>
       </div>
     </article>
@@ -1215,7 +1243,9 @@
 
   <div class="doctor-grid">
     <article class="doctor-card">
-      <div class="doctor-avatar">N</div>
+      <div class="doctor-avatar">
+        <img src="image/dr-nuri.jpg" alt="dr. Nuri Dyah Anggraini, SpOG" onerror="this.style.display='none';this.parentElement.dataset.fallback='N'">
+      </div>
       <div class="session-badge">Sesi 01 · Menopause Mastery</div>
       <h3>dr. Nuri Dyah Anggraini</h3>
       <div class="specialist">SpOG · Spesialis Kandungan</div>
@@ -1223,15 +1253,19 @@
     </article>
 
     <article class="doctor-card">
-      <div class="doctor-avatar">Y</div>
+      <div class="doctor-avatar">
+        <img src="image/dr-yudhis.jpg" alt="dr. Yudhistya Ngudi Insan Ksyatria, Sp.OG, Subsp.Urogin-RE" onerror="this.style.display='none';this.parentElement.dataset.fallback='Y'">
+      </div>
       <div class="session-badge">Sesi 02 · Intimate Comfort</div>
-      <h3>dr. Yudhistya</h3>
-      <div class="specialist">SpOG Subsp Urogine-RE</div>
+      <h3>dr. Yudhistya Ngudi Insan Ksyatria</h3>
+      <div class="specialist">Sp.OG, Subsp.Urogin-RE</div>
       <p class="topic">Solusi Miss V kering & bebas nyeri di perimenopause — kesehatan intim yang sering tidak dibicarakan terbuka.</p>
     </article>
 
     <article class="doctor-card">
-      <div class="doctor-avatar">R</div>
+      <div class="doctor-avatar">
+        <img src="image/dr-rere.jpg" alt="dr. Syah Rini Wisdayanti, SpOG" onerror="this.style.display='none';this.parentElement.dataset.fallback='R'">
+      </div>
       <div class="session-badge">Sesi 03 · Hormone Harmony</div>
       <h3>dr. Syah Rini Wisdayanti</h3>
       <div class="specialist">SpOG · Spesialis Kandungan</div>
@@ -1304,6 +1338,11 @@
             </div>
           </label>
         </div>
+      </div>
+      <div class="form-row">
+        <label>Ada gejala atau topik yang ingin kamu tanyakan ke dokter?</label>
+        <span class="form-label-hint">Opsional — jawaban kamu bantu dokter siapkan materi yang paling relevan</span>
+        <textarea name="pertanyaan" placeholder="cth: Saya sering susah tidur dan mood swing sejak usia 45 — apakah ini normal? Atau saya ingin tahu lebih soal HRT..."></textarea>
       </div>
       <button type="submit" class="form-submit">Konfirmasi Pendaftaran →</button>
       <p class="form-note">Data kamu hanya digunakan untuk keperluan webinar. Kami menjaga kerahasiaannya.</p>
