@@ -1250,7 +1250,7 @@
     <form class="form-card" onsubmit="handleSubmit(event)">
       <div class="form-row">
         <label>Nama Lengkap</label>
-        <input type="text" name="nama" placeholder="Nama panggilan kamu" required>
+        <input type="text" name="nama" placeholder="cth: Sarah Wijaya" required>
       </div>
       <div class="form-row">
         <label>Email Aktif</label>
@@ -1329,6 +1329,38 @@
 
 <script>
   const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzzQFFkhpul2A4JVy9taVmvKa-1PzGBtRUBe5-zWit79maTnuLrhFEbyfEdeT1KBkrRjg/exec';
+
+  // Logika checkbox sesi: "Semua sesi" mutually exclusive dengan sesi individual
+  // — Centang "Semua sesi" → uncheck Sesi 1, 2, 3
+  // — Centang sesi individual → uncheck "Semua sesi"
+  // — Centang ke-3 sesi individual → auto-konversi ke "Semua sesi"
+  document.addEventListener('DOMContentLoaded', () => {
+    const allBox = document.querySelector('input[name="sesi"][value="Semua sesi"]');
+    const individualBoxes = Array.from(
+      document.querySelectorAll('input[name="sesi"]:not([value="Semua sesi"])')
+    );
+
+    if (!allBox || individualBoxes.length === 0) return;
+
+    allBox.addEventListener('change', () => {
+      if (allBox.checked) {
+        individualBoxes.forEach(cb => { cb.checked = false; });
+      }
+    });
+
+    individualBoxes.forEach(cb => {
+      cb.addEventListener('change', () => {
+        if (cb.checked && allBox.checked) {
+          allBox.checked = false;
+        }
+        // Kalau ke-3 sesi individual ke-centang semua → auto switch ke "Semua sesi"
+        if (individualBoxes.every(c => c.checked)) {
+          individualBoxes.forEach(c => { c.checked = false; });
+          allBox.checked = true;
+        }
+      });
+    });
+  });
 
   async function handleSubmit(e){
     e.preventDefault();
