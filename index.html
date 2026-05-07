@@ -873,6 +873,47 @@
     box-shadow:0 0 0 4px rgba(143,175,154,.1);
   }
   .form-row textarea::placeholder{color:var(--warm-grey);font-weight:300}
+
+  /* Field validation states */
+  .form-row.has-error input,
+  .form-row.has-error textarea{
+    border-color:#b85450;
+    background:rgba(184,84,80,.04);
+  }
+  .form-row.has-error input:focus,
+  .form-row.has-error textarea:focus{
+    box-shadow:0 0 0 4px rgba(184,84,80,.1);
+    border-color:#b85450;
+  }
+  .form-row.has-error label{color:#b85450}
+  .field-error{
+    font-size:.8rem;
+    color:#b85450;
+    margin-top:.5rem;
+    display:none;
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    line-height:1.4;
+    align-items:center;
+    gap:.4rem;
+  }
+  .form-row.has-error .field-error{
+    display:flex;
+    animation:shakeIn .35s ease;
+  }
+  .field-error::before{
+    content:"⚠";
+    font-style:normal;
+    font-size:.85rem;
+  }
+  @keyframes shakeIn{
+    0%,100%{transform:translateX(0)}
+    25%{transform:translateX(-3px)}
+    75%{transform:translateX(3px)}
+  }
+  .form-row.is-valid input{
+    border-color:rgba(143,175,154,.6);
+  }
   .form-label-hint{
     font-size:.68rem;
     color:var(--warm-grey);
@@ -1509,13 +1550,15 @@
         <label>Nama Lengkap</label>
         <input type="text" name="nama" placeholder="cth: Sarah Wijaya" required>
       </div>
-      <div class="form-row">
+      <div class="form-row" data-field="email">
         <label>Email Aktif</label>
-        <input type="email" name="email" placeholder="email@contoh.com" required>
+        <input type="email" name="email" placeholder="nama@email.com" required>
+        <span class="field-error">Email belum valid. Pakai format seperti <strong>nama@email.com</strong></span>
       </div>
-      <div class="form-row">
+      <div class="form-row" data-field="whatsapp">
         <label>Nomor WhatsApp</label>
-        <input type="tel" name="whatsapp" placeholder="08xx xxxx xxxx" required>
+        <input type="tel" name="whatsapp" placeholder="cth: 081234567890" required>
+        <span class="field-error">Nomor WA belum benar. Pakai format <strong>08xx</strong> atau <strong>+62 8xx</strong>, minimal 10 digit</span>
       </div>
       <div class="form-row">
         <label>Rentang Usia</label>
@@ -1620,6 +1663,56 @@
 <script>
   const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzzQFFkhpul2A4JVy9taVmvKa-1PzGBtRUBe5-zWit79maTnuLrhFEbyfEdeT1KBkrRjg/exec';
 
+  // ===== Field Validation =====
+  function isValidEmail(v) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim());
+  }
+  function isValidWhatsApp(v) {
+    // Strip spaces, dashes, dots, parens
+    const cleaned = v.replace(/[\s\-.()]/g, '');
+    // Indonesian mobile: 08xx (10-13 digits) atau +62/62 prefix
+    return /^(\+?62|0)8\d{8,12}$/.test(cleaned);
+  }
+  function setFieldError(row, hasError) {
+    if (hasError) {
+      row.classList.add('has-error');
+      row.classList.remove('is-valid');
+    } else {
+      row.classList.remove('has-error');
+      if (row.querySelector('input').value.trim()) {
+        row.classList.add('is-valid');
+      }
+    }
+  }
+  function setupFieldValidation() {
+    const fields = [
+      { name: 'email', validator: isValidEmail },
+      { name: 'whatsapp', validator: isValidWhatsApp }
+    ];
+    fields.forEach(({ name, validator }) => {
+      const input = document.querySelector(`input[name="${name}"]`);
+      if (!input) return;
+      const row = input.closest('.form-row');
+
+      // Validate on blur (kalau user udah selesai ngetik)
+      input.addEventListener('blur', () => {
+        if (input.value.trim() && !validator(input.value)) {
+          setFieldError(row, true);
+        } else if (input.value.trim()) {
+          setFieldError(row, false);
+        }
+      });
+
+      // Real-time clear error pas user perbaiki
+      input.addEventListener('input', () => {
+        if (row.classList.contains('has-error') && validator(input.value)) {
+          setFieldError(row, false);
+        }
+      });
+    });
+  }
+  document.addEventListener('DOMContentLoaded', setupFieldValidation);
+
   // ===== Success Modal =====
   function showSuccessModal(info) {
     const modal = document.getElementById('successModal');
@@ -1713,6 +1806,32 @@
     for (const key of new Set(formData.keys())) {
       const values = formData.getAll(key);
       data[key] = values.length > 1 ? values.join(', ') : values[0];
+    }
+
+    // Validasi field email & whatsapp
+    let firstInvalid = null;
+    if (!isValidEmail(data.email || '')) {
+      const row = form.querySelector('[data-field="email"]');
+      setFieldError(row, true);
+      firstInvalid = firstInvalid || row;
+    }
+    if (!isValidWhatsApp(data.whatsapp || '')) {
+      const row = form.querySelector('[data-field="whatsapp"]');
+      setFieldError(row, true);
+      firstInvalid = firstInvalid || row;
+    }
+    if (firstInvalid) {
+      btn.textContent = 'Cek lagi data kamu ↑';
+      btn.style.background = '#b85450';
+      btn.style.opacity = '1';
+      firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      firstInvalid.querySelector('input').focus();
+      setTimeout(()=>{
+        btn.textContent = original;
+        btn.style.background = '';
+        btn.disabled = false;
+      }, 3000);
+      return;
     }
 
     if (!data.sesi) {
