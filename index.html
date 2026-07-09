@@ -3,46 +3,49 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Her Prime: Menopause Glow-Up Series — HANDIA × Gayatri</title>
-<meta name="description" content="Tiga sesi webinar gratis untuk wanita 35–60 tahun. Edukasi perimenopause & menopause dari dokter spesialis, dalam bahasa hangat dan tidak menghakimi." />
-<meta name="keywords" content="webinar menopause, perimenopause, HRT, hot flash, kesehatan wanita, HANDIA, Gayatri, Her Prime" />
-<meta name="theme-color" content="#6B8B77" />
-<meta name="author" content="HANDIA × Gayatri" />
+<title>Tidur Susah, Mood Berantakan, Kolesterol Naik — HER PRIME · HANDIA</title>
+<meta name="description" content="Webinar edukasi gratis untuk perempuan 40+ dan support system. Kenali tanda perimenopause dari dokter spesialis obgyn — evidence-based, empatik, dan tidak menghakimi." />
+<meta name="keywords" content="webinar perimenopause, menopause, HRT, hot flash, kolesterol, mood swing, kesehatan wanita 40+, HANDIA, Her Prime" />
+<meta name="theme-color" content="#2E7BE0" />
+<meta name="author" content="HANDIA — Handy Healthcare" />
 
-<!-- Open Graph / Facebook / WhatsApp -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://handia-webinar.vercel.app/" />
-<meta property="og:title" content="Her Prime: Menopause Glow-Up Series — HANDIA × Gayatri" />
-<meta property="og:description" content="Tiga sesi webinar gratis dari dokter spesialis. Untuk wanita 35–60 tahun yang sedang melalui perimenopause atau menopause." />
-<meta property="og:image" content="https://handia-webinar.vercel.app/image/menopause-mastery-banner.png" />
+<meta property="og:title" content="Tidur Susah, Mood Berantakan, Kolesterol Naik — Apakah Ini Perimenopause?" />
+<meta property="og:description" content="Webinar HANDIA — Her Prime. Edukasi gratis 75–90 menit untuk perempuan 40+ dan support system. Dari dokter spesialis obgyn." />
+<meta property="og:image" content="https://handia-webinar.vercel.app/image/handia-her-prime-flyer.png" />
 
-<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Her Prime: Menopause Glow-Up Series — HANDIA × Gayatri" />
-<meta name="twitter:description" content="Tiga sesi webinar gratis dari dokter spesialis. Untuk wanita 35–60 tahun yang sedang melalui perimenopause atau menopause." />
-<meta name="twitter:image" content="https://handia-webinar.vercel.app/image/menopause-mastery-banner.png" />
+<meta name="twitter:title" content="Tidur Susah, Mood Berantakan, Kolesterol Naik — HANDIA Her Prime" />
+<meta name="twitter:description" content="Webinar edukasi gratis untuk perempuan 40+. Kenali perimenopause dari dokter obgyn." />
+<meta name="twitter:image" content="https://handia-webinar.vercel.app/image/handia-her-prime-flyer.png" />
 
-<!-- Favicon (inline SVG, no extra request) -->
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%236B8B77'/%3E%3Ctext x='50' y='68' font-family='Cormorant Garamond, serif' font-size='62' fill='%23FBF9F5' text-anchor='middle' font-weight='500'%3EH%3C/text%3E%3C/svg%3E" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%232E7BE0'/%3E%3Ctext x='50' y='68' font-family='Cormorant Garamond, serif' font-size='62' fill='white' text-anchor='middle' font-weight='500'%3EH%3C/text%3E%3C/svg%3E" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
+    /* Blue medical palette (matching HANDIA brand from flyer) + editorial warm accent */
+    --blue:#2E7BE0;
+    --blue-deep:#1D5CB8;
+    --blue-soft:#B8D2F2;
+    --blue-cream:#EAF2FC;
     --sage:#8FAF9A;
     --sage-deep:#6B8B77;
     --sage-soft:#C8D6CC;
     --beige:#E8DFD3;
     --beige-light:#F0E9DE;
     --cream:#F6F3EF;
-    --paper:#FBF9F5;
+    --paper:#FDFCFA;
+    --white:#FFFFFF;
     --warm-grey:#B8AFA6;
-    --stone:#7BAA36;
-    --ink:#3A3D38;
-    --ink-soft:#5C5F58;
+    --ink:#1F2937;
+    --ink-soft:#4B5563;
     --gold:#CBBA55;
     --gold-deep:#A8932E;
+    --red:#B85450;
   }
 
   *{margin:0;padding:0;box-sizing:border-box}
@@ -52,22 +55,20 @@
     background:var(--paper);
     color:var(--ink);
     font-weight:300;
-    line-height:1.6;
+    line-height:1.65;
     overflow-x:hidden;
     letter-spacing:.005em;
   }
-
   .serif{font-family:'Cormorant Garamond',serif}
   .italic{font-style:italic}
 
-  /* Subtle paper texture */
   body::before{
     content:"";
     position:fixed;
     inset:0;
     background-image:
-      radial-gradient(circle at 20% 30%, rgba(143,175,154,.03) 0%, transparent 50%),
-      radial-gradient(circle at 80% 70%, rgba(232,223,211,.05) 0%, transparent 50%);
+      radial-gradient(circle at 15% 25%, rgba(46,123,224,.04) 0%, transparent 50%),
+      radial-gradient(circle at 85% 75%, rgba(232,223,211,.06) 0%, transparent 50%);
     pointer-events:none;
     z-index:0;
   }
@@ -76,174 +77,223 @@
   nav{
     position:fixed;
     top:0;left:0;right:0;
-    padding:1.4rem 3rem;
+    padding:1.2rem 3rem;
     display:flex;justify-content:space-between;align-items:center;
     z-index:100;
-    backdrop-filter:blur(12px);
-    background:rgba(251,249,245,.75);
+    backdrop-filter:blur(14px);
+    background:rgba(253,252,250,.82);
     border-bottom:1px solid rgba(184,175,166,.15);
   }
   .logo{
+    display:flex;align-items:center;gap:.7rem;
     font-family:'Cormorant Garamond',serif;
-    font-size:1.55rem;
+    font-size:1.5rem;
     font-weight:500;
-    letter-spacing:.35em;
-    color:var(--sage-deep);
+    letter-spacing:.32em;
+    color:var(--blue-deep);
   }
-  .nav-cta{
-    font-size:.78rem;
-    letter-spacing:.18em;
+  .logo-mark{
+    width:34px;height:34px;
+    border-radius:8px;
+    background:linear-gradient(135deg,var(--blue) 0%,var(--blue-deep) 100%);
+    display:flex;align-items:center;justify-content:center;
+    color:white;
+    font-weight:600;
+    font-family:'Inter Tight',sans-serif;
+    font-size:.9rem;
+    letter-spacing:0;
+    box-shadow:0 4px 12px rgba(46,123,224,.25);
+  }
+  .logo-sub{
+    font-family:'Inter Tight',sans-serif;
+    font-size:.62rem;
+    letter-spacing:.28em;
     text-transform:uppercase;
-    color:var(--ink);
+    color:var(--warm-grey);
+    font-weight:500;
+    margin-top:2px;
+  }
+  .logo-text{display:flex;flex-direction:column;line-height:1}
+  .nav-cta{
+    font-size:.76rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:white;
+    background:var(--blue);
     text-decoration:none;
-    padding:.75rem 1.6rem;
-    border:1px solid var(--ink);
+    padding:.85rem 1.7rem;
     border-radius:50px;
     transition:all .35s ease;
-    font-weight:400;
+    font-weight:500;
+    box-shadow:0 6px 18px rgba(46,123,224,.22);
   }
-  .nav-cta:hover{background:var(--ink);color:var(--paper)}
+  .nav-cta:hover{
+    background:var(--blue-deep);
+    transform:translateY(-2px);
+    box-shadow:0 10px 24px rgba(46,123,224,.3);
+  }
 
   /* ===== HERO ===== */
   .hero{
     min-height:100vh;
-    padding:9rem 3rem 4rem;
+    padding:9rem 3rem 5rem;
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:4rem;
+    grid-template-columns:1.15fr 1fr;
+    gap:4.5rem;
     align-items:center;
     position:relative;
     z-index:2;
   }
-
-  .hero-eyebrow{
-    display:inline-flex;align-items:center;gap:1rem;
-    font-size:.72rem;
-    letter-spacing:.32em;
+  .hero-badge{
+    display:inline-flex;align-items:center;gap:.6rem;
+    padding:.5rem 1rem;
+    background:var(--blue-cream);
+    border-radius:50px;
+    font-size:.7rem;
+    letter-spacing:.24em;
     text-transform:uppercase;
-    color:var(--sage-deep);
-    margin-bottom:2rem;
-    font-weight:500;
+    color:var(--blue-deep);
+    font-weight:600;
+    margin-bottom:1.8rem;
+    border:1px solid rgba(46,123,224,.15);
   }
-  .hero-eyebrow::before{
+  .hero-badge::before{
     content:"";
-    width:40px;height:1px;
-    background:var(--sage-deep);
+    width:6px;height:6px;
+    border-radius:50%;
+    background:var(--blue);
+    animation:pulse 2s ease infinite;
   }
-
+  @keyframes pulse{
+    0%,100%{opacity:1;transform:scale(1)}
+    50%{opacity:.5;transform:scale(1.4)}
+  }
   .hero h1{
     font-family:'Cormorant Garamond',serif;
-    font-size:clamp(3rem,5.5vw,5.2rem);
-    line-height:1;
-    font-weight:400;
+    font-size:clamp(2.4rem,5.2vw,4.6rem);
+    line-height:1.05;
+    font-weight:500;
     letter-spacing:-.015em;
     color:var(--ink);
-    margin-bottom:2rem;
+    margin-bottom:1.4rem;
   }
   .hero h1 .accent{
+    color:var(--blue-deep);
     font-style:italic;
-    color:var(--sage-deep);
-    font-weight:300;
+    font-weight:400;
+    display:block;
+    font-size:.72em;
+    margin-top:.4rem;
   }
-
   .hero-sub{
     font-size:1.08rem;
-    line-height:1.65;
+    line-height:1.7;
     color:var(--ink-soft);
-    max-width:480px;
-    margin-bottom:2.5rem;
+    max-width:520px;
+    margin-bottom:2.2rem;
   }
-
   .hero-meta{
-    display:flex;gap:2.5rem;
-    margin-bottom:2.8rem;
-    padding-top:1.8rem;
-    border-top:1px solid rgba(184,175,166,.3);
+    display:flex;gap:2rem;
+    margin-bottom:2.5rem;
+    padding:1.5rem 0;
+    border-top:1px solid rgba(184,175,166,.28);
+    border-bottom:1px solid rgba(184,175,166,.28);
+    flex-wrap:wrap;
   }
-  .meta-item .label{
-    font-size:.68rem;
-    letter-spacing:.25em;
+  .meta-item{display:flex;align-items:center;gap:.7rem}
+  .meta-icon{
+    width:38px;height:38px;
+    border-radius:10px;
+    background:var(--blue-cream);
+    color:var(--blue-deep);
+    display:flex;align-items:center;justify-content:center;
+    flex-shrink:0;
+  }
+  .meta-icon svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .meta-text .label{
+    font-size:.62rem;
+    letter-spacing:.22em;
     text-transform:uppercase;
     color:var(--warm-grey);
-    margin-bottom:.3rem;
+    font-weight:500;
+    margin-bottom:.1rem;
   }
-  .meta-item .value{
+  .meta-text .value{
     font-family:'Cormorant Garamond',serif;
-    font-size:1.15rem;
+    font-size:1.05rem;
     color:var(--ink);
     font-weight:500;
+    line-height:1.2;
   }
 
   .btn-primary{
     display:inline-flex;align-items:center;gap:.8rem;
-    padding:1.1rem 2.4rem;
-    background:var(--ink);
-    color:var(--paper);
+    padding:1.15rem 2.4rem;
+    background:linear-gradient(135deg,var(--blue) 0%,var(--blue-deep) 100%);
+    color:white;
     text-decoration:none;
-    font-size:.82rem;
+    font-size:.8rem;
     letter-spacing:.2em;
     text-transform:uppercase;
     border-radius:50px;
     transition:all .4s ease;
-    font-weight:400;
+    font-weight:500;
+    box-shadow:0 12px 28px rgba(46,123,224,.28);
+    border:none;
+    cursor:pointer;
   }
   .btn-primary:hover{
-    background:var(--sage-deep);
-    transform:translateY(-2px);
-    box-shadow:0 12px 30px rgba(107,139,119,.25);
+    transform:translateY(-3px);
+    box-shadow:0 18px 40px rgba(46,123,224,.35);
   }
-  .btn-primary .arrow{
-    transition:transform .4s ease;
-  }
-  .btn-primary:hover .arrow{transform:translateX(4px)}
+  .btn-primary .arrow{transition:transform .4s ease}
+  .btn-primary:hover .arrow{transform:translateX(5px)}
 
   /* Hero Visual — flyer poster */
   .hero-visual{
     position:relative;
     width:100%;
     max-width:520px;
-    aspect-ratio:9/16;
+    aspect-ratio:4/5;
     max-height:640px;
     justify-self:center;
-    border-radius:14px;
+    border-radius:16px;
     overflow:hidden;
-    box-shadow:0 40px 80px rgba(58,61,56,.18);
-    background:#1a2f24;
-    transition:transform .6s ease, box-shadow .6s ease;
+    box-shadow:0 50px 100px rgba(29,92,184,.22);
+    background:var(--blue-cream);
+    transition:transform .6s ease;
   }
-  .hero-visual:hover{
-    transform:translateY(-4px);
-    box-shadow:0 50px 90px rgba(58,61,56,.22);
-  }
+  .hero-visual:hover{transform:translateY(-6px)}
   .hero-visual img{
     width:100%;height:100%;
     object-fit:cover;
     display:block;
   }
-  .hero-visual::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:linear-gradient(180deg,transparent 60%,rgba(26,47,36,.35) 100%);
-    pointer-events:none;
+  .hero-visual-fallback{
+    width:100%;height:100%;
+    display:flex;align-items:center;justify-content:center;
+    color:var(--blue-deep);
+    padding:2rem;
+    text-align:center;
+    background:linear-gradient(135deg,var(--blue-cream) 0%,var(--white) 100%);
   }
-  .hero-poster-badge{
-    position:absolute;
-    top:1.5rem;left:1.5rem;
-    background:rgba(251,249,245,.92);
-    backdrop-filter:blur(8px);
-    padding:.55rem 1rem;
-    border-radius:50px;
-    font-size:.68rem;
-    letter-spacing:.22em;
+  .hero-visual-fallback .placeholder-mark{
+    font-family:'Cormorant Garamond',serif;
+    font-size:.72rem;
+    letter-spacing:.24em;
     text-transform:uppercase;
-    color:var(--ink);
+    color:var(--warm-grey);
+    margin-bottom:1rem;
+  }
+  .hero-visual-fallback h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.6rem;
+    color:var(--blue-deep);
+    line-height:1.3;
     font-weight:500;
-    border:1px solid rgba(184,175,166,.3);
-    z-index:2;
   }
 
-  /* ===== SECTION DIVIDER ===== */
+  /* ===== DIVIDER ===== */
   .divider{
     text-align:center;
     padding:5rem 2rem 3rem;
@@ -254,9 +304,9 @@
     display:inline-flex;align-items:center;gap:1.5rem;
     font-family:'Cormorant Garamond',serif;
     font-style:italic;
-    font-size:1.05rem;
-    color:var(--sage-deep);
-    letter-spacing:.05em;
+    font-size:1.1rem;
+    color:var(--blue-deep);
+    letter-spacing:.04em;
   }
   .divider .ornament::before,.divider .ornament::after{
     content:"";
@@ -274,621 +324,539 @@
     z-index:2;
   }
   .section-eyebrow{
-    font-size:.72rem;
-    letter-spacing:.35em;
+    font-size:.7rem;
+    letter-spacing:.32em;
     text-transform:uppercase;
-    color:var(--sage-deep);
-    margin-bottom:1.5rem;
-    font-weight:500;
+    color:var(--blue-deep);
+    margin-bottom:1.4rem;
+    font-weight:600;
   }
   .about h2{
     font-family:'Cormorant Garamond',serif;
-    font-size:clamp(2.2rem,3.5vw,3.2rem);
+    font-size:clamp(2rem,3.5vw,3.2rem);
     line-height:1.15;
-    font-weight:400;
+    font-weight:500;
     margin-bottom:1.8rem;
     letter-spacing:-.01em;
+    color:var(--ink);
   }
+  .about h2 .italic{color:var(--blue-deep)}
   .about p{
-    font-size:1.1rem;
-    line-height:1.75;
+    font-size:1.08rem;
+    line-height:1.8;
     color:var(--ink-soft);
-    max-width:680px;
+    max-width:720px;
     margin:0 auto;
   }
 
-  /* ===== LINEUP ===== */
-  .lineup{
+  /* ===== SEGMENTASI PESERTA ===== */
+  .segments{
     padding:6rem 3rem;
-    background:linear-gradient(180deg,var(--paper) 0%,var(--cream) 50%,var(--paper) 100%);
+    background:linear-gradient(180deg,var(--paper) 0%,var(--blue-cream) 50%,var(--paper) 100%);
     position:relative;
     z-index:2;
   }
-  .lineup-header{
-    max-width:1200px;
+  .segments-header{
+    max-width:1100px;
     margin:0 auto 4rem;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:3rem;
-    align-items:end;
-  }
-  .lineup-header h2{
-    font-family:'Cormorant Garamond',serif;
-    font-size:clamp(2.2rem,3.5vw,3.4rem);
-    line-height:1.1;
-    font-weight:400;
-  }
-  .lineup-header p{
-    color:var(--ink-soft);
-    line-height:1.7;
-  }
-
-  .session-grid{
-    max-width:1200px;
-    margin:0 auto;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:2rem;
-  }
-  .session-card{
-    background:var(--paper);
-    border-radius:14px;
-    padding:2.5rem 2rem;
-    position:relative;
-    overflow:hidden;
-    border:1px solid rgba(184,175,166,.2);
-    transition:all .5s ease;
-    display:flex;
-    flex-direction:column;
-  }
-  .session-card:hover{
-    transform:translateY(-6px);
-    border-color:var(--sage);
-    box-shadow:0 20px 50px rgba(58,61,56,.08);
-  }
-  .session-card .wave-bg{
-    position:absolute;
-    top:-30px;right:-30px;
-    width:160px;height:160px;
-    opacity:.5;
-    pointer-events:none;
-  }
-  .session-num{
-    font-family:'Cormorant Garamond',serif;
-    font-style:italic;
-    font-size:.95rem;
-    color:var(--gold-deep);
-    letter-spacing:.15em;
-    margin-bottom:1rem;
-    position:relative;
-    z-index:2;
-  }
-  .session-card h3{
-    font-family:'Cormorant Garamond',serif;
-    font-size:1.55rem;
-    line-height:1.2;
-    font-weight:500;
-    color:var(--ink);
-    margin-bottom:1.2rem;
-    position:relative;
-    z-index:2;
-    min-height:5.5rem;
-  }
-  .session-card .date{
-    font-size:.78rem;
-    letter-spacing:.18em;
-    text-transform:uppercase;
-    color:var(--sage-deep);
-    margin-bottom:1.5rem;
-    padding-bottom:1.2rem;
-    border-bottom:1px dashed rgba(184,175,166,.4);
-  }
-  .session-card ul{
-    list-style:none;
-    flex:1;
-  }
-  .session-card li{
-    font-size:.92rem;
-    color:var(--ink-soft);
-    line-height:1.55;
-    padding:.5rem 0 .5rem 1.4rem;
-    position:relative;
-  }
-  .session-card li::before{
-    content:"";
-    position:absolute;
-    left:0;top:1.05rem;
-    width:6px;height:6px;
-    border-radius:50%;
-    background:var(--sage);
-  }
-  .session-card.featured{
-    background:linear-gradient(160deg,var(--beige-light) 0%,var(--paper) 60%);
-    border-color:var(--gold);
-  }
-  .session-card.featured::after{
-    content:"Sesi Pertama";
-    position:absolute;
-    top:1.5rem;right:1.5rem;
-    font-size:.62rem;
-    letter-spacing:.25em;
-    text-transform:uppercase;
-    color:var(--gold-deep);
-    background:var(--paper);
-    padding:.4rem .8rem;
-    border-radius:50px;
-    border:1px solid var(--gold);
-    font-weight:500;
-  }
-  .session-card .doctor-attr{
-    margin-top:1.5rem;
-    padding-top:1.2rem;
-    border-top:1px dashed rgba(184,175,166,.4);
-    display:flex;align-items:center;gap:.7rem;
-    position:relative;
-    z-index:2;
-  }
-  .session-card .doctor-mini{
-    width:42px;height:42px;
-    border-radius:50%;
-    background:linear-gradient(135deg,var(--sage-soft),var(--beige));
-    display:flex;align-items:center;justify-content:center;
-    font-family:'Cormorant Garamond',serif;
-    font-size:1.1rem;
-    color:var(--sage-deep);
-    font-style:italic;
-    flex-shrink:0;
-    border:2px solid var(--paper);
-    box-shadow:0 4px 12px rgba(58,61,56,.06);
-    overflow:hidden;
-  }
-  .session-card .doctor-mini img{
-    width:100%;height:100%;
-    object-fit:cover;
-    object-position:center 15%;
-    transform:scale(1.4);
-    transform-origin:center 12%;
-    border-radius:50%;
-  }
-  .session-card .doctor-info{
-    line-height:1.3;
-  }
-  .session-card .doctor-info .doctor-label{
-    font-size:.62rem;
-    letter-spacing:.22em;
-    text-transform:uppercase;
-    color:var(--warm-grey);
-    font-weight:500;
-    margin-bottom:.15rem;
-  }
-  .session-card .doctor-info .doctor-name{
-    font-family:'Cormorant Garamond',serif;
-    font-size:.95rem;
-    color:var(--ink);
-    font-weight:500;
-  }
-
-  /* ===== WHY JOIN ===== */
-  .why{
-    padding:7rem 3rem;
-    max-width:1200px;
-    margin:0 auto;
-    position:relative;
-    z-index:2;
-  }
-  .why-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:5rem;
-    align-items:center;
-  }
-  .why-text h2{
-    font-family:'Cormorant Garamond',serif;
-    font-size:clamp(2.2rem,3.5vw,3.2rem);
-    line-height:1.15;
-    font-weight:400;
-    margin-bottom:1.8rem;
-  }
-  .why-text h2 .italic{color:var(--sage-deep)}
-
-  .feature-list{
-    list-style:none;
-    margin-top:2rem;
-  }
-  .feature-list li{
-    display:flex;
-    gap:1.2rem;
-    padding:1.4rem 0;
-    border-bottom:1px solid rgba(184,175,166,.25);
-  }
-  .feature-list li:last-child{border-bottom:none}
-  .feature-icon{
-    flex-shrink:0;
-    width:42px;height:42px;
-    border-radius:50%;
-    background:var(--cream);
-    display:flex;align-items:center;justify-content:center;
-    border:1px solid var(--sage-soft);
-  }
-  .feature-icon svg{width:18px;height:18px;stroke:var(--sage-deep);fill:none;stroke-width:1.5}
-  .feature-content h4{
-    font-family:'Cormorant Garamond',serif;
-    font-size:1.25rem;
-    font-weight:500;
-    margin-bottom:.3rem;
-  }
-  .feature-content p{
-    font-size:.92rem;
-    color:var(--ink-soft);
-    line-height:1.6;
-  }
-
-  .why-visual{
-    position:relative;
-    aspect-ratio:4/5;
-    border-radius:14px;
-    overflow:hidden;
-    background:#1a2f24;
-    box-shadow:0 30px 60px rgba(58,61,56,.15);
-  }
-  .why-visual > img{
-    position:absolute;
-    inset:0;
-    width:100%;height:100%;
-    object-fit:cover;
-    object-position:center 20%;
-    filter:brightness(.88) saturate(.9);
-  }
-  .why-visual .quote-card{
-    position:absolute;
-    bottom:2rem;left:2rem;right:2rem;
-    background:rgba(251,249,245,.92);
-    backdrop-filter:blur(8px);
-    padding:1.8rem;
-    border-radius:8px;
-    font-family:'Cormorant Garamond',serif;
-    font-style:italic;
-    font-size:1.15rem;
-    line-height:1.4;
-    color:var(--ink);
-  }
-  .why-visual .quote-card cite{
-    display:block;
-    font-style:normal;
-    font-family:'Inter Tight',sans-serif;
-    font-size:.72rem;
-    letter-spacing:.2em;
-    text-transform:uppercase;
-    color:var(--warm-grey);
-    margin-top:.8rem;
-    font-weight:500;
-  }
-
-  /* ===== SPEAKERS (3 doctors) ===== */
-  .speakers{
-    padding:6rem 3rem;
-    background:var(--cream);
-    position:relative;
-    z-index:2;
-  }
-  .speakers-header{
-    max-width:1200px;
-    margin:0 auto 3.5rem;
     text-align:center;
   }
-  .speakers-header h2{
+  .segments-header h2{
     font-family:'Cormorant Garamond',serif;
-    font-size:clamp(2.2rem,3.5vw,3.4rem);
+    font-size:clamp(2rem,3.5vw,3rem);
     line-height:1.15;
-    font-weight:400;
-    margin-bottom:1.2rem;
-    letter-spacing:-.01em;
+    font-weight:500;
+    margin-bottom:1rem;
+    color:var(--ink);
   }
-  .speakers-header h2 .italic{color:var(--sage-deep)}
-  .speakers-header > p{
+  .segments-header p{
     color:var(--ink-soft);
-    line-height:1.7;
     max-width:640px;
     margin:0 auto;
   }
-  .doctor-grid{
+  .segments-grid{
     max-width:1200px;
     margin:0 auto;
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:2rem;
+    grid-template-columns:repeat(2,1fr);
+    gap:1.4rem;
   }
-  .doctor-card{
-    background:var(--paper);
+  .segment-card{
+    background:var(--white);
     border-radius:14px;
-    padding:2.2rem 1.8rem;
-    text-align:center;
-    border:1px solid rgba(184,175,166,.2);
-    transition:all .5s ease;
-    position:relative;
-    overflow:hidden;
+    padding:2.2rem 2rem;
+    border:1px solid rgba(46,123,224,.12);
+    box-shadow:0 6px 20px rgba(29,92,184,.05);
+    transition:all .4s ease;
+    display:flex;gap:1.4rem;
+    align-items:flex-start;
   }
-  .doctor-card:hover{
-    transform:translateY(-6px);
-    border-color:var(--sage);
-    box-shadow:0 20px 50px rgba(58,61,56,.08);
+  .segment-card:hover{
+    transform:translateY(-4px);
+    border-color:var(--blue-soft);
+    box-shadow:0 20px 40px rgba(29,92,184,.1);
   }
-  .doctor-avatar{
-    width:140px;height:140px;
-    border-radius:50%;
-    margin:0 auto 1.4rem;
-    background:linear-gradient(135deg,var(--sage-soft),var(--beige));
+  .segment-icon{
+    flex-shrink:0;
+    width:52px;height:52px;
+    border-radius:12px;
+    background:var(--blue-cream);
+    color:var(--blue-deep);
     display:flex;align-items:center;justify-content:center;
-    border:3px solid var(--paper);
-    box-shadow:0 8px 24px rgba(58,61,56,.1);
     font-family:'Cormorant Garamond',serif;
-    font-size:2.4rem;
-    color:var(--sage-deep);
     font-style:italic;
-    overflow:hidden;
-  }
-  /* Upper body + wajah, seragam untuk semua dokter */
-  .doctor-avatar img{
-    width:100%;height:100%;
-    object-fit:cover;
-    border-radius:50%;
-    object-position:center 15%;
-    transform:scale(1.35);
-    transform-origin:center 12%;
-    transition:transform .5s ease;
-  }
-  .doctor-card:hover .doctor-avatar img{
-    transform:scale(1.42);
-  }
-  /* dr. Yudhis (card 2) — zoom dikit lebih */
-  .doctor-card:nth-child(2) .doctor-avatar img{
-    transform:scale(1.55);
-    object-position:center 18%;
-  }
-  .doctor-card:nth-child(2):hover .doctor-avatar img{
-    transform:scale(1.62);
-  }
-  .doctor-card .session-badge{
-    display:inline-block;
-    font-size:.62rem;
-    letter-spacing:.25em;
-    text-transform:uppercase;
-    color:var(--gold-deep);
-    background:var(--paper);
-    padding:.4rem .9rem;
-    border-radius:50px;
-    border:1px solid var(--gold);
+    font-size:1.4rem;
     font-weight:500;
-    margin-bottom:1rem;
   }
-  .doctor-card h3{
+  .segment-content h3{
     font-family:'Cormorant Garamond',serif;
     font-size:1.35rem;
     font-weight:500;
     color:var(--ink);
     line-height:1.25;
-    margin-bottom:.4rem;
+    margin-bottom:.35rem;
   }
-  .doctor-card .specialist{
-    font-size:.72rem;
-    letter-spacing:.18em;
+  .segment-age{
+    font-size:.68rem;
+    letter-spacing:.22em;
     text-transform:uppercase;
-    color:var(--sage-deep);
-    margin-bottom:1.2rem;
-    font-weight:500;
+    color:var(--blue);
+    font-weight:600;
+    margin-bottom:.8rem;
   }
-  .doctor-card .topic{
+  .segment-content p{
+    font-size:.94rem;
+    line-height:1.55;
+    color:var(--ink-soft);
+  }
+
+  /* ===== MATERI ===== */
+  .materi{
+    padding:7rem 3rem;
+    max-width:1200px;
+    margin:0 auto;
+    position:relative;
+    z-index:2;
+  }
+  .materi-header{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:3rem;
+    margin-bottom:4rem;
+    align-items:end;
+  }
+  .materi-header h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(2rem,3.5vw,3.2rem);
+    line-height:1.15;
+    font-weight:500;
+    color:var(--ink);
+  }
+  .materi-header h2 .italic{color:var(--blue-deep)}
+  .materi-header p{
+    color:var(--ink-soft);
+    line-height:1.7;
+  }
+  .materi-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1.4rem;
+  }
+  .materi-item{
+    padding:2rem 1.8rem;
+    background:var(--white);
+    border-radius:12px;
+    border:1px solid rgba(184,175,166,.18);
+    transition:all .35s ease;
+    position:relative;
+  }
+  .materi-item:hover{
+    border-color:var(--blue-soft);
+    box-shadow:0 12px 30px rgba(29,92,184,.08);
+  }
+  .materi-num{
     font-family:'Cormorant Garamond',serif;
     font-style:italic;
     font-size:1rem;
+    color:var(--blue);
+    font-weight:500;
+    margin-bottom:.7rem;
+  }
+  .materi-item h4{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.25rem;
+    font-weight:500;
+    line-height:1.25;
+    color:var(--ink);
+    margin-bottom:.7rem;
+  }
+  .materi-item p{
+    font-size:.9rem;
+    line-height:1.55;
     color:var(--ink-soft);
+  }
+
+  /* ===== MITOS FAKTA ===== */
+  .mitos{
+    padding:6rem 3rem;
+    background:linear-gradient(180deg,var(--paper) 0%,var(--cream) 100%);
+    position:relative;
+    z-index:2;
+  }
+  .mitos-container{
+    max-width:960px;
+    margin:0 auto;
+  }
+  .mitos-header{
+    text-align:center;
+    margin-bottom:3rem;
+  }
+  .mitos-header h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(2rem,3.5vw,3rem);
+    line-height:1.15;
+    font-weight:500;
+    margin-bottom:1rem;
+    color:var(--ink);
+  }
+  .mitos-header p{
+    color:var(--ink-soft);
+    max-width:600px;
+    margin:0 auto;
+  }
+  .mitos-list{
+    display:grid;
+    gap:1.2rem;
+  }
+  .mitos-card{
+    background:var(--white);
+    border-radius:12px;
+    padding:1.7rem 1.8rem;
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:1.2rem;
+    align-items:center;
+    border:1px solid rgba(184,175,166,.2);
+    transition:all .3s ease;
+  }
+  .mitos-card:hover{
+    border-color:var(--blue-soft);
+    transform:translateX(4px);
+  }
+  .mitos-badge{
+    font-size:.62rem;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    padding:.4rem .8rem;
+    border-radius:50px;
+    font-weight:600;
+    color:var(--red);
+    background:rgba(184,84,80,.08);
+    align-self:start;
+  }
+  .mitos-text{
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-size:1.15rem;
+    color:var(--ink);
     line-height:1.4;
-    padding-top:1rem;
-    border-top:1px dashed rgba(184,175,166,.4);
+  }
+
+  /* ===== RUNDOWN ===== */
+  .rundown{
+    padding:6rem 3rem;
+    position:relative;
+    z-index:2;
+    max-width:900px;
+    margin:0 auto;
+  }
+  .rundown-header{
+    text-align:center;
+    margin-bottom:3rem;
+  }
+  .rundown-header h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(2rem,3.5vw,3rem);
+    line-height:1.15;
+    font-weight:500;
+    margin-bottom:1rem;
+    color:var(--ink);
+  }
+  .rundown-header h2 .italic{color:var(--blue-deep)}
+  .rundown-header p{color:var(--ink-soft)}
+  .timeline{
+    position:relative;
+    padding-left:2.5rem;
+  }
+  .timeline::before{
+    content:"";
+    position:absolute;
+    left:11px;top:8px;bottom:8px;
+    width:1px;
+    background:linear-gradient(180deg,var(--blue) 0%,var(--blue-soft) 100%);
+  }
+  .timeline-item{
+    position:relative;
+    padding:1.2rem 0 1.8rem;
+    display:grid;
+    grid-template-columns:130px 1fr;
+    gap:1.5rem;
+    align-items:flex-start;
+  }
+  .timeline-item::before{
+    content:"";
+    position:absolute;
+    left:-2.5rem;top:1.5rem;
+    width:22px;height:22px;
+    border-radius:50%;
+    background:white;
+    border:2px solid var(--blue);
+    box-shadow:0 0 0 4px var(--blue-cream);
+  }
+  .timeline-time{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.05rem;
+    color:var(--blue-deep);
+    font-weight:500;
+    padding-top:.15rem;
+  }
+  .timeline-content h4{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.2rem;
+    font-weight:500;
+    color:var(--ink);
+    margin-bottom:.25rem;
+    line-height:1.3;
+  }
+  .timeline-content p{
+    font-size:.9rem;
+    color:var(--ink-soft);
+    line-height:1.5;
+  }
+
+  /* ===== SPEAKER (TBA) ===== */
+  .speaker{
+    padding:6rem 3rem;
+    background:var(--blue-cream);
+    position:relative;
+    z-index:2;
+  }
+  .speaker-inner{
+    max-width:640px;
+    margin:0 auto;
+    text-align:center;
+  }
+  .speaker-avatar-tba{
+    width:150px;height:150px;
+    border-radius:50%;
+    margin:0 auto 1.8rem;
+    background:linear-gradient(135deg,var(--blue-soft) 0%,var(--white) 100%);
+    display:flex;align-items:center;justify-content:center;
+    border:4px solid var(--white);
+    box-shadow:0 20px 40px rgba(29,92,184,.15);
+    position:relative;
+  }
+  .speaker-avatar-tba svg{
+    width:70px;height:70px;
+    color:var(--blue-deep);
+    fill:currentColor;
+    opacity:.75;
+  }
+  .speaker-badge{
+    display:inline-block;
+    font-size:.65rem;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    color:var(--blue-deep);
+    background:var(--white);
+    padding:.5rem 1rem;
+    border-radius:50px;
+    font-weight:600;
+    margin-bottom:1rem;
+    border:1px solid rgba(46,123,224,.2);
+  }
+  .speaker-inner h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(1.8rem,3vw,2.6rem);
+    font-weight:500;
+    color:var(--ink);
+    margin-bottom:.6rem;
+    line-height:1.2;
+  }
+  .speaker-role{
+    font-size:.9rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--blue-deep);
+    font-weight:500;
+    margin-bottom:1.4rem;
+  }
+  .speaker-inner p{
+    color:var(--ink-soft);
+    line-height:1.7;
+    margin-bottom:1.4rem;
+  }
+  .speaker-note{
+    display:inline-flex;
+    align-items:center;gap:.6rem;
+    background:var(--white);
+    padding:.75rem 1.3rem;
+    border-radius:50px;
+    font-size:.82rem;
+    color:var(--ink-soft);
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    border:1px solid rgba(46,123,224,.15);
+  }
+  .speaker-note::before{
+    content:"◆";
+    color:var(--blue);
+    font-style:normal;
+  }
+
+  /* ===== DISCLAIMER ===== */
+  .disclaimer{
+    padding:4rem 3rem;
+    max-width:960px;
+    margin:0 auto;
+    position:relative;
+    z-index:2;
+  }
+  .disclaimer-card{
+    background:var(--white);
+    border-radius:14px;
+    padding:2.5rem 2.8rem;
+    border:1px solid rgba(184,175,166,.2);
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:1.8rem;
+    align-items:flex-start;
+    box-shadow:0 8px 24px rgba(29,92,184,.04);
+  }
+  .disclaimer-icon{
+    flex-shrink:0;
+    width:52px;height:52px;
+    border-radius:12px;
+    background:var(--blue-cream);
+    color:var(--blue-deep);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .disclaimer-icon svg{width:26px;height:26px}
+  .disclaimer-content h4{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.35rem;
+    font-weight:500;
+    color:var(--ink);
+    margin-bottom:.6rem;
+  }
+  .disclaimer-content p{
+    font-size:.92rem;
+    color:var(--ink-soft);
+    line-height:1.65;
   }
 
   /* ===== CTA REGISTRATION ===== */
   .cta-section{
-    padding:7rem 3rem;
+    padding:6rem 3rem;
     position:relative;
     z-index:2;
     overflow:hidden;
-  }
-  .cta-section::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:linear-gradient(170deg,var(--beige-light) 0%,var(--paper) 60%);
-    z-index:-1;
-  }
-  .cta-wave{
-    position:absolute;
-    bottom:0;left:0;right:0;
-    height:200px;
-    opacity:.3;
-    pointer-events:none;
+    background:linear-gradient(160deg,var(--blue-cream) 0%,var(--paper) 60%);
   }
   .cta-container{
-    max-width:560px;
+    max-width:580px;
     margin:0 auto;
-    text-align:center;
     position:relative;
     z-index:2;
   }
-  .cta-section h2{
+  .cta-header{
+    text-align:center;
+    margin-bottom:2.5rem;
+  }
+  .cta-header h2{
     font-family:'Cormorant Garamond',serif;
-    font-size:clamp(2.4rem,4vw,3.6rem);
+    font-size:clamp(2.2rem,3.8vw,3.4rem);
     line-height:1.1;
-    font-weight:400;
-    margin-bottom:1.2rem;
+    font-weight:500;
+    margin-bottom:1rem;
+    color:var(--ink);
     letter-spacing:-.01em;
   }
-  .cta-section h2 .italic{color:var(--sage-deep)}
-  .cta-section > .cta-container > p{
-    font-size:1.05rem;
+  .cta-header h2 .italic{color:var(--blue-deep)}
+  .cta-header > p{
+    font-size:1rem;
     color:var(--ink-soft);
-    margin-bottom:2.8rem;
     line-height:1.65;
   }
 
   .form-card{
-    background:var(--paper);
-    border-radius:16px;
+    background:var(--white);
+    border-radius:18px;
     padding:2.8rem;
-    box-shadow:0 30px 70px rgba(58,61,56,.08);
-    border:1px solid rgba(184,175,166,.2);
+    box-shadow:0 40px 80px rgba(29,92,184,.1);
+    border:1px solid rgba(46,123,224,.1);
     text-align:left;
   }
   .form-row{
     display:flex;flex-direction:column;
-    margin-bottom:1.4rem;
+    margin-bottom:1.3rem;
   }
   .form-row label{
     font-size:.7rem;
     letter-spacing:.22em;
     text-transform:uppercase;
-    color:var(--warm-grey);
+    color:var(--ink-soft);
     margin-bottom:.5rem;
-    font-weight:500;
+    font-weight:600;
   }
   .form-row input,
-  .form-row select{
-    padding:.95rem 1.1rem;
-    border:1px solid rgba(184,175,166,.4);
-    border-radius:8px;
-    background:var(--cream);
-    font-family:'Inter Tight',sans-serif;
-    font-size:.95rem;
-    color:var(--ink);
-    transition:all .3s ease;
-    font-weight:300;
-  }
-  .form-row input:focus,
-  .form-row select:focus{
-    outline:none;
-    border-color:var(--sage);
-    background:var(--paper);
-    box-shadow:0 0 0 4px rgba(143,175,154,.1);
-  }
-  .form-row input::placeholder{color:var(--warm-grey);font-weight:300}
-
-  /* Checkbox group for sesi */
-  .session-options{
-    display:grid;
-    gap:.7rem;
-  }
-  .session-option{
-    display:flex;
-    align-items:flex-start;
-    gap:.85rem;
-    padding:1rem 1.1rem;
-    background:var(--cream);
-    border:1px solid rgba(184,175,166,.4);
-    border-radius:8px;
-    cursor:pointer;
-    transition:all .25s ease;
-  }
-  .session-option:hover{
-    border-color:var(--sage);
-    background:var(--paper);
-  }
-  .session-option input[type="checkbox"]{
-    flex-shrink:0;
-    width:18px;height:18px;
-    margin-top:2px;
-    accent-color:var(--sage-deep);
-    cursor:pointer;
-  }
-  .session-option .opt-text{
-    flex:1;
-  }
-  .session-option .opt-title{
-    font-size:.9rem;
-    color:var(--ink);
-    font-weight:400;
-    line-height:1.35;
-    margin-bottom:.15rem;
-  }
-  .session-option .opt-meta{
-    font-size:.75rem;
-    color:var(--warm-grey);
-    font-style:italic;
-    font-family:'Cormorant Garamond',serif;
-  }
-  .session-option:has(input:checked){
-    border-color:var(--sage-deep);
-    background:var(--paper);
-    box-shadow:0 0 0 3px rgba(143,175,154,.12);
-  }
-  .session-option.recommended .opt-title::after{
-    content:" Direkomendasikan";
-    font-size:.62rem;
-    letter-spacing:.18em;
-    text-transform:uppercase;
-    color:var(--gold-deep);
-    margin-left:.5rem;
-    font-weight:500;
-    font-style:normal;
-  }
-
-  .form-submit{
-    width:100%;
-    padding:1.15rem;
-    background:var(--ink);
-    color:var(--paper);
-    border:none;
-    border-radius:50px;
-    font-family:'Inter Tight',sans-serif;
-    font-size:.82rem;
-    letter-spacing:.22em;
-    text-transform:uppercase;
-    cursor:pointer;
-    transition:all .4s ease;
-    margin-top:.6rem;
-    font-weight:400;
-  }
-  .form-submit:hover{
-    background:var(--sage-deep);
-    transform:translateY(-2px);
-    box-shadow:0 12px 30px rgba(107,139,119,.3);
-  }
+  .form-row select,
   .form-row textarea{
     padding:.95rem 1.1rem;
     border:1px solid rgba(184,175,166,.4);
-    border-radius:8px;
-    background:var(--cream);
+    border-radius:10px;
+    background:var(--paper);
     font-family:'Inter Tight',sans-serif;
     font-size:.95rem;
     color:var(--ink);
     transition:all .3s ease;
-    font-weight:300;
-    resize:vertical;
-    min-height:100px;
-    line-height:1.6;
+    font-weight:400;
   }
+  .form-row textarea{
+    resize:vertical;
+    min-height:110px;
+    line-height:1.55;
+  }
+  .form-row input:focus,
+  .form-row select:focus,
   .form-row textarea:focus{
     outline:none;
-    border-color:var(--sage);
-    background:var(--paper);
-    box-shadow:0 0 0 4px rgba(143,175,154,.1);
+    border-color:var(--blue);
+    background:var(--white);
+    box-shadow:0 0 0 4px rgba(46,123,224,.1);
   }
+  .form-row input::placeholder,
   .form-row textarea::placeholder{color:var(--warm-grey);font-weight:300}
 
-  /* Field validation states */
+  .form-label-hint{
+    font-size:.7rem;
+    color:var(--warm-grey);
+    font-style:italic;
+    margin-top:.15rem;
+    margin-bottom:.5rem;
+    font-family:'Cormorant Garamond',serif;
+  }
+
+  /* Field validation */
   .form-row.has-error input,
   .form-row.has-error textarea{
-    border-color:#b85450;
+    border-color:var(--red);
     background:rgba(184,84,80,.04);
   }
-  .form-row.has-error input:focus,
-  .form-row.has-error textarea:focus{
-    box-shadow:0 0 0 4px rgba(184,84,80,.1);
-    border-color:#b85450;
-  }
-  .form-row.has-error label{color:#b85450}
+  .form-row.has-error label{color:var(--red)}
   .field-error{
     font-size:.8rem;
-    color:#b85450;
+    color:var(--red);
     margin-top:.5rem;
     display:none;
     font-family:'Cormorant Garamond',serif;
@@ -904,86 +872,48 @@
   .field-error::before{
     content:"⚠";
     font-style:normal;
-    font-size:.85rem;
   }
   @keyframes shakeIn{
     0%,100%{transform:translateX(0)}
     25%{transform:translateX(-3px)}
     75%{transform:translateX(3px)}
   }
-  .form-row.is-valid input{
-    border-color:rgba(143,175,154,.6);
+
+  .form-submit{
+    width:100%;
+    padding:1.2rem;
+    background:linear-gradient(135deg,var(--blue) 0%,var(--blue-deep) 100%);
+    color:white;
+    border:none;
+    border-radius:50px;
+    font-family:'Inter Tight',sans-serif;
+    font-size:.82rem;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    cursor:pointer;
+    transition:all .4s ease;
+    margin-top:.8rem;
+    font-weight:500;
+    box-shadow:0 14px 30px rgba(46,123,224,.28);
   }
-  .form-label-hint{
-    font-size:.68rem;
-    color:var(--warm-grey);
-    font-style:italic;
-    margin-top:.2rem;
-    font-family:'Cormorant Garamond',serif;
+  .form-submit:hover:not(:disabled){
+    transform:translateY(-3px);
+    box-shadow:0 20px 40px rgba(46,123,224,.35);
   }
+  .form-submit:disabled{cursor:wait}
   .form-note{
     text-align:center;
     font-size:.78rem;
     color:var(--warm-grey);
-    margin-top:1.5rem;
+    margin-top:1.4rem;
     font-style:italic;
     font-family:'Cormorant Garamond',serif;
-  }
-
-  /* ===== FOOTER ===== */
-  footer{
-    padding:3rem;
-    text-align:center;
-    background:var(--ink);
-    color:var(--beige);
-    position:relative;
-    z-index:2;
-  }
-  footer .logo-foot{
-    font-family:'Cormorant Garamond',serif;
-    font-size:1.4rem;
-    letter-spacing:.35em;
-    margin-bottom:.8rem;
-    color:var(--paper);
-  }
-  footer .tagline{
-    font-family:'Cormorant Garamond',serif;
-    font-style:italic;
-    font-size:1rem;
-    color:var(--sage-soft);
-    margin-bottom:1.5rem;
-  }
-  footer .contact{
-    margin-top:1.6rem;
-    padding-top:1.6rem;
-    border-top:1px solid rgba(184,175,166,.2);
-    display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;
-    font-size:.82rem;
-    color:var(--sage-soft);
-  }
-  footer .contact a{
-    color:var(--sage-soft);
-    text-decoration:none;
-    transition:color .25s ease;
-    border-bottom:1px solid transparent;
-  }
-  footer .contact a:hover{
-    color:var(--paper);
-    border-bottom-color:var(--sage-soft);
-  }
-  footer .meta{
-    font-size:.72rem;
-    letter-spacing:.15em;
-    color:var(--warm-grey);
-    text-transform:uppercase;
-    margin-top:1.5rem;
   }
 
   /* ===== SUCCESS MODAL ===== */
   .success-modal[hidden]{display:none}
   .success-modal{
-    position:fixed;
-    inset:0;
+    position:fixed;inset:0;
     z-index:1000;
     display:flex;align-items:center;justify-content:center;
     padding:1.5rem;
@@ -992,32 +922,27 @@
   }
   .success-modal.active{opacity:1}
   .success-modal-backdrop{
-    position:absolute;
-    inset:0;
-    background:rgba(58,61,56,.55);
+    position:absolute;inset:0;
+    background:rgba(31,41,55,.65);
     backdrop-filter:blur(8px);
   }
   .success-modal-card{
     position:relative;
-    background:var(--paper);
+    background:var(--white);
     border-radius:18px;
     padding:3rem 2.5rem 2.5rem;
     max-width:480px;
     width:100%;
     text-align:center;
-    box-shadow:0 40px 100px rgba(58,61,56,.3);
-    border:1px solid rgba(184,175,166,.25);
+    box-shadow:0 40px 100px rgba(31,41,55,.35);
     transform:scale(.92) translateY(20px);
     transition:transform .4s cubic-bezier(.2,.9,.3,1.1);
   }
-  .success-modal.active .success-modal-card{
-    transform:scale(1) translateY(0);
-  }
+  .success-modal.active .success-modal-card{transform:scale(1) translateY(0)}
   .success-modal-close{
     position:absolute;
     top:1rem;right:1.2rem;
-    background:transparent;
-    border:none;
+    background:transparent;border:none;
     width:36px;height:36px;
     border-radius:50%;
     color:var(--warm-grey);
@@ -1027,17 +952,14 @@
     line-height:1;
     display:flex;align-items:center;justify-content:center;
   }
-  .success-modal-close:hover{
-    background:var(--cream);
-    color:var(--ink);
-  }
+  .success-modal-close:hover{background:var(--cream);color:var(--ink)}
   .success-icon{
     width:90px;height:90px;
     margin:0 auto 1.5rem;
     border-radius:50%;
-    background:linear-gradient(135deg,var(--sage-soft) 0%,var(--cream) 100%);
+    background:linear-gradient(135deg,var(--blue-soft) 0%,var(--blue-cream) 100%);
     display:flex;align-items:center;justify-content:center;
-    box-shadow:0 12px 30px rgba(143,175,154,.25);
+    box-shadow:0 12px 30px rgba(46,123,224,.25);
     animation:popIn .55s cubic-bezier(.2,.9,.3,1.3) .15s both;
   }
   @keyframes popIn{
@@ -1051,16 +973,14 @@
     stroke-dashoffset:60;
     animation:drawCheck .6s ease .55s forwards;
   }
-  @keyframes drawCheck{
-    to{stroke-dashoffset:0}
-  }
+  @keyframes drawCheck{to{stroke-dashoffset:0}}
   .success-eyebrow{
     font-size:.7rem;
-    letter-spacing:.32em;
+    letter-spacing:.28em;
     text-transform:uppercase;
-    color:var(--sage-deep);
-    margin-bottom:.8rem;
-    font-weight:500;
+    color:var(--blue-deep);
+    margin-bottom:.7rem;
+    font-weight:600;
   }
   .success-modal-card h3{
     font-family:'Cormorant Garamond',serif;
@@ -1074,35 +994,11 @@
     font-size:.95rem;
     line-height:1.6;
     color:var(--ink-soft);
-    margin-bottom:1.8rem;
+    margin-bottom:1.6rem;
   }
-  .success-modal-card strong{
-    color:var(--ink);
-    font-weight:500;
-  }
-  .success-meta{
-    background:var(--cream);
-    border-radius:10px;
-    padding:1rem 1.2rem;
-    margin-bottom:1.8rem;
-    text-align:left;
-    font-size:.82rem;
-    color:var(--ink-soft);
-    line-height:1.55;
-    border-left:3px solid var(--sage);
-  }
-  .success-meta-label{
-    font-size:.62rem;
-    letter-spacing:.22em;
-    text-transform:uppercase;
-    color:var(--warm-grey);
-    margin-bottom:.3rem;
-    font-weight:500;
-  }
+  .success-modal-card strong{color:var(--ink);font-weight:500}
   .success-actions{
-    display:flex;
-    gap:.8rem;
-    flex-direction:column;
+    display:flex;gap:.8rem;flex-direction:column;
   }
   .success-btn{
     padding:.95rem 1.4rem;
@@ -1118,89 +1014,102 @@
     align-items:center;justify-content:center;
     gap:.6rem;
     transition:all .35s ease;
-    font-weight:400;
+    font-weight:500;
   }
   .success-btn-primary{
-    background:var(--ink);
-    color:var(--paper);
+    background:linear-gradient(135deg,var(--blue) 0%,var(--blue-deep) 100%);
+    color:white;
+    box-shadow:0 12px 28px rgba(46,123,224,.22);
   }
   .success-btn-primary:hover{
-    background:var(--sage-deep);
     transform:translateY(-2px);
-    box-shadow:0 12px 30px rgba(107,139,119,.25);
+    box-shadow:0 18px 36px rgba(46,123,224,.3);
   }
   .success-btn-secondary{
     background:transparent;
     color:var(--ink);
     border:1px solid rgba(184,175,166,.5);
   }
-  .success-btn-secondary:hover{
-    background:var(--cream);
-    border-color:var(--sage);
-  }
-  @media(max-width:480px){
-    .success-modal-card{padding:2.5rem 1.6rem 1.8rem}
-    .success-modal-card h3{font-size:1.5rem}
-    .success-icon{width:75px;height:75px;margin-bottom:1.2rem}
-  }
+  .success-btn-secondary:hover{background:var(--cream);border-color:var(--blue-soft)}
 
-  /* ===== HERO STATS ===== */
-  .hero-stats{
-    display:flex;gap:2rem;
-    margin-bottom:2.5rem;
-    flex-wrap:wrap;
+  /* ===== FOOTER ===== */
+  footer{
+    padding:3.5rem 3rem 2.5rem;
+    text-align:center;
+    background:var(--ink);
+    color:var(--beige);
+    position:relative;
+    z-index:2;
   }
-  .hero-stat{
-    display:flex;align-items:center;gap:.6rem;
-    font-size:.82rem;
-    color:var(--ink-soft);
+  footer .logo-foot{
+    display:inline-flex;align-items:center;gap:.7rem;
+    margin-bottom:1rem;
   }
-  .hero-stat .stat-num{
+  footer .logo-foot .logo-mark{
+    box-shadow:0 6px 16px rgba(46,123,224,.4);
+  }
+  footer .logo-foot .logo-text{
     font-family:'Cormorant Garamond',serif;
-    font-size:1.5rem;
-    font-weight:600;
-    color:var(--sage-deep);
-    line-height:1;
+    font-size:1.4rem;
+    letter-spacing:.32em;
+    color:var(--paper);
   }
-  .hero-stat .stat-dot{
-    width:5px;height:5px;
-    border-radius:50%;
-    background:var(--sage-soft);
-    margin-left:.4rem;
+  footer .tagline{
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-size:1rem;
+    color:var(--blue-soft);
+    margin-bottom:1.8rem;
+    max-width:520px;
+    margin-left:auto;margin-right:auto;
+    line-height:1.5;
   }
-  .hero-stat:last-child .stat-dot{display:none}
+  footer .contact{
+    padding-top:1.6rem;
+    border-top:1px solid rgba(184,175,166,.15);
+    display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap;
+    font-size:.86rem;
+    color:var(--blue-soft);
+    margin-bottom:1.6rem;
+  }
+  footer .contact a{
+    color:var(--blue-soft);
+    text-decoration:none;
+    transition:color .25s ease;
+    border-bottom:1px solid transparent;
+  }
+  footer .contact a:hover{color:var(--paper);border-bottom-color:var(--blue-soft)}
+  footer .meta{
+    font-size:.72rem;
+    letter-spacing:.18em;
+    color:var(--warm-grey);
+    text-transform:uppercase;
+  }
 
   /* ===== ANIMATIONS ===== */
   @keyframes fadeUp{
-    from{opacity:0;transform:translateY(30px)}
+    from{opacity:0;transform:translateY(28px)}
     to{opacity:1;transform:translateY(0)}
   }
-  /* Hero fade-up (CSS — fires on load) */
-  .fade-up{
-    animation:fadeUp .9s ease forwards;
-    opacity:0;
-  }
+  .fade-up{animation:fadeUp .9s ease forwards;opacity:0}
   .delay-1{animation-delay:.15s}
   .delay-2{animation-delay:.3s}
   .delay-3{animation-delay:.45s}
   .delay-4{animation-delay:.6s}
 
-  /* Scroll-reveal (Intersection Observer) */
   [data-reveal]{
     opacity:0;
     transform:translateY(28px);
-    transition:opacity .7s ease, transform .7s ease;
+    transition:opacity .7s ease,transform .7s ease;
   }
-  [data-reveal].revealed{
-    opacity:1;
-    transform:translateY(0);
-  }
+  [data-reveal].revealed{opacity:1;transform:translateY(0)}
   [data-reveal][data-delay="1"]{transition-delay:.1s}
   [data-reveal][data-delay="2"]{transition-delay:.2s}
   [data-reveal][data-delay="3"]{transition-delay:.35s}
+  [data-reveal][data-delay="4"]{transition-delay:.5s}
 
   /* ===== RESPONSIVE ===== */
-  @media(max-width:920px){
+  @media(max-width:960px){
     nav{padding:1rem 1.5rem}
     .hero{
       grid-template-columns:1fr;
@@ -1208,342 +1117,361 @@
       gap:2.5rem;
       min-height:auto;
     }
-    .hero-visual{
-      order:-1;
-      max-width:380px;
-      max-height:520px;
-    }
-    .hero h1{font-size:clamp(2.4rem,8vw,3.6rem)}
-    .hero-meta{flex-wrap:wrap;gap:1.5rem}
-    .hero-stats{gap:1.2rem;font-size:.78rem}
-    .hero-stat .stat-num{font-size:1.3rem}
-    .lineup{padding:4rem 1.5rem}
-    .lineup-header{
-      grid-template-columns:1fr;
-      gap:1.5rem;
-    }
-    .session-grid{grid-template-columns:1fr;gap:1.5rem}
-    .session-card{padding:2rem 1.6rem}
-    .session-card h3{min-height:auto;font-size:1.4rem}
-    .session-card .doctor-name{font-size:.88rem;line-height:1.35}
-    .why{padding:4rem 1.5rem}
-    .why-grid{grid-template-columns:1fr;gap:3rem}
-    .why-visual{aspect-ratio:4/5;max-height:460px}
-    .speakers{padding:4rem 1.5rem}
-    .speakers-header{margin-bottom:2.5rem}
-    .doctor-grid{grid-template-columns:1fr;gap:1.5rem;max-width:420px}
-    .doctor-card{padding:2rem 1.6rem}
-    .doctor-card h3{font-size:1.25rem}
-    .cta-section{padding:4rem 1.5rem}
+    .hero-visual{order:-1;max-width:380px;max-height:520px}
+    .hero h1{font-size:clamp(2.2rem,7vw,3.4rem)}
+    .segments-grid{grid-template-columns:1fr}
+    .materi-header{grid-template-columns:1fr;gap:1.5rem}
+    .materi-grid{grid-template-columns:1fr;gap:1rem}
+    .segments,.materi,.mitos,.rundown,.speaker,.cta-section,.about,.disclaimer{padding:4rem 1.5rem}
+    .disclaimer-card{grid-template-columns:1fr;text-align:center;padding:2rem 1.5rem}
+    .disclaimer-icon{margin:0 auto}
     .form-card{padding:2rem 1.5rem}
-    .about{padding:1rem 1.5rem 4rem}
-    .nav-cta{padding:.6rem 1.2rem;font-size:.7rem}
-    footer .contact{flex-direction:column;gap:.6rem}
+    .timeline{padding-left:2rem}
+    .timeline-item{grid-template-columns:1fr;gap:.4rem}
+    .timeline-item::before{left:-2rem;top:.4rem}
+    .timeline-time{font-size:.85rem;letter-spacing:.15em;text-transform:uppercase;color:var(--blue)}
+    footer{padding:2.5rem 1.5rem 2rem}
+    footer .contact{flex-direction:column;gap:.8rem}
+    .mitos-card{grid-template-columns:1fr;gap:.7rem}
   }
-
-  /* Smaller mobile (< 480px) */
   @media(max-width:480px){
-    nav{padding:1rem 1rem}
-    .logo{font-size:1.3rem;letter-spacing:.28em}
-    .nav-cta{padding:.55rem 1rem;font-size:.65rem;letter-spacing:.15em}
+    .logo{font-size:1.25rem;letter-spacing:.24em}
+    .logo-mark{width:30px;height:30px;font-size:.8rem}
+    .nav-cta{padding:.65rem 1.15rem;font-size:.66rem;letter-spacing:.16em}
     .hero{padding:6rem 1.2rem 2.5rem}
-    .hero h1{font-size:2.2rem;line-height:1.05}
-    .hero-eyebrow{font-size:.65rem;margin-bottom:1.5rem}
-    .hero-sub{font-size:1rem}
+    .hero h1{font-size:2rem;line-height:1.1}
+    .hero-badge{font-size:.62rem;letter-spacing:.2em}
     .hero-meta{gap:1rem}
-    .meta-item .value{font-size:1rem}
-    .hero-stats{gap:.9rem;flex-wrap:wrap}
-    .hero-stat{font-size:.74rem}
-    .hero-stat .stat-num{font-size:1.15rem}
-    .hero-poster-badge{font-size:.6rem;padding:.45rem .8rem;top:1rem;left:1rem}
-    .btn-primary{padding:1rem 1.8rem;font-size:.74rem;letter-spacing:.16em}
-    .divider{padding:3rem 1rem 2rem}
-    .divider .ornament{font-size:.92rem}
-    .section-eyebrow{font-size:.65rem;letter-spacing:.28em}
-    .about h2,.lineup-header h2,.why-text h2,.speakers-header h2,.cta-section h2{
-      font-size:1.85rem;line-height:1.2
-    }
-    .lineup,.why,.speakers,.cta-section{padding:3rem 1.2rem}
-    .session-card{padding:1.8rem 1.4rem}
-    .session-card h3{font-size:1.25rem}
-    .doctor-card{padding:1.8rem 1.4rem}
-    .doctor-avatar{width:120px;height:120px}
+    .meta-text .value{font-size:.95rem}
+    .segments,.materi,.mitos,.rundown,.speaker,.cta-section,.about,.disclaimer{padding:3rem 1.2rem}
+    .segment-card,.materi-item{padding:1.6rem 1.4rem}
+    .segment-card{gap:1rem}
+    .segment-icon{width:44px;height:44px;font-size:1.2rem}
+    .about h2,.segments-header h2,.materi-header h2,.mitos-header h2,.rundown-header h2,.speaker-inner h2,.cta-header h2{font-size:1.75rem;line-height:1.2}
     .form-card{padding:1.6rem 1.2rem}
     .form-row label{font-size:.66rem}
-    .session-option{padding:.85rem .9rem}
-    .session-option .opt-title{font-size:.85rem}
-    footer{padding:2.5rem 1.2rem}
+    .btn-primary,.form-submit{padding:1rem 1.6rem;font-size:.74rem;letter-spacing:.16em}
+    .divider{padding:3rem 1rem 2rem}
+    .divider .ornament{font-size:.92rem}
+    .section-eyebrow{font-size:.66rem;letter-spacing:.28em}
+    .speaker-avatar-tba{width:120px;height:120px}
+    .speaker-avatar-tba svg{width:52px;height:52px}
+    .success-modal-card{padding:2.5rem 1.6rem 1.8rem}
+    .success-modal-card h3{font-size:1.5rem}
+    .success-icon{width:75px;height:75px;margin-bottom:1.2rem}
   }
 </style>
 </head>
 <body>
 
 <nav>
-  <div class="logo">HANDIA</div>
-  <a href="#daftar" class="nav-cta">Daftar Sekarang</a>
+  <div class="logo">
+    <span class="logo-mark">H</span>
+    <div class="logo-text">
+      <span>HANDIA</span>
+      <span class="logo-sub">Handy Healthcare</span>
+    </div>
+  </div>
+  <a href="#daftar" class="nav-cta">Daftar Gratis</a>
 </nav>
 
 <!-- ===== HERO ===== -->
 <section class="hero">
   <div class="hero-text">
-    <div class="hero-eyebrow fade-up">HANDIA × Gayatri</div>
-    <h1 class="fade-up delay-1">Her Prime: <span class="accent serif">Menopause<br>Glow-Up</span> Series.</h1>
+    <div class="hero-badge fade-up">Webinar HER PRIME · Live via Zoom</div>
+    <h1 class="fade-up delay-1">
+      Tidur Susah, Mood Berantakan, Kolesterol Naik:
+      <span class="accent">Apakah ini perimenopause?</span>
+    </h1>
     <p class="hero-sub fade-up delay-2">
-      Tiga sesi webinar untuk perempuan usia 35–60 tahun. Edukasi berbasis sains tentang perimenopause & menopause — dibawakan langsung oleh dokter, dalam bahasa yang hangat dan tidak menghakimi.
+      Kenali tanda-tanda perimenopause yang sering terlewat dan langkah tepat untuk menjaga kesehatan tubuh & kualitas hidup — dari dokter spesialis obgyn, dalam bahasa yang mudah dipahami.
     </p>
 
     <div class="hero-meta fade-up delay-3">
       <div class="meta-item">
-        <div class="label">Format</div>
-        <div class="value serif">Webinar Online</div>
+        <div class="meta-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="meta-text">
+          <div class="label">Durasi</div>
+          <div class="value">75–90 Menit</div>
+        </div>
       </div>
       <div class="meta-item">
-        <div class="label">Durasi</div>
-        <div class="value serif">60 Menit</div>
+        <div class="meta-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="6" width="14" height="12" rx="2"/><polygon points="22 8 16 12 22 16 22 8"/></svg>
+        </div>
+        <div class="meta-text">
+          <div class="label">Platform</div>
+          <div class="value">Zoom Online</div>
+        </div>
       </div>
       <div class="meta-item">
-        <div class="label">Investasi</div>
-        <div class="value serif italic">Gratis</div>
-      </div>
-    </div>
-
-    <div class="hero-stats fade-up delay-4">
-      <div class="hero-stat">
-        <span class="stat-num">3</span>
-        <span>Dokter Spesialis</span>
-        <span class="stat-dot"></span>
-      </div>
-      <div class="hero-stat">
-        <span class="stat-num">3</span>
-        <span>Sesi Webinar</span>
-        <span class="stat-dot"></span>
-      </div>
-      <div class="hero-stat">
-        <span class="stat-num">100</span>
-        <span>Peserta</span>
+        <div class="meta-icon">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <div class="meta-text">
+          <div class="label">Investasi</div>
+          <div class="value serif italic">Gratis</div>
+        </div>
       </div>
     </div>
 
     <a href="#daftar" class="btn-primary fade-up delay-4">
-      Amankan Tempat
+      Amankan Kursi Saya
       <span class="arrow">→</span>
     </a>
   </div>
 
   <div class="hero-visual fade-up delay-2">
-    <div class="hero-poster-badge">Sesi 01 · Bulan Depan</div>
-    <img src="image/menopause-mastery-banner.png" alt="HANDIA × Gayatri Her Prime — Tiga sesi webinar dengan dokter spesialis">
+    <img src="image/handia-her-prime-flyer.png" alt="HANDIA HER PRIME — Tidur Susah, Mood Berantakan, Kolesterol Naik" onerror="this.style.display='none';this.parentElement.querySelector('.hero-visual-fallback').style.display='flex'">
+    <div class="hero-visual-fallback" style="display:none">
+      <div>
+        <div class="placeholder-mark">— HER PRIME —</div>
+        <h3>Poster flyer akan tampil di sini</h3>
+        <p style="margin-top:1rem;font-size:.85rem;color:var(--warm-grey)">Simpan flyer sebagai <code>image/handia-her-prime-flyer.png</code></p>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- ===== DIVIDER ===== -->
 <div class="divider" data-reveal>
-  <div class="ornament">— Tiga Sesi, Satu Perjalanan —</div>
+  <div class="ornament">— Bukan lebay. Ini nyata dan bisa dijelaskan. —</div>
 </div>
 
 <!-- ===== ABOUT ===== -->
 <section class="about" data-reveal>
-  <div class="section-eyebrow">Tentang Series</div>
-  <h2>Perubahan tubuh di fase ini bukan akhir<br><span class="serif italic">— ini babak baru.</span></h2>
+  <div class="section-eyebrow">Tentang Webinar</div>
+  <h2>Perubahan tubuh di usia 40+ punya penjelasan medis<br><span class="serif italic">— dan solusinya nyata.</span></h2>
   <p>
-    Banyak perempuan menghadapi perimenopause dan menopause tanpa informasi yang utuh. Hot flash, brain fog, mood yang naik-turun, hingga perubahan intim — sering dianggap "harus diterima saja." Padahal, ada banyak yang bisa dilakukan.<br><br>
-    <em class="serif">Her Prime</em> hadir sebagai ruang terbuka, hangat, dan berbasis bukti — tempat kamu bisa bertanya tanpa takut dihakimi, dan pulang dengan rasa percaya diri.
+    Banyak perempuan 40+ merasakan perubahan tubuh yang tidak selalu langsung dikenali sebagai perimenopause. Hot flashes, gangguan tidur, mood/anxiety, palpitasi, brain fog, nyeri sendi, kolesterol naik — hingga keluhan area intim. Semua ini <em class="serif">bisa dijelaskan</em>.
+    <br><br>
+    HER PRIME dirancang sebagai ruang edukasi yang <strong>aman, empatik, dan berbasis bukti</strong> — agar kamu paham apa yang sedang terjadi dan tahu kapan perlu evaluasi medis. Untuk kamu, atau untuk orang terdekat yang ingin mendukung.
   </p>
 </section>
 
-<!-- ===== LINEUP ===== -->
-<section class="lineup">
-  <div class="lineup-header">
+<!-- ===== SEGMENTASI PESERTA ===== -->
+<section class="segments">
+  <div class="segments-header" data-reveal>
+    <div class="section-eyebrow">Untuk Siapa</div>
+    <h2>Cocok untuk kamu yang…</h2>
+    <p>Setiap fase punya kebutuhan berbeda. Webinar ini merangkum topik untuk empat kelompok peserta.</p>
+  </div>
+
+  <div class="segments-grid">
+    <article class="segment-card" data-reveal data-delay="1">
+      <div class="segment-icon">i</div>
+      <div class="segment-content">
+        <h3>Perimenopause Awal</h3>
+        <div class="segment-age">38 – 45 tahun</div>
+        <p>Validasi gejala yang sering diragukan, pemahaman dasar perubahan hormon, dan <strong>red flags</strong> yang tidak boleh diabaikan.</p>
+      </div>
+    </article>
+
+    <article class="segment-card" data-reveal data-delay="2">
+      <div class="segment-icon">ii</div>
+      <div class="segment-content">
+        <h3>Perimenopause Aktif</h3>
+        <div class="segment-age">45 – 52 tahun</div>
+        <p>Solusi praktis untuk tidur, hot flashes, mood/anxiety, nyeri sendi, perubahan metabolik, dan pilihan terapi yang tersedia.</p>
+      </div>
+    </article>
+
+    <article class="segment-card" data-reveal data-delay="3">
+      <div class="segment-icon">iii</div>
+      <div class="segment-content">
+        <h3>Menopause & Post-Menopause</h3>
+        <div class="segment-age">50+ tahun</div>
+        <p>Pencegahan jangka panjang untuk tulang, jantung, kulit, area intim, dan kualitas hidup setelah menstruasi berhenti.</p>
+      </div>
+    </article>
+
+    <article class="segment-card" data-reveal data-delay="4">
+      <div class="segment-icon">iv</div>
+      <div class="segment-content">
+        <h3>Support System</h3>
+        <div class="segment-age">Keluarga & Pasangan</div>
+        <p>Memahami bahwa keluhan bukan sekadar "lebay" atau overthinking — dan tahu cara mendukung dengan tepat.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== MATERI YANG DIBAHAS ===== -->
+<section class="materi">
+  <div class="materi-header" data-reveal>
     <div>
-      <div class="section-eyebrow">Lineup Sesi</div>
-      <h2>Tiga sesi yang berdiri sendiri,<br><span class="serif italic">namun saling melengkapi.</span></h2>
+      <div class="section-eyebrow">Yang Akan Dibahas</div>
+      <h2>Enam topik utama<br><span class="serif italic">yang perlu kamu pahami.</span></h2>
     </div>
-    <p>Ikuti satu sesi sesuai topik yang paling relevan untuk kamu, atau seluruh series untuk gambaran utuh perjalanan menopause yang sehat dan terinformasi.</p>
+    <p>Kurikulum berbasis <em class="serif">evidence-based medicine</em> yang dirancang untuk pemahaman awam — tanpa jargon medis yang membingungkan.</p>
   </div>
 
-  <div class="session-grid">
-    <!-- Session 1 -->
-    <article class="session-card featured" data-reveal data-delay="1">
-      <svg class="wave-bg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,100 Q50,70 100,100 T200,90" stroke="#CBBA55" stroke-width="1.5" fill="none" opacity=".5"/>
-        <path d="M0,120 Q50,95 100,120 T200,115" stroke="#8FAF9A" stroke-width="1.5" fill="none" opacity=".5"/>
-        <path d="M0,140 Q50,120 100,140 T200,135" stroke="#B8AFA6" stroke-width="1.5" fill="none" opacity=".5"/>
-      </svg>
-      <div class="session-num">— Sesi 01 · Menopause Mastery</div>
-      <h3>Gejala, Pengobatan & Self-Care Rituals Pada Menopause</h3>
-      <div class="date">Bulan Depan · 19.30 WIB</div>
-      <ul>
-        <li>Apa yang sebenarnya terjadi di tubuh — penjelasan berbasis sains</li>
-        <li>Gejala umum yang sering diabaikan: hot flash, brain fog, gangguan tidur</li>
-        <li>Pendekatan medis dan non-medis yang aman</li>
-        <li>Self-care rituals harian untuk kualitas hidup lebih baik</li>
-        <li>Kapan saatnya konsultasi ke dokter</li>
-      </ul>
-      <div class="doctor-attr">
-        <div class="doctor-mini"><img src="image/dr-nuri.png" alt=""></div>
-        <div class="doctor-info">
-          <div class="doctor-label">Pembicara</div>
-          <div class="doctor-name">dr. Nuri Dyah Anggraini, SpOG</div>
-        </div>
-      </div>
+  <div class="materi-grid">
+    <article class="materi-item" data-reveal data-delay="1">
+      <div class="materi-num">— 01 · Pembuka</div>
+      <h4>Mengapa Tubuh Berubah</h4>
+      <p>Perempuan 40+ bisa merasa "tidak seperti biasa" meski hasil pemeriksaan rutin tampak normal. Kenapa?</p>
     </article>
 
-    <!-- Session 2 -->
-    <article class="session-card" data-reveal data-delay="2">
-      <svg class="wave-bg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,100 Q50,70 100,100 T200,90" stroke="#8FAF9A" stroke-width="1.5" fill="none" opacity=".4"/>
-        <path d="M0,120 Q50,95 100,120 T200,115" stroke="#B8AFA6" stroke-width="1.5" fill="none" opacity=".4"/>
-      </svg>
-      <div class="session-num">— Sesi 02 · Intimate Comfort</div>
-      <h3>Solusi Miss V Kering & Bebas Nyeri di Perimenopause</h3>
-      <div class="date">Akan Diumumkan</div>
-      <ul>
-        <li>Mengapa area intim berubah — penjelasan hormonal yang jujur</li>
-        <li>Gejala yang normal vs yang perlu penanganan medis</li>
-        <li>Solusi topikal & sistemik yang aman dan terbukti efektif</li>
-        <li>Meluruskan mitos kesehatan intim wanita usia matang</li>
-        <li>Tips kenyamanan dan kualitas hidup intim sehari-hari</li>
-      </ul>
-      <div class="doctor-attr">
-        <div class="doctor-mini"><img src="image/dr-yudhis.png" alt=""></div>
-        <div class="doctor-info">
-          <div class="doctor-label">Pembicara</div>
-          <div class="doctor-name">dr. Yudhistya Ngudi Insan Ksyatria, Sp.OG</div>
-        </div>
-      </div>
+    <article class="materi-item" data-reveal data-delay="1">
+      <div class="materi-num">— 02 · Kenali Fase</div>
+      <h4>Perimenopause vs Menopause</h4>
+      <p>Perubahan siklus, tanda yang sering membingungkan, dan bagaimana membedakan tahapannya.</p>
     </article>
 
-    <!-- Session 3 -->
-    <article class="session-card" data-reveal data-delay="3">
-      <svg class="wave-bg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,100 Q50,70 100,100 T200,90" stroke="#8FAF9A" stroke-width="1.5" fill="none" opacity=".4"/>
-        <path d="M0,120 Q50,95 100,120 T200,115" stroke="#CBBA55" stroke-width="1.5" fill="none" opacity=".4"/>
-      </svg>
-      <div class="session-num">— Sesi 03 · Hormone Harmony</div>
-      <h3>HRT sebagai Solusi Cerdas & Aman pada Perimenopause</h3>
-      <div class="date">Akan Diumumkan</div>
-      <ul>
-        <li>Apa itu Hormone Replacement Therapy dan cara kerjanya</li>
-        <li>Siapa yang cocok dan siapa yang perlu berhati-hati</li>
-        <li>Meluruskan mitos: apakah HRT menyebabkan kanker?</li>
-        <li>Jenis-jenis HRT dan cara pemberian yang tersedia</li>
-        <li>Proses konsultasi, resep, dan monitoring yang benar</li>
-      </ul>
-      <div class="doctor-attr">
-        <div class="doctor-mini"><img src="image/dr-rere.png" alt=""></div>
-        <div class="doctor-info">
-          <div class="doctor-label">Pembicara</div>
-          <div class="doctor-name">dr. Syah Rini Wisdayanti, SpOG</div>
-        </div>
-      </div>
+    <article class="materi-item" data-reveal data-delay="2">
+      <div class="materi-num">— 03 · Gejala Utama</div>
+      <h4>Dari Tidur ke Metabolik</h4>
+      <p>Insomnia, hot flashes, palpitasi, mood/anxiety, brain fog, nyeri sendi, kulit, area intim/urinary.</p>
+    </article>
+
+    <article class="materi-item" data-reveal data-delay="2">
+      <div class="materi-num">— 04 · Mitos vs Fakta</div>
+      <h4>Luruskan Kesalahpahaman</h4>
+      <p>HRT/MHT dan kanker, suplemen, anxiety, brain fog, vagina kering, dan keluhan berkemih.</p>
+    </article>
+
+    <article class="materi-item" data-reveal data-delay="3">
+      <div class="materi-num">— 05 · Pilihan Solusi</div>
+      <h4>Lifestyle Hingga Terapi</h4>
+      <p>Nutrisi, olahraga/resistance training, HRT/MHT, non-HRT, terapi lokal, dan kapan konsultasi dokter.</p>
+    </article>
+
+    <article class="materi-item" data-reveal data-delay="3">
+      <div class="materi-num">— 06 · Action Plan</div>
+      <h4>Langkah Setelah Webinar</h4>
+      <p>Checklist keluhan, pemeriksaan yang bisa dipertimbangkan, red flags, dan next step yang jelas.</p>
     </article>
   </div>
 </section>
 
-<!-- ===== WHY JOIN ===== -->
-<section class="why">
-  <div class="why-grid">
-    <div class="why-text">
-      <div class="section-eyebrow">Mengapa Bergabung</div>
-      <h2>Bukan seminar medis yang kaku — <span class="serif italic">ini ngobrol dengan dokter teman.</span></h2>
-
-      <ul class="feature-list">
-        <li>
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 21l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.18L12 21z" stroke-linejoin="round"/></svg>
-          </div>
-          <div class="feature-content">
-            <h4>Hangat & Tidak Menghakimi</h4>
-            <p>Kamu mungkin baru pertama kali bicara tentang topik ini. Itu wajar — dan kami siap mendengarkan tanpa penilaian.</p>
-          </div>
-        </li>
-        <li>
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM10 17l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-          </div>
-          <div class="feature-content">
-            <h4>Berbasis Bukti Ilmiah</h4>
-            <p>Disampaikan oleh dokter spesialis dalam bahasa sehari-hari yang mudah dipahami — tanpa jargon membingungkan.</p>
-          </div>
-        </li>
-        <li>
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
-          </div>
-          <div class="feature-content">
-            <h4>Sesi Tanya Jawab Terbuka</h4>
-            <p>Pertanyaan paling pribadi sekalipun — semua boleh ditanyakan. Moderator membantu memvalidasi setiap pertanyaan.</p>
-          </div>
-        </li>
-        <li>
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 2L4 7v6c0 5.5 3.5 10.74 8 12 4.5-1.26 8-6.5 8-12V7l-8-5z" stroke-linejoin="round"/></svg>
-          </div>
-          <div class="feature-content">
-            <h4>Empowering, Bukan Menakuti</h4>
-            <p>Kamu pulang dengan informasi utuh dan rasa percaya diri — bukan kecemasan baru.</p>
-          </div>
-        </li>
-      </ul>
+<!-- ===== MITOS VS FAKTA ===== -->
+<section class="mitos">
+  <div class="mitos-container">
+    <div class="mitos-header" data-reveal>
+      <div class="section-eyebrow">Mitos vs Fakta</div>
+      <h2>Yang sering keliru — dan akan diluruskan.</h2>
+      <p>Kutipan mitos populer yang akan dibongkar bersama dokter di sesi khusus <em class="serif">Myth vs Fact</em>.</p>
     </div>
 
-    <div class="why-visual">
-      <img src="image/menopause-mastery-banner.png" alt="Tiga dokter spesialis Her Prime Series" loading="lazy">
-      <div class="quote-card">
-        "Akhirnya ada tempat untuk bertanya tanpa harus merasa malu."
-        <cite>— Yang sering kami dengar</cite>
+    <div class="mitos-list">
+      <div class="mitos-card" data-reveal>
+        <div class="mitos-badge">Mitos</div>
+        <div class="mitos-text">"HRT/MHT pasti menyebabkan kanker — jadi lebih aman dihindari saja."</div>
+      </div>
+      <div class="mitos-card" data-reveal>
+        <div class="mitos-badge">Mitos</div>
+        <div class="mitos-text">"Suplemen alami selalu aman untuk semua orang, tidak perlu resep."</div>
+      </div>
+      <div class="mitos-card" data-reveal>
+        <div class="mitos-badge">Mitos</div>
+        <div class="mitos-text">"Brain fog dan anxiety pas menopause itu hanya sugesti — bisa diatasi sendiri."</div>
+      </div>
+      <div class="mitos-card" data-reveal>
+        <div class="mitos-badge">Mitos</div>
+        <div class="mitos-text">"Vagina kering dan sering pipis di usia matang adalah hal wajar yang tidak bisa diobati."</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== SPEAKERS ===== -->
-<section class="speakers">
-  <div class="speakers-header">
-    <div class="section-eyebrow">Tiga Dokter Spesialis</div>
-    <h2>Dibawakan oleh dokter yang ngerti,<br><span class="serif italic">dalam bahasa yang manusiawi.</span></h2>
-    <p>Setiap sesi dipimpin satu dokter spesialis dengan fokus topik yang mendalam — bukan presentasi kaku, tapi obrolan hangat yang berbasis bukti.</p>
+<!-- ===== RUNDOWN ===== -->
+<section class="rundown">
+  <div class="rundown-header" data-reveal>
+    <div class="section-eyebrow">Rundown Acara</div>
+    <h2>75–90 menit,<br><span class="serif italic">terstruktur & interaktif.</span></h2>
+    <p>Format webinar dengan sesi Q&amp;A anonim — pertanyaan paling personal pun tetap aman.</p>
   </div>
 
-  <div class="doctor-grid">
-    <article class="doctor-card" data-reveal data-delay="1">
-      <div class="doctor-avatar">
-        <img src="image/dr-nuri.png" alt="dr. Nuri Dyah Anggraini, SpOG" onerror="this.style.display='none';this.parentElement.dataset.fallback='N'">
+  <div class="timeline">
+    <div class="timeline-item" data-reveal>
+      <div class="timeline-time">0 – 5 min</div>
+      <div class="timeline-content">
+        <h4>Opening & Disclaimer Edukasi</h4>
+        <p>Aturan webinar, konteks edukasi umum, dan pengenalan moderator + dokter.</p>
       </div>
-      <div class="session-badge">Sesi 01 · Menopause Mastery</div>
-      <h3>dr. Nuri Dyah Anggraini</h3>
-      <div class="specialist">SpOG · Spesialis Kandungan</div>
-      <p class="topic">Gejala, pengobatan & self-care rituals pada menopause — apa yang sebenarnya terjadi di tubuh dan apa yang bisa dilakukan.</p>
-    </article>
+    </div>
+    <div class="timeline-item" data-reveal>
+      <div class="timeline-time">5 – 10 min</div>
+      <div class="timeline-content">
+        <h4>Polling Keluhan Peserta</h4>
+        <p>Kamu langsung ikut — polling anonim untuk memetakan keluhan yang paling relevan.</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-reveal>
+      <div class="timeline-time">10 – 45 min</div>
+      <div class="timeline-content">
+        <h4>Materi Utama oleh Dokter Obgyn</h4>
+        <p>Pemaparan enam topik inti — dari kenali fase sampai action plan.</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-reveal>
+      <div class="timeline-time">45 – 55 min</div>
+      <div class="timeline-content">
+        <h4>Myth vs Fact</h4>
+        <p>Sesi seru: dokter bongkar 4–5 mitos prioritas bersama moderator.</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-reveal>
+      <div class="timeline-time">55 – 80 min</div>
+      <div class="timeline-content">
+        <h4>Q&amp;A Anonim</h4>
+        <p>Pertanyaan kamu dibacakan tanpa identitas. Dokter menjawab dalam koridor edukasi.</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-reveal>
+      <div class="timeline-time">80 – 90 min</div>
+      <div class="timeline-content">
+        <h4>Closing & Next Step</h4>
+        <p>Recap, action plan singkat, dan informasi program lanjutan dari HANDIA.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <article class="doctor-card" data-reveal data-delay="2">
-      <div class="doctor-avatar">
-        <img src="image/dr-yudhis.png" alt="dr. Yudhistya Ngudi Insan Ksyatria, Sp.OG, Subsp.Urogin-RE" onerror="this.style.display='none';this.parentElement.dataset.fallback='Y'">
-      </div>
-      <div class="session-badge">Sesi 02 · Intimate Comfort</div>
-      <h3>dr. Yudhistya Ngudi Insan Ksyatria</h3>
-      <div class="specialist">Sp.OG, Subsp.Urogin-RE</div>
-      <p class="topic">Solusi Miss V kering & bebas nyeri di perimenopause — kesehatan intim yang sering tidak dibicarakan terbuka.</p>
-    </article>
+<!-- ===== SPEAKER (TBA) ===== -->
+<section class="speaker">
+  <div class="speaker-inner" data-reveal>
+    <div class="speaker-avatar-tba">
+      <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+    </div>
+    <div class="speaker-badge">Narasumber</div>
+    <h2>Dokter Spesialis Obgyn</h2>
+    <div class="speaker-role">Akan Segera Diumumkan</div>
+    <p>
+      Materi utama disampaikan langsung oleh dokter spesialis Kandungan &amp; Kebidanan yang berpengalaman menangani perempuan di fase perimenopause dan menopause.
+    </p>
+    <div class="speaker-note">Nama, foto, & profil lengkap dokter akan diumumkan menjelang acara</div>
+  </div>
+</section>
 
-    <article class="doctor-card" data-reveal data-delay="3">
-      <div class="doctor-avatar">
-        <img src="image/dr-rere.png" alt="dr. Syah Rini Wisdayanti, SpOG" onerror="this.style.display='none';this.parentElement.dataset.fallback='R'">
-      </div>
-      <div class="session-badge">Sesi 03 · Hormone Harmony</div>
-      <h3>dr. Syah Rini Wisdayanti</h3>
-      <div class="specialist">SpOG · Spesialis Kandungan</div>
-      <p class="topic">HRT sebagai solusi cerdas & aman pada perimenopause — meluruskan mitos & memahami pilihan yang ada.</p>
-    </article>
+<!-- ===== DISCLAIMER ===== -->
+<section class="disclaimer" data-reveal>
+  <div class="disclaimer-card">
+    <div class="disclaimer-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 7 9 18l-5-5"/>
+      </svg>
+    </div>
+    <div class="disclaimer-content">
+      <h4>Ini edukasi umum — bukan diagnosis atau konsultasi personal.</h4>
+      <p>
+        Webinar ini tidak menggantikan pemeriksaan dokter, bukan konsultasi medis individual, dan <strong>bukan endorsement produk apapun</strong>. Untuk keluhan yang membutuhkan pemeriksaan langsung, kamu tetap perlu berkonsultasi ke fasilitas kesehatan terdekat.
+      </p>
+    </div>
   </div>
 </section>
 
 <!-- ===== CTA REGISTRATION ===== -->
 <section class="cta-section" id="daftar">
   <div class="cta-container">
-    <div class="section-eyebrow">Pendaftaran Webinar</div>
-    <h2>Amankan tempat kamu, <span class="serif italic">gratis.</span></h2>
-    <p>Kapasitas terbatas 100 peserta per sesi. Link Zoom akan dikirim H-1 ke email & WhatsApp yang kamu daftarkan.</p>
+    <div class="cta-header" data-reveal>
+      <div class="section-eyebrow">Pendaftaran</div>
+      <h2>Amankan kursi kamu, <span class="serif italic">gratis.</span></h2>
+      <p>Kuota terbatas. Link Zoom akan dikirim H-1 ke email &amp; WhatsApp yang kamu daftarkan.</p>
+    </div>
 
     <form class="form-card" onsubmit="handleSubmit(event)">
       <div class="form-row">
@@ -1564,61 +1492,34 @@
         <label>Rentang Usia</label>
         <select name="usia" required>
           <option value="">Pilih rentang usia</option>
-          <option>35–40 tahun</option>
-          <option>41–45 tahun</option>
-          <option>46–50 tahun</option>
-          <option>51–55 tahun</option>
-          <option>56–60 tahun</option>
+          <option>Di bawah 38 tahun</option>
+          <option>38–45 tahun (Perimenopause awal)</option>
+          <option>45–52 tahun (Perimenopause aktif)</option>
+          <option>52+ tahun (Menopause / post-menopause)</option>
+          <option>Support system (keluarga / pasangan)</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label>Sumber Info</label>
+        <select name="sumber">
+          <option value="">Dari mana kamu tahu webinar ini? (opsional)</option>
+          <option>Instagram</option>
+          <option>WhatsApp / grup keluarga</option>
+          <option>Referral teman</option>
+          <option>Google Search</option>
+          <option>Email / newsletter HANDIA</option>
           <option>Lainnya</option>
         </select>
       </div>
       <div class="form-row">
-        <label>Sesi yang Ingin Diikuti</label>
-        <div class="session-options">
-          <label class="session-option recommended">
-            <input type="checkbox" name="sesi" value="Semua sesi">
-            <div class="opt-text">
-              <div class="opt-title">Semua sesi (3 webinar)</div>
-              <div class="opt-meta">Gambaran utuh — gejala, intim, & HRT</div>
-            </div>
-          </label>
-          <label class="session-option">
-            <input type="checkbox" name="sesi" value="Sesi 1 - Menopause Mastery">
-            <div class="opt-text">
-              <div class="opt-title">Sesi 1 — Menopause Mastery</div>
-              <div class="opt-meta">dr. Nuri · Gejala, pengobatan & self-care</div>
-            </div>
-          </label>
-          <label class="session-option">
-            <input type="checkbox" name="sesi" value="Sesi 2 - Intimate Comfort">
-            <div class="opt-text">
-              <div class="opt-title">Sesi 2 — Intimate Comfort</div>
-              <div class="opt-meta">dr. Yudhistya · Solusi Miss V kering & nyeri</div>
-            </div>
-          </label>
-          <label class="session-option">
-            <input type="checkbox" name="sesi" value="Sesi 3 - Hormone Harmony">
-            <div class="opt-text">
-              <div class="opt-title">Sesi 3 — Hormone Harmony</div>
-              <div class="opt-meta">dr. Syah Rini · HRT — solusi cerdas & aman</div>
-            </div>
-          </label>
-        </div>
-      </div>
-      <div class="form-row">
-        <label>Ada gejala atau topik yang ingin kamu tanyakan ke dokter?</label>
-        <span class="form-label-hint">Opsional — jawaban kamu bantu dokter siapkan materi yang paling relevan</span>
-        <textarea name="pertanyaan" placeholder="cth: Saya sering susah tidur dan mood swing sejak usia 45 — apakah ini normal? Atau saya ingin tahu lebih soal HRT..."></textarea>
+        <label>Pertanyaan Anonim untuk Dokter</label>
+        <span class="form-label-hint">Opsional — pertanyaan kamu akan disaring & dibacakan anonim saat sesi Q&amp;A</span>
+        <textarea name="pertanyaan" placeholder="cth: Saya sering hot flash & susah tidur sejak 46 tahun. Apakah HRT aman untuk saya yang punya riwayat hipertensi?"></textarea>
       </div>
       <button type="submit" class="form-submit">Konfirmasi Pendaftaran →</button>
-      <p class="form-note">Data kamu hanya digunakan untuk keperluan webinar. Kami menjaga kerahasiaannya.</p>
+      <p class="form-note">Data kamu hanya digunakan untuk keperluan webinar ini. Kami menjaga kerahasiaannya.</p>
     </form>
   </div>
-
-  <svg class="cta-wave" viewBox="0 0 1440 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-    <path d="M0,100 Q360,40 720,100 T1440,90 L1440,200 L0,200 Z" fill="#8FAF9A" opacity=".25"/>
-    <path d="M0,130 Q360,80 720,130 T1440,120 L1440,200 L0,200 Z" fill="#6B8B77" opacity=".2"/>
-  </svg>
 </section>
 
 <!-- ===== SUCCESS MODAL ===== -->
@@ -1628,16 +1529,12 @@
     <button class="success-modal-close" onclick="closeSuccessModal()" aria-label="Tutup">×</button>
     <div class="success-icon">
       <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-        <path d="M16 31 L26 41 L45 21" fill="none" stroke="#6B8B77" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M16 31 L26 41 L45 21" fill="none" stroke="#1D5CB8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </div>
     <div class="success-eyebrow">Pendaftaran Berhasil</div>
     <h3 id="successTitle">Sampai jumpa di webinar! <span class="serif italic">✦</span></h3>
-    <p>Terima kasih udah daftar <em class="serif">Her Prime Series</em>. Detail lengkap (link Zoom, jadwal, & reminder) akan dikirim ke <strong id="successContact">email & WhatsApp kamu</strong> H-1 sebelum sesi.</p>
-    <div class="success-meta" id="successMeta">
-      <div class="success-meta-label">Sesi Terdaftar</div>
-      <div id="successSesi">—</div>
-    </div>
+    <p>Terima kasih udah daftar <em class="serif">HANDIA Her Prime</em>. Detail lengkap (link Zoom &amp; reminder) akan dikirim ke <strong id="successContact">email &amp; WhatsApp kamu</strong> menjelang acara.</p>
     <div class="success-actions">
       <a href="#" id="shareWa" class="success-btn success-btn-primary" target="_blank" rel="noopener">
         Bagikan ke Teman →
@@ -1651,40 +1548,35 @@
 
 <!-- ===== FOOTER ===== -->
 <footer>
-  <div class="logo-foot">HANDIA</div>
-  <div class="tagline">A quiet presence that understands before you even explain.</div>
-  <div class="contact">
-    <span>Pertanyaan? Hubungi <strong>Akmal (EO &amp; Moderator)</strong></span>
-    <a href="mailto:ops.sismed@gmail.com">ops.sismed@gmail.com</a>
+  <div class="logo-foot">
+    <span class="logo-mark">H</span>
+    <span class="logo-text">HANDIA</span>
   </div>
-  <div class="meta">© 2026 HANDIA × Gayatri  ·  Her Prime Series  ·  Diadakan oleh SISMED</div>
+  <div class="tagline">Handy Healthcare — ruang aman untuk memahami tubuh, sebelum harus khawatir.</div>
+  <div class="contact">
+    <span>PIC: <strong>Hafizul Aswad</strong></span>
+    <a href="https://wa.me/6285157755689">WhatsApp: +62 851-5775-5689</a>
+    <a href="mailto:hafizulaswad02@gmail.com">hafizulaswad02@gmail.com</a>
+  </div>
+  <div class="meta">© 2026 HANDIA · Handy Healthcare · All Rights Reserved</div>
 </footer>
 
 <script>
   const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzzQFFkhpul2A4JVy9taVmvKa-1PzGBtRUBe5-zWit79maTnuLrhFEbyfEdeT1KBkrRjg/exec';
 
   // ===== Field Validation =====
-  function isValidEmail(v) {
+  function isValidEmail(v){
     return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim());
   }
-  function isValidWhatsApp(v) {
-    // Strip spaces, dashes, dots, parens
+  function isValidWhatsApp(v){
     const cleaned = v.replace(/[\s\-.()]/g, '');
-    // Indonesian mobile: 08xx (10-13 digits) atau +62/62 prefix
     return /^(\+?62|0)8\d{8,12}$/.test(cleaned);
   }
-  function setFieldError(row, hasError) {
-    if (hasError) {
-      row.classList.add('has-error');
-      row.classList.remove('is-valid');
-    } else {
-      row.classList.remove('has-error');
-      if (row.querySelector('input').value.trim()) {
-        row.classList.add('is-valid');
-      }
-    }
+  function setFieldError(row, hasError){
+    if (hasError) row.classList.add('has-error');
+    else row.classList.remove('has-error');
   }
-  function setupFieldValidation() {
+  function setupFieldValidation(){
     const fields = [
       { name: 'email', validator: isValidEmail },
       { name: 'whatsapp', validator: isValidWhatsApp }
@@ -1693,65 +1585,51 @@
       const input = document.querySelector(`input[name="${name}"]`);
       if (!input) return;
       const row = input.closest('.form-row');
-
-      // Validate on blur (kalau user udah selesai ngetik)
       input.addEventListener('blur', () => {
-        if (input.value.trim() && !validator(input.value)) {
-          setFieldError(row, true);
-        } else if (input.value.trim()) {
-          setFieldError(row, false);
-        }
+        if (input.value.trim() && !validator(input.value)) setFieldError(row, true);
+        else setFieldError(row, false);
       });
-
-      // Real-time clear error pas user perbaiki
       input.addEventListener('input', () => {
-        if (row.classList.contains('has-error') && validator(input.value)) {
-          setFieldError(row, false);
-        }
+        if (row.classList.contains('has-error') && validator(input.value)) setFieldError(row, false);
       });
     });
   }
   document.addEventListener('DOMContentLoaded', setupFieldValidation);
 
   // ===== Success Modal =====
-  function showSuccessModal(info) {
+  function showSuccessModal(info){
     const modal = document.getElementById('successModal');
-    const sesiEl = document.getElementById('successSesi');
     const contactEl = document.getElementById('successContact');
     const shareBtn = document.getElementById('shareWa');
 
-    sesiEl.textContent = info.sesi || 'Semua sesi';
     contactEl.textContent = info.email
       ? `${info.email} dan WhatsApp ${info.whatsapp || ''}`
       : 'email & WhatsApp kamu';
 
-    const shareText = `Aku baru aja daftar Her Prime: Menopause Glow-Up Series — 3 webinar gratis tentang menopause dari dokter spesialis. Cek di sini:\n\nhttps://handia-webinar.vercel.app`;
+    const shareText = `Aku baru aja daftar webinar HANDIA Her Prime — "Tidur Susah, Mood Berantakan, Kolesterol Naik: Apakah Ini Perimenopause?" Gratis dari dokter obgyn. Yuk ikutan:\n\nhttps://handia-webinar.vercel.app`;
     shareBtn.href = 'https://wa.me/?text=' + encodeURIComponent(shareText);
 
     modal.removeAttribute('hidden');
     document.body.style.overflow = 'hidden';
     requestAnimationFrame(() => modal.classList.add('active'));
   }
-
-  function closeSuccessModal() {
+  function closeSuccessModal(){
     const modal = document.getElementById('successModal');
     modal.classList.remove('active');
     document.body.style.overflow = '';
     setTimeout(() => modal.setAttribute('hidden', ''), 380);
   }
-
-  // Tutup modal dengan ESC
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
+    if (e.key === 'Escape'){
       const modal = document.getElementById('successModal');
       if (modal && !modal.hasAttribute('hidden')) closeSuccessModal();
     }
   });
 
-  // Scroll-reveal via Intersection Observer (lebih smooth dari CSS animation)
+  // ===== Scroll Reveal =====
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
+      if (entry.isIntersecting){
         entry.target.classList.add('revealed');
         revealObserver.unobserve(entry.target);
       }
@@ -1759,38 +1637,7 @@
   }, { threshold: 0.12 });
   document.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(el));
 
-  // Logika checkbox sesi: "Semua sesi" mutually exclusive dengan sesi individual
-  // — Centang "Semua sesi" → uncheck Sesi 1, 2, 3
-  // — Centang sesi individual → uncheck "Semua sesi"
-  // — Centang ke-3 sesi individual → auto-konversi ke "Semua sesi"
-  document.addEventListener('DOMContentLoaded', () => {
-    const allBox = document.querySelector('input[name="sesi"][value="Semua sesi"]');
-    const individualBoxes = Array.from(
-      document.querySelectorAll('input[name="sesi"]:not([value="Semua sesi"])')
-    );
-
-    if (!allBox || individualBoxes.length === 0) return;
-
-    allBox.addEventListener('change', () => {
-      if (allBox.checked) {
-        individualBoxes.forEach(cb => { cb.checked = false; });
-      }
-    });
-
-    individualBoxes.forEach(cb => {
-      cb.addEventListener('change', () => {
-        if (cb.checked && allBox.checked) {
-          allBox.checked = false;
-        }
-        // Kalau ke-3 sesi individual ke-centang semua → auto switch ke "Semua sesi"
-        if (individualBoxes.every(c => c.checked)) {
-          individualBoxes.forEach(c => { c.checked = false; });
-          allBox.checked = true;
-        }
-      });
-    });
-  });
-
+  // ===== Form Submit =====
   async function handleSubmit(e){
     e.preventDefault();
     const form = e.target;
@@ -1799,46 +1646,29 @@
 
     btn.disabled = true;
     btn.textContent = 'Mengirim…';
-    btn.style.opacity = '.7';
+    btn.style.opacity = '.75';
 
-    const formData = new FormData(form);
-    const data = {};
-    for (const key of new Set(formData.keys())) {
-      const values = formData.getAll(key);
-      data[key] = values.length > 1 ? values.join(', ') : values[0];
-    }
+    const data = Object.fromEntries(new FormData(form).entries());
 
-    // Validasi field email & whatsapp
+    // Validasi email & whatsapp
     let firstInvalid = null;
-    if (!isValidEmail(data.email || '')) {
+    if (!isValidEmail(data.email || '')){
       const row = form.querySelector('[data-field="email"]');
       setFieldError(row, true);
       firstInvalid = firstInvalid || row;
     }
-    if (!isValidWhatsApp(data.whatsapp || '')) {
+    if (!isValidWhatsApp(data.whatsapp || '')){
       const row = form.querySelector('[data-field="whatsapp"]');
       setFieldError(row, true);
       firstInvalid = firstInvalid || row;
     }
-    if (firstInvalid) {
+    if (firstInvalid){
       btn.textContent = 'Cek lagi data kamu ↑';
-      btn.style.background = '#b85450';
+      btn.style.background = 'linear-gradient(135deg,#B85450 0%,#8B3D3A 100%)';
       btn.style.opacity = '1';
-      firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      firstInvalid.scrollIntoView({ behavior:'smooth', block:'center' });
       firstInvalid.querySelector('input').focus();
-      setTimeout(()=>{
-        btn.textContent = original;
-        btn.style.background = '';
-        btn.disabled = false;
-      }, 3000);
-      return;
-    }
-
-    if (!data.sesi) {
-      btn.textContent = 'Pilih minimal 1 sesi ↑';
-      btn.style.background = '#b85450';
-      btn.style.opacity = '1';
-      setTimeout(()=>{
+      setTimeout(() => {
         btn.textContent = original;
         btn.style.background = '';
         btn.disabled = false;
@@ -1855,29 +1685,25 @@
       });
 
       btn.textContent = 'Berhasil ✓';
-      btn.style.background = '#6B8B77';
       btn.style.opacity = '1';
 
-      // Tampilkan modal sukses
       showSuccessModal({
-        nama: data.nama,
         email: data.email,
-        whatsapp: data.whatsapp,
-        sesi: data.sesi
+        whatsapp: data.whatsapp
       });
 
       form.reset();
 
-      setTimeout(()=>{
+      setTimeout(() => {
         btn.textContent = original;
         btn.style.background = '';
         btn.disabled = false;
       }, 3000);
-    } catch (err) {
+    } catch (err){
       btn.textContent = 'Gagal kirim — coba lagi';
-      btn.style.background = '#b85450';
+      btn.style.background = 'linear-gradient(135deg,#B85450 0%,#8B3D3A 100%)';
       btn.style.opacity = '1';
-      setTimeout(()=>{
+      setTimeout(() => {
         btn.textContent = original;
         btn.style.background = '';
         btn.disabled = false;
