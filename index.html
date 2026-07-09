@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Tidur Susah, Mood Berantakan, Kolesterol Naik — HER PRIME · HANDIA</title>
-<meta name="description" content="Webinar edukasi gratis untuk perempuan 40+ dan support system. Kenali tanda perimenopause dari dokter spesialis obgyn — evidence-based, empatik, dan tidak menghakimi." />
+<meta name="description" content="Webinar edukasi gratis dari dokter spesialis obgyn. Kenali tanda perimenopause dan langkah menjaga kesehatan Anda di usia matang. Untuk perempuan 40+ dan keluarga." />
 <meta name="keywords" content="webinar perimenopause, menopause, HRT, hot flash, kolesterol, mood swing, kesehatan wanita 40+, HANDIA, Her Prime" />
 <meta name="theme-color" content="#2E7BE0" />
 <meta name="author" content="HANDIA — Handy Healthcare" />
@@ -73,15 +73,50 @@
     z-index:0;
   }
 
+  /* ===== ANNOUNCE BAR (pintasan daftar) ===== */
+  .announce-bar{
+    position:fixed;
+    top:0;left:0;right:0;
+    z-index:101;
+    background:linear-gradient(90deg,var(--blue) 0%,var(--blue-deep) 100%);
+    color:white;
+    padding:.55rem 1rem;
+    text-align:center;
+    font-size:.85rem;
+    letter-spacing:.01em;
+    box-shadow:0 2px 12px rgba(29,92,184,.18);
+  }
+  .announce-link{
+    display:inline-flex;align-items:center;gap:.6rem;
+    color:white;
+    text-decoration:none;
+    transition:opacity .25s ease;
+    font-weight:400;
+  }
+  .announce-link:hover{opacity:.9}
+  .announce-link strong{font-weight:600}
+  .announce-dot{
+    width:8px;height:8px;
+    border-radius:50%;
+    background:white;
+    animation:pulse 2s ease infinite;
+    flex-shrink:0;
+  }
+  .announce-arrow{
+    transition:transform .3s ease;
+    display:inline-block;
+  }
+  .announce-link:hover .announce-arrow{transform:translateX(4px)}
+
   /* ===== NAV ===== */
   nav{
     position:fixed;
-    top:0;left:0;right:0;
+    top:42px;left:0;right:0;
     padding:1.2rem 3rem;
     display:flex;justify-content:space-between;align-items:center;
     z-index:100;
     backdrop-filter:blur(14px);
-    background:rgba(253,252,250,.82);
+    background:rgba(253,252,250,.9);
     border-bottom:1px solid rgba(184,175,166,.15);
   }
   .logo{
@@ -134,7 +169,7 @@
   /* ===== HERO ===== */
   .hero{
     min-height:100vh;
-    padding:9rem 3rem 5rem;
+    padding:10.5rem 3rem 5rem;
     display:grid;
     grid-template-columns:1.15fr 1fr;
     gap:4.5rem;
@@ -1113,9 +1148,11 @@
   /* ===== RESPONSIVE ===== */
   @media(max-width:960px){
     nav{padding:1rem 1.5rem}
+    .announce-bar{font-size:.78rem;padding:.5rem .8rem}
+    nav{top:38px;padding:1rem 1.5rem}
     .hero{
       grid-template-columns:1fr;
-      padding:7rem 1.5rem 3rem;
+      padding:8rem 1.5rem 3rem;
       gap:2.5rem;
       min-height:auto;
     }
@@ -1140,7 +1177,8 @@
     .logo{font-size:1.25rem;letter-spacing:.24em}
     .logo-mark{width:30px;height:30px;font-size:.8rem}
     .nav-cta{padding:.65rem 1.15rem;font-size:.66rem;letter-spacing:.16em}
-    .hero{padding:6rem 1.2rem 2.5rem}
+    .announce-bar{font-size:.72rem;padding:.45rem .6rem}
+    .hero{padding:7rem 1.2rem 2.5rem}
     .hero h1{font-size:2rem;line-height:1.1}
     .hero-badge{font-size:.62rem;letter-spacing:.2em}
     .hero-meta{gap:1rem}
@@ -1166,6 +1204,14 @@
 </head>
 <body>
 
+<div class="announce-bar">
+  <a href="#daftar" class="announce-link">
+    <span class="announce-dot"></span>
+    <strong>Kuota terbatas</strong> — daftar gratis sekarang
+    <span class="announce-arrow">→</span>
+  </a>
+</div>
+
 <nav>
   <div class="logo">
     <span class="logo-mark"><img src="image/handia-logo.jpg" alt="HANDIA"></span>
@@ -1174,7 +1220,7 @@
       <span class="logo-sub">Handy Healthcare</span>
     </div>
   </div>
-  <a href="#daftar" class="nav-cta">Daftar Gratis</a>
+  <a href="#daftar" class="nav-cta">Daftar Gratis →</a>
 </nav>
 
 <!-- ===== HERO ===== -->
@@ -1186,7 +1232,7 @@
       <span class="accent">Apakah ini perimenopause?</span>
     </h1>
     <p class="hero-sub fade-up delay-2">
-      Kenali tanda-tanda perimenopause yang sering terlewat dan langkah tepat untuk menjaga kesehatan tubuh & kualitas hidup — dari dokter spesialis obgyn, dalam bahasa yang mudah dipahami.
+      Kenali tanda perimenopause yang sering terlewat dan langkah tepat menjaga kesehatan Anda. Disampaikan dokter spesialis obgyn dalam bahasa yang mudah dipahami.
     </p>
 
     <div class="hero-meta fade-up delay-3">
@@ -1220,7 +1266,7 @@
     </div>
 
     <a href="#daftar" class="btn-primary fade-up delay-4">
-      Amankan Kursi Saya
+      Daftar Sekarang, Gratis
       <span class="arrow">→</span>
     </a>
   </div>
@@ -1239,17 +1285,17 @@
 
 <!-- ===== DIVIDER ===== -->
 <div class="divider" data-reveal>
-  <div class="ornament">— Bukan lebay. Ini nyata dan bisa dijelaskan. —</div>
+  <div class="ornament">— Bukan hal yang perlu diabaikan, bukan pula ditakuti. —</div>
 </div>
 
 <!-- ===== ABOUT ===== -->
 <section class="about" data-reveal>
   <div class="section-eyebrow">Tentang Webinar</div>
-  <h2>Perubahan tubuh di usia 40+ punya penjelasan medis<br><span class="serif italic">— dan solusinya nyata.</span></h2>
+  <h2>Perubahan tubuh di usia matang punya penjelasan medis<br><span class="serif italic">— dan solusinya nyata.</span></h2>
   <p>
-    Banyak perempuan 40+ merasakan perubahan tubuh yang tidak selalu langsung dikenali sebagai perimenopause. Hot flashes, gangguan tidur, mood/anxiety, palpitasi, brain fog, nyeri sendi, kolesterol naik — hingga keluhan area intim. Semua ini <em class="serif">bisa dijelaskan</em>.
+    Banyak perempuan mengalami perubahan yang tidak selalu langsung dikenali sebagai perimenopause. <strong>Rasa panas mendadak, sulit tidur, mood yang tak menentu, jantung berdebar, sulit fokus, nyeri sendi, hingga kolesterol meningkat</strong> — semua punya penjelasan medis dan bisa ditangani.
     <br><br>
-    HER PRIME dirancang sebagai ruang edukasi yang <strong>aman, empatik, dan berbasis bukti</strong> — agar kamu paham apa yang sedang terjadi dan tahu kapan perlu evaluasi medis. Untuk kamu, atau untuk orang terdekat yang ingin mendukung.
+    HER PRIME hadir sebagai ruang edukasi yang <em class="serif">aman, empatik, dan berbasis bukti</em> — agar Anda memahami apa yang sedang terjadi dan tahu kapan perlu berkonsultasi ke dokter.
   </p>
 </section>
 
@@ -1257,44 +1303,44 @@
 <section class="segments">
   <div class="segments-header" data-reveal>
     <div class="section-eyebrow">Untuk Siapa</div>
-    <h2>Cocok untuk kamu yang…</h2>
-    <p>Setiap fase punya kebutuhan berbeda. Webinar ini merangkum topik untuk empat kelompok peserta.</p>
+    <h2>Webinar ini cocok untuk Anda</h2>
+    <p>Materi dirancang bermanfaat untuk berbagai fase — dari yang baru merasakan perubahan hingga yang mendampingi orang terdekat.</p>
   </div>
 
   <div class="segments-grid">
     <article class="segment-card" data-reveal data-delay="1">
-      <div class="segment-icon">i</div>
+      <div class="segment-icon">◆</div>
       <div class="segment-content">
-        <h3>Perimenopause Awal</h3>
-        <div class="segment-age">38 – 45 tahun</div>
-        <p>Validasi gejala yang sering diragukan, pemahaman dasar perubahan hormon, dan <strong>red flags</strong> yang tidak boleh diabaikan.</p>
+        <h3>Baru merasakan perubahan</h3>
+        <div class="segment-age">Sekitar usia 38 – 45 tahun</div>
+        <p>Kenali gejala awal, pahami perubahan hormon dari akarnya, dan tanda-tanda yang tidak boleh diabaikan.</p>
       </div>
     </article>
 
     <article class="segment-card" data-reveal data-delay="2">
-      <div class="segment-icon">ii</div>
+      <div class="segment-icon">◆</div>
       <div class="segment-content">
-        <h3>Perimenopause Aktif</h3>
-        <div class="segment-age">45 – 52 tahun</div>
-        <p>Solusi praktis untuk tidur, hot flashes, mood/anxiety, nyeri sendi, perubahan metabolik, dan pilihan terapi yang tersedia.</p>
+        <h3>Sudah aktif mengalami gejala</h3>
+        <div class="segment-age">Sekitar usia 45 – 52 tahun</div>
+        <p>Solusi praktis untuk sulit tidur, rasa panas mendadak, mood tidak stabil, nyeri sendi, dan perubahan metabolik.</p>
       </div>
     </article>
 
     <article class="segment-card" data-reveal data-delay="3">
-      <div class="segment-icon">iii</div>
+      <div class="segment-icon">◆</div>
       <div class="segment-content">
-        <h3>Menopause & Post-Menopause</h3>
-        <div class="segment-age">50+ tahun</div>
-        <p>Pencegahan jangka panjang untuk tulang, jantung, kulit, area intim, dan kualitas hidup setelah menstruasi berhenti.</p>
+        <h3>Sudah memasuki menopause</h3>
+        <div class="segment-age">Usia 52 tahun ke atas</div>
+        <p>Pencegahan jangka panjang untuk kesehatan tulang, jantung, kulit, dan kualitas hidup setelah menopause.</p>
       </div>
     </article>
 
     <article class="segment-card" data-reveal data-delay="4">
-      <div class="segment-icon">iv</div>
+      <div class="segment-icon">♥</div>
       <div class="segment-content">
-        <h3>Support System</h3>
-        <div class="segment-age">Keluarga & Pasangan</div>
-        <p>Memahami bahwa keluhan bukan sekadar "lebay" atau overthinking — dan tahu cara mendukung dengan tepat.</p>
+        <h3>Mendampingi orang terdekat</h3>
+        <div class="segment-age">Keluarga, pasangan, anak</div>
+        <p>Pahami bahwa keluhan Ibu, istri, atau kakak bukan sekadar berlebihan — dan pelajari cara mendukung dengan tepat.</p>
       </div>
     </article>
   </div>
@@ -1305,46 +1351,46 @@
   <div class="materi-header" data-reveal>
     <div>
       <div class="section-eyebrow">Yang Akan Dibahas</div>
-      <h2>Enam topik utama<br><span class="serif italic">yang perlu kamu pahami.</span></h2>
+      <h2>Enam topik utama<br><span class="serif italic">yang perlu Anda pahami.</span></h2>
     </div>
-    <p>Kurikulum berbasis <em class="serif">evidence-based medicine</em> yang dirancang untuk pemahaman awam — tanpa jargon medis yang membingungkan.</p>
+    <p>Materi berbasis <em class="serif">bukti ilmiah</em> yang dirancang untuk pemahaman awam — tanpa istilah medis yang membingungkan.</p>
   </div>
 
   <div class="materi-grid">
     <article class="materi-item" data-reveal data-delay="1">
       <div class="materi-num">— 01 · Pembuka</div>
       <h4>Mengapa Tubuh Berubah</h4>
-      <p>Perempuan 40+ bisa merasa "tidak seperti biasa" meski hasil pemeriksaan rutin tampak normal. Kenapa?</p>
+      <p>Kenapa perempuan usia matang sering merasa "tidak seperti biasa" meski hasil pemeriksaan rutin tampak normal.</p>
     </article>
 
     <article class="materi-item" data-reveal data-delay="1">
       <div class="materi-num">— 02 · Kenali Fase</div>
       <h4>Perimenopause vs Menopause</h4>
-      <p>Perubahan siklus, tanda yang sering membingungkan, dan bagaimana membedakan tahapannya.</p>
+      <p>Perbedaan kedua fase, perubahan siklus, dan tanda-tanda yang sering membingungkan.</p>
     </article>
 
     <article class="materi-item" data-reveal data-delay="2">
       <div class="materi-num">— 03 · Gejala Utama</div>
-      <h4>Dari Tidur ke Metabolik</h4>
-      <p>Insomnia, hot flashes, palpitasi, mood/anxiety, brain fog, nyeri sendi, kulit, area intim/urinary.</p>
+      <h4>Dari Tidur Hingga Kolesterol</h4>
+      <p>Sulit tidur, rasa panas mendadak, jantung berdebar, mood tak menentu, sulit fokus, nyeri sendi, hingga kulit &amp; area intim.</p>
     </article>
 
     <article class="materi-item" data-reveal data-delay="2">
       <div class="materi-num">— 04 · Mitos vs Fakta</div>
       <h4>Luruskan Kesalahpahaman</h4>
-      <p>HRT/MHT dan kanker, suplemen, anxiety, brain fog, vagina kering, dan keluhan berkemih.</p>
+      <p>Terapi hormon dan risiko kanker, suplemen, gangguan cemas, sulit fokus, dan keluhan area intim.</p>
     </article>
 
     <article class="materi-item" data-reveal data-delay="3">
       <div class="materi-num">— 05 · Pilihan Solusi</div>
-      <h4>Lifestyle Hingga Terapi</h4>
-      <p>Nutrisi, olahraga/resistance training, HRT/MHT, non-HRT, terapi lokal, dan kapan konsultasi dokter.</p>
+      <h4>Gaya Hidup Hingga Terapi</h4>
+      <p>Nutrisi, olahraga kekuatan, terapi hormon, alternatif non-hormonal, dan kapan sebaiknya konsultasi ke dokter.</p>
     </article>
 
     <article class="materi-item" data-reveal data-delay="3">
-      <div class="materi-num">— 06 · Action Plan</div>
-      <h4>Langkah Setelah Webinar</h4>
-      <p>Checklist keluhan, pemeriksaan yang bisa dipertimbangkan, red flags, dan next step yang jelas.</p>
+      <div class="materi-num">— 06 · Langkah Setelah</div>
+      <h4>Apa yang Perlu Anda Lakukan</h4>
+      <p>Panduan mengenali keluhan, pemeriksaan yang bisa dipertimbangkan, dan tanda-tanda yang perlu penanganan segera.</p>
     </article>
   </div>
 </section>
@@ -1355,25 +1401,25 @@
     <div class="mitos-header" data-reveal>
       <div class="section-eyebrow">Mitos vs Fakta</div>
       <h2>Yang sering keliru — dan akan diluruskan.</h2>
-      <p>Kutipan mitos populer yang akan dibongkar bersama dokter di sesi khusus <em class="serif">Myth vs Fact</em>.</p>
+      <p>Kutipan mitos populer yang akan dibongkar bersama dokter di sesi khusus <em class="serif">Mitos vs Fakta</em>.</p>
     </div>
 
     <div class="mitos-list">
       <div class="mitos-card" data-reveal>
         <div class="mitos-badge">Mitos</div>
-        <div class="mitos-text">"HRT/MHT pasti menyebabkan kanker — jadi lebih aman dihindari saja."</div>
+        <div class="mitos-text">"Terapi hormon pasti menyebabkan kanker — jadi lebih aman dihindari saja."</div>
       </div>
       <div class="mitos-card" data-reveal>
         <div class="mitos-badge">Mitos</div>
-        <div class="mitos-text">"Suplemen alami selalu aman untuk semua orang, tidak perlu resep."</div>
+        <div class="mitos-text">"Suplemen alami selalu aman untuk semua orang, tanpa perlu resep dokter."</div>
       </div>
       <div class="mitos-card" data-reveal>
         <div class="mitos-badge">Mitos</div>
-        <div class="mitos-text">"Brain fog dan anxiety pas menopause itu hanya sugesti — bisa diatasi sendiri."</div>
+        <div class="mitos-text">"Sulit fokus dan mudah cemas saat menopause hanyalah sugesti — cukup diabaikan saja."</div>
       </div>
       <div class="mitos-card" data-reveal>
         <div class="mitos-badge">Mitos</div>
-        <div class="mitos-text">"Vagina kering dan sering pipis di usia matang adalah hal wajar yang tidak bisa diobati."</div>
+        <div class="mitos-text">"Keluhan area intim di usia matang adalah hal wajar yang tidak bisa ditangani."</div>
       </div>
     </div>
   </div>
@@ -1384,50 +1430,50 @@
   <div class="rundown-header" data-reveal>
     <div class="section-eyebrow">Rundown Acara</div>
     <h2>75–90 menit,<br><span class="serif italic">terstruktur & interaktif.</span></h2>
-    <p>Format webinar dengan sesi Q&amp;A anonim — pertanyaan paling personal pun tetap aman.</p>
+    <p>Format webinar dengan sesi tanya-jawab anonim — pertanyaan paling pribadi pun tetap aman.</p>
   </div>
 
   <div class="timeline">
     <div class="timeline-item" data-reveal>
-      <div class="timeline-time">0 – 5 min</div>
+      <div class="timeline-time">0 – 5 menit</div>
       <div class="timeline-content">
-        <h4>Opening & Disclaimer Edukasi</h4>
-        <p>Aturan webinar, konteks edukasi umum, dan pengenalan moderator + dokter.</p>
+        <h4>Pembukaan &amp; Pengantar</h4>
+        <p>Aturan webinar, konteks edukasi umum, dan pengenalan moderator serta dokter.</p>
       </div>
     </div>
     <div class="timeline-item" data-reveal>
-      <div class="timeline-time">5 – 10 min</div>
+      <div class="timeline-time">5 – 10 menit</div>
       <div class="timeline-content">
         <h4>Polling Keluhan Peserta</h4>
-        <p>Kamu langsung ikut — polling anonim untuk memetakan keluhan yang paling relevan.</p>
+        <p>Anda ikut menjawab langsung — polling anonim untuk memetakan keluhan yang paling relevan.</p>
       </div>
     </div>
     <div class="timeline-item" data-reveal>
-      <div class="timeline-time">10 – 45 min</div>
+      <div class="timeline-time">10 – 45 menit</div>
       <div class="timeline-content">
         <h4>Materi Utama oleh Dokter Obgyn</h4>
-        <p>Pemaparan enam topik inti — dari kenali fase sampai action plan.</p>
+        <p>Pemaparan enam topik inti — dari kenali fase hingga langkah selanjutnya.</p>
       </div>
     </div>
     <div class="timeline-item" data-reveal>
-      <div class="timeline-time">45 – 55 min</div>
+      <div class="timeline-time">45 – 55 menit</div>
       <div class="timeline-content">
-        <h4>Myth vs Fact</h4>
-        <p>Sesi seru: dokter bongkar 4–5 mitos prioritas bersama moderator.</p>
+        <h4>Mitos vs Fakta</h4>
+        <p>Dokter bersama moderator meluruskan 4–5 mitos yang paling sering keliru dipahami.</p>
       </div>
     </div>
     <div class="timeline-item" data-reveal>
-      <div class="timeline-time">55 – 80 min</div>
+      <div class="timeline-time">55 – 80 menit</div>
       <div class="timeline-content">
-        <h4>Q&amp;A Anonim</h4>
-        <p>Pertanyaan kamu dibacakan tanpa identitas. Dokter menjawab dalam koridor edukasi.</p>
+        <h4>Tanya-Jawab Anonim</h4>
+        <p>Pertanyaan Anda dibacakan tanpa identitas. Dokter menjawab dalam koridor edukasi umum.</p>
       </div>
     </div>
     <div class="timeline-item" data-reveal>
-      <div class="timeline-time">80 – 90 min</div>
+      <div class="timeline-time">80 – 90 menit</div>
       <div class="timeline-content">
-        <h4>Closing & Next Step</h4>
-        <p>Recap, action plan singkat, dan informasi program lanjutan dari HANDIA.</p>
+        <h4>Penutup &amp; Langkah Selanjutnya</h4>
+        <p>Rangkuman, panduan langkah yang bisa Anda lakukan, dan informasi program lanjutan HANDIA.</p>
       </div>
     </div>
   </div>
@@ -1443,9 +1489,9 @@
     <h2>Dokter Spesialis Obgyn</h2>
     <div class="speaker-role">Akan Segera Diumumkan</div>
     <p>
-      Materi utama disampaikan langsung oleh dokter spesialis Kandungan &amp; Kebidanan yang berpengalaman menangani perempuan di fase perimenopause dan menopause.
+      Materi disampaikan langsung oleh dokter spesialis Kandungan &amp; Kebidanan yang berpengalaman menangani perempuan di fase perimenopause dan menopause.
     </p>
-    <div class="speaker-note">Nama, foto, & profil lengkap dokter akan diumumkan menjelang acara</div>
+    <div class="speaker-note">Nama, foto, dan profil lengkap dokter akan diumumkan menjelang acara</div>
   </div>
 </section>
 
@@ -1460,7 +1506,7 @@
     <div class="disclaimer-content">
       <h4>Ini edukasi umum — bukan diagnosis atau konsultasi personal.</h4>
       <p>
-        Webinar ini tidak menggantikan pemeriksaan dokter, bukan konsultasi medis individual, dan <strong>bukan endorsement produk apapun</strong>. Untuk keluhan yang membutuhkan pemeriksaan langsung, kamu tetap perlu berkonsultasi ke fasilitas kesehatan terdekat.
+        Webinar ini tidak menggantikan pemeriksaan dokter, bukan konsultasi medis individual, dan <strong>bukan endorsement produk apapun</strong>. Untuk keluhan yang membutuhkan pemeriksaan langsung, Anda tetap perlu berkonsultasi ke fasilitas kesehatan terdekat.
       </p>
     </div>
   </div>
@@ -1471,55 +1517,60 @@
   <div class="cta-container">
     <div class="cta-header" data-reveal>
       <div class="section-eyebrow">Pendaftaran</div>
-      <h2>Amankan kursi kamu, <span class="serif italic">gratis.</span></h2>
-      <p>Kuota terbatas. Link Zoom akan dikirim H-1 ke email &amp; WhatsApp yang kamu daftarkan.</p>
+      <h2>Amankan kursi Anda, <span class="serif italic">gratis.</span></h2>
+      <p>Kuota terbatas. Link Zoom akan dikirim H-1 ke email &amp; WhatsApp yang Anda daftarkan.</p>
     </div>
 
     <form class="form-card" onsubmit="handleSubmit(event)">
       <div class="form-row">
         <label>Nama Lengkap</label>
-        <input type="text" name="nama" placeholder="cth: Sarah Wijaya" required>
+        <input type="text" name="nama" placeholder="Contoh: Sri Utami" required>
       </div>
       <div class="form-row" data-field="email">
         <label>Email Aktif</label>
         <input type="email" name="email" placeholder="nama@email.com" required>
-        <span class="field-error">Email belum valid. Pakai format seperti <strong>nama@email.com</strong></span>
+        <span class="field-error">Email belum valid. Gunakan format seperti <strong>nama@email.com</strong></span>
       </div>
       <div class="form-row" data-field="whatsapp">
         <label>Nomor WhatsApp</label>
-        <input type="tel" name="whatsapp" placeholder="cth: 081234567890" required>
-        <span class="field-error">Nomor WA belum benar. Pakai format <strong>08xx</strong> atau <strong>+62 8xx</strong>, minimal 10 digit</span>
+        <input type="tel" name="whatsapp" placeholder="Contoh: 081234567890" required>
+        <span class="field-error">Nomor WA belum benar. Gunakan format <strong>08xx</strong> atau <strong>+62 8xx</strong>, minimal 10 digit</span>
       </div>
       <div class="form-row">
-        <label>Rentang Usia</label>
-        <select name="usia" required>
-          <option value="">Pilih rentang usia</option>
-          <option>Di bawah 38 tahun</option>
-          <option>38–45 tahun (Perimenopause awal)</option>
-          <option>45–52 tahun (Perimenopause aktif)</option>
-          <option>52+ tahun (Menopause / post-menopause)</option>
-          <option>Support system (keluarga / pasangan)</option>
+        <label>Usia Anda</label>
+        <span class="form-label-hint">Isi dengan angka — misalnya 47</span>
+        <input type="text" name="usia" inputmode="numeric" pattern="[0-9]{1,3}" placeholder="Contoh: 47" required>
+      </div>
+      <div class="form-row">
+        <label>Anda mengikuti webinar sebagai</label>
+        <select name="peran" required>
+          <option value="">Pilih salah satu</option>
+          <option>Diri sendiri</option>
+          <option>Mendampingi Ibu atau orang tua</option>
+          <option>Mendampingi pasangan / istri</option>
+          <option>Keluarga lain (kakak, adik, dll)</option>
+          <option>Tenaga kesehatan / praktisi</option>
         </select>
       </div>
       <div class="form-row">
-        <label>Sumber Info</label>
+        <label>Dari mana Anda tahu webinar ini?</label>
         <select name="sumber">
-          <option value="">Dari mana kamu tahu webinar ini? (opsional)</option>
+          <option value="">Pilih salah satu (opsional)</option>
           <option>Instagram</option>
           <option>WhatsApp / grup keluarga</option>
-          <option>Referral teman</option>
+          <option>Rekomendasi teman</option>
           <option>Google Search</option>
           <option>Email / newsletter HANDIA</option>
           <option>Lainnya</option>
         </select>
       </div>
       <div class="form-row">
-        <label>Pertanyaan Anonim untuk Dokter</label>
-        <span class="form-label-hint">Opsional — pertanyaan kamu akan disaring & dibacakan anonim saat sesi Q&amp;A</span>
-        <textarea name="pertanyaan" placeholder="cth: Saya sering hot flash & susah tidur sejak 46 tahun. Apakah HRT aman untuk saya yang punya riwayat hipertensi?"></textarea>
+        <label>Pertanyaan untuk Dokter</label>
+        <span class="form-label-hint">Opsional — pertanyaan Anda akan dibacakan anonim saat sesi tanya-jawab</span>
+        <textarea name="pertanyaan" placeholder="Contoh: Saya sering merasa panas mendadak dan sulit tidur sejak usia 46. Apakah terapi hormon aman untuk saya yang punya riwayat hipertensi?"></textarea>
       </div>
       <button type="submit" class="form-submit">Konfirmasi Pendaftaran →</button>
-      <p class="form-note">Data kamu hanya digunakan untuk keperluan webinar ini. Kami menjaga kerahasiaannya.</p>
+      <p class="form-note">Data Anda hanya digunakan untuk keperluan webinar ini. Kami menjaga kerahasiaannya.</p>
     </form>
   </div>
 </section>
@@ -1536,10 +1587,10 @@
     </div>
     <div class="success-eyebrow">Pendaftaran Berhasil</div>
     <h3 id="successTitle">Sampai jumpa di webinar! <span class="serif italic">✦</span></h3>
-    <p>Terima kasih udah daftar <em class="serif">HANDIA Her Prime</em>. Detail lengkap (link Zoom &amp; reminder) akan dikirim ke <strong id="successContact">email &amp; WhatsApp kamu</strong> menjelang acara.</p>
+    <p>Terima kasih telah mendaftar <em class="serif">HANDIA Her Prime</em>. Detail lengkap (link Zoom &amp; pengingat) akan dikirim ke <strong id="successContact">email &amp; WhatsApp Anda</strong> menjelang acara.</p>
     <div class="success-actions">
       <a href="#" id="shareWa" class="success-btn success-btn-primary" target="_blank" rel="noopener">
-        Bagikan ke Teman →
+        Bagikan ke Keluarga →
       </a>
       <button class="success-btn success-btn-secondary" onclick="closeSuccessModal()">
         Selesai
@@ -1606,9 +1657,9 @@
 
     contactEl.textContent = info.email
       ? `${info.email} dan WhatsApp ${info.whatsapp || ''}`
-      : 'email & WhatsApp kamu';
+      : 'email & WhatsApp Anda';
 
-    const shareText = `Aku baru aja daftar webinar HANDIA Her Prime — "Tidur Susah, Mood Berantakan, Kolesterol Naik: Apakah Ini Perimenopause?" Gratis dari dokter obgyn. Yuk ikutan:\n\nhttps://handia-webinar.vercel.app`;
+    const shareText = `Ada webinar edukasi gratis dari HANDIA — "Tidur Susah, Mood Berantakan, Kolesterol Naik: Apakah Ini Perimenopause?" Dibawakan langsung oleh dokter spesialis obgyn. Cocok untuk Ibu, istri, atau keluarga di usia 40+. Info & pendaftaran:\n\nhttps://handia-webinar.vercel.app`;
     shareBtn.href = 'https://wa.me/?text=' + encodeURIComponent(shareText);
 
     modal.removeAttribute('hidden');

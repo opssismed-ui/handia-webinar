@@ -1,10 +1,11 @@
 /**
- * HANDIA Her Prime — Webinar Registration Endpoint (v5 — single webinar)
+ * HANDIA Her Prime — Webinar Registration Endpoint (v6 — usia bebas + peran)
  *
- * PENYESUAIAN v5:
- * - Ganti kolom "Sesi" → "Sumber" (dari mana peserta tahu webinar)
- * - Kolom "Pertanyaan" tetap (pertanyaan anonim untuk dokter)
- * - Auto-headers tetap aktif
+ * PENYESUAIAN v6:
+ * - Umur = input teks bebas (bukan dropdown lagi) — user isi angka sendiri
+ * - Kolom baru "Peran" — apakah peserta ikut untuk diri sendiri, mendampingi,
+ *   atau tenaga kesehatan
+ * - Kolom "Sumber" & "Pertanyaan" tetap ada
  *
  * SETUP:
  * 1. Buka https://script.google.com → project "HANDIA Webinar Endpoint"
@@ -13,8 +14,8 @@
  * 4. Save (Ctrl+S)
  * 5. Deploy → Manage deployments → ✏️ pencil icon → New version → Deploy
  *    (URL endpoint tetap sama)
- * 6. Kalau mau kolom baru kepake langsung, KOSONGKAN Sheet dulu (hapus semua row)
- *    biar auto-header regenerate.
+ * 6. Untuk kolom baru muncul otomatis, KOSONGKAN Sheet dulu (hapus semua row)
+ *    supaya auto-header regenerate.
  */
 
 const SHEET_ID = 'GANTI_DENGAN_ID_SHEET_KAMU';
@@ -26,6 +27,7 @@ const HEADERS = [
   'Email',
   'WhatsApp',
   'Usia',
+  'Peran',
   'Sumber',
   'Pertanyaan'
 ];
@@ -46,9 +48,10 @@ function doPost(e) {
       sheet.setColumnWidth(2, 180); // Nama
       sheet.setColumnWidth(3, 220); // Email
       sheet.setColumnWidth(4, 140); // WhatsApp
-      sheet.setColumnWidth(5, 220); // Usia
-      sheet.setColumnWidth(6, 180); // Sumber
-      sheet.setColumnWidth(7, 380); // Pertanyaan
+      sheet.setColumnWidth(5, 80);  // Usia
+      sheet.setColumnWidth(6, 220); // Peran
+      sheet.setColumnWidth(7, 180); // Sumber
+      sheet.setColumnWidth(8, 380); // Pertanyaan
     }
 
     sheet.appendRow([
@@ -57,6 +60,7 @@ function doPost(e) {
       data.email || '',
       data.whatsapp || '',
       data.usia || '',
+      data.peran || '',
       data.sumber || '',
       data.pertanyaan || ''
     ]);
@@ -75,7 +79,7 @@ function doGet() {
   return ContentService
     .createTextOutput(JSON.stringify({
       status: 'ok',
-      message: 'HANDIA Her Prime Webinar Endpoint v5 — single webinar mode'
+      message: 'HANDIA Her Prime Webinar Endpoint v6'
     }))
     .setMimeType(ContentService.MimeType.JSON);
 }
