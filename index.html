@@ -77,6 +77,19 @@
     z-index:0;
   }
 
+  /* Botanical silhouette (transparan, feminine — ikut poster) */
+  .botanical{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+  .botanical .b{position:absolute;opacity:.05}
+  .botanical .b-tr{top:-40px;right:-50px;width:clamp(150px,20vw,300px);color:var(--pink);transform:rotate(14deg)}
+  .botanical .b-bl{bottom:-50px;left:-60px;width:clamp(160px,22vw,330px);color:var(--lavender);transform:rotate(-158deg)}
+  .botanical .b-lotus{top:15%;left:3%;width:clamp(110px,13vw,180px);color:var(--pink-deep);opacity:.045}
+  @media(max-width:600px){
+    .botanical .b-lotus{display:none}
+    .botanical .b{opacity:.04}
+    .botanical .b-tr{width:130px;right:-40px}
+    .botanical .b-bl{width:150px;left:-55px}
+  }
+
   /* ===== ANNOUNCE BAR ===== */
   .announce-bar{
     position:fixed;
@@ -301,7 +314,7 @@
   .manfaat-card:nth-child(2) .manfaat-ico{background:var(--lavender-soft);color:var(--lavender)}
   .manfaat-card:nth-child(3) .manfaat-ico{background:#E4F7FB;color:#0E7C97}
   .manfaat-card:nth-child(4) .manfaat-ico{background:#EAF2FC;color:var(--handia-blue)}
-  .manfaat-card p{font-size:.94rem;line-height:1.5;color:var(--ink);font-weight:400}
+  .manfaat-card p{font-size:1.02rem;line-height:1.5;color:var(--ink);font-weight:400}
 
   /* ===== UNTUK SIAPA ===== */
   .segments{padding:5rem 3rem;background:var(--blush);position:relative;z-index:2}
@@ -332,7 +345,7 @@
     font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;
     color:var(--pink-deep);font-weight:600;margin-bottom:.7rem;
   }
-  .segment-content p{font-size:.92rem;line-height:1.55;color:var(--ink-soft)}
+  .segment-content p{font-size:1rem;line-height:1.55;color:var(--ink-soft)}
 
   /* ===== MATERI (compact) ===== */
   .materi{padding:5rem 3rem;max-width:1080px;margin:0 auto;position:relative;z-index:2}
@@ -354,7 +367,7 @@
     font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;
     color:var(--navy);line-height:1.2;margin-bottom:.3rem;
   }
-  .materi-item p{font-size:.88rem;line-height:1.5;color:var(--ink-soft)}
+  .materi-item p{font-size:.96rem;line-height:1.5;color:var(--ink-soft)}
 
   /* ===== MITOS ===== */
   .mitos{padding:5rem 3rem;background:linear-gradient(180deg,var(--paper) 0%,var(--lavender-soft) 100%);position:relative;z-index:2}
@@ -409,7 +422,7 @@
     font-family:'Cormorant Garamond',serif;font-size:1.18rem;font-weight:600;
     color:var(--navy);margin-bottom:.25rem;line-height:1.3;
   }
-  .timeline-content p{font-size:.88rem;color:var(--ink-soft);line-height:1.5}
+  .timeline-content p{font-size:.96rem;color:var(--ink-soft);line-height:1.5}
 
   /* ===== SPEAKER (TBA) ===== */
   .speaker{padding:5rem 3rem;background:var(--lavender-soft);position:relative;z-index:2}
@@ -476,7 +489,7 @@
   }
   .form-row{display:flex;flex-direction:column;margin-bottom:1.2rem}
   .form-row label{
-    font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
+    font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;
     color:var(--navy);margin-bottom:.5rem;font-weight:600;
   }
   .form-row input,.form-row select,.form-row textarea{
@@ -491,7 +504,7 @@
   }
   .form-row input::placeholder,.form-row textarea::placeholder{color:#B7A9B5;font-weight:300}
   .form-label-hint{
-    font-size:.72rem;color:var(--ink-soft);font-style:italic;
+    font-size:.86rem;color:var(--ink-soft);font-style:italic;
     margin-top:-.05rem;margin-bottom:.5rem;font-family:'Cormorant Garamond',serif;
   }
   .form-row.has-error input,.form-row.has-error textarea{border-color:#D6455F;background:rgba(214,69,95,.04)}
@@ -665,25 +678,29 @@
     .fab-daftar:hover{transform:translateX(-50%) translateY(-3px) scale(1.03)}
   }
   @media(max-width:480px){
-    html{font-size:15px}
-    .announce-bar{font-size:.7rem;padding:.4rem .6rem}
+    html{font-size:16px}
+    .announce-bar{font-size:.74rem;padding:.45rem .6rem}
     .logo-text .logo-name{font-size:1.1rem;letter-spacing:.2em}
     .logo-sub{font-size:.54rem}
     .logo-mark{width:32px;height:32px}
     .nav-cta{padding:.55rem 1rem;font-size:.65rem;letter-spacing:.12em}
     .hero{padding:7rem 1rem 2.5rem}
-    .hero h1{font-size:1.9rem;line-height:1.12}
-    .hero-badge{font-size:.6rem;letter-spacing:.14em}
+    .hero h1{font-size:2rem;line-height:1.12}
+    .hero-sub{font-size:1.12rem;line-height:1.65}
+    .hero-badge{font-size:.64rem;letter-spacing:.12em}
     .hero-chips{gap:.5rem}
-    .chip{font-size:.72rem;padding:.5rem .9rem}
+    .chip{font-size:.84rem;padding:.6rem 1rem}
     .about,.manfaat,.segments,.materi,.mitos,.rundown,.speaker,.cta-section,.disclaimer{padding:2.5rem 1rem}
     .manfaat-grid{grid-template-columns:1fr;gap:1rem;max-width:340px;margin-left:auto;margin-right:auto}
     .manfaat-card,.segment-card{padding:1.5rem 1.3rem}
     .segment-card{gap:1rem}
     .about h2,.manfaat-header h2,.segments-header h2,.materi-header h2,.mitos-header h2,.rundown-header h2,.speaker-inner h2,.cta-header h2{font-size:1.65rem;line-height:1.2}
-    .form-card{padding:1.5rem 1.15rem}
-    .form-row input,.form-row select,.form-row textarea{font-size:16px;padding:.9rem 1rem}
-    .btn-primary,.form-submit{padding:1rem 1.5rem;font-size:.74rem;letter-spacing:.12em}
+    .form-card{padding:1.6rem 1.2rem}
+    .form-row input,.form-row select,.form-row textarea{font-size:1.05rem;padding:1rem 1.1rem}
+    .form-row label{font-size:.86rem}
+    .form-label-hint{font-size:.92rem}
+    .form-note{font-size:.88rem}
+    .btn-primary,.form-submit{padding:1.15rem 1.6rem;font-size:.82rem;letter-spacing:.1em}
     .divider{padding:2.8rem 1rem 1.8rem}
     .divider .ornament{font-size:.95rem;gap:.8rem}
     .divider .ornament::before,.divider .ornament::after{width:30px}
@@ -698,6 +715,44 @@
 </style>
 </head>
 <body>
+
+<div class="botanical" aria-hidden="true">
+  <svg class="b b-tr" viewBox="0 0 180 420" xmlns="http://www.w3.org/2000/svg">
+    <path d="M96 420 C86 340 96 280 94 210 C92 140 98 70 92 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <g fill="currentColor">
+      <ellipse cx="64" cy="196" rx="30" ry="12" transform="rotate(32 64 196)"/>
+      <ellipse cx="122" cy="176" rx="30" ry="12" transform="rotate(-32 122 176)"/>
+      <ellipse cx="68" cy="146" rx="26" ry="11" transform="rotate(30 68 146)"/>
+      <ellipse cx="118" cy="128" rx="26" ry="11" transform="rotate(-30 118 128)"/>
+      <ellipse cx="72" cy="100" rx="21" ry="9" transform="rotate(28 72 100)"/>
+      <ellipse cx="114" cy="84" rx="21" ry="9" transform="rotate(-28 114 84)"/>
+      <ellipse cx="80" cy="56" rx="16" ry="7" transform="rotate(26 80 56)"/>
+      <ellipse cx="108" cy="44" rx="16" ry="7" transform="rotate(-26 108 44)"/>
+      <ellipse cx="92" cy="20" rx="11" ry="6"/>
+    </g>
+  </svg>
+  <svg class="b b-bl" viewBox="0 0 180 420" xmlns="http://www.w3.org/2000/svg">
+    <path d="M96 420 C86 340 96 280 94 210 C92 140 98 70 92 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <g fill="currentColor">
+      <ellipse cx="64" cy="196" rx="30" ry="12" transform="rotate(32 64 196)"/>
+      <ellipse cx="122" cy="176" rx="30" ry="12" transform="rotate(-32 122 176)"/>
+      <ellipse cx="68" cy="146" rx="26" ry="11" transform="rotate(30 68 146)"/>
+      <ellipse cx="118" cy="128" rx="26" ry="11" transform="rotate(-30 118 128)"/>
+      <ellipse cx="72" cy="100" rx="21" ry="9" transform="rotate(28 72 100)"/>
+      <ellipse cx="114" cy="84" rx="21" ry="9" transform="rotate(-28 114 84)"/>
+      <ellipse cx="80" cy="56" rx="16" ry="7" transform="rotate(26 80 56)"/>
+      <ellipse cx="108" cy="44" rx="16" ry="7" transform="rotate(-26 108 44)"/>
+      <ellipse cx="92" cy="20" rx="11" ry="6"/>
+    </g>
+  </svg>
+  <svg class="b b-lotus" viewBox="0 0 200 132" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+    <path d="M100 120 C92 80 92 44 100 14 C108 44 108 80 100 120Z"/>
+    <path d="M100 120 C80 86 70 54 66 26 C90 44 104 78 100 120Z"/>
+    <path d="M100 120 C120 86 130 54 134 26 C110 44 96 78 100 120Z"/>
+    <path d="M100 122 C70 102 44 84 26 62 C60 62 92 92 100 122Z"/>
+    <path d="M100 122 C130 102 156 84 174 62 C140 62 108 92 100 122Z"/>
+  </svg>
+</div>
 
 <div class="announce-bar">
   <a href="#daftar" class="announce-link">
@@ -1044,22 +1099,22 @@
     <form class="form-card" onsubmit="handleSubmit(event)">
       <div class="form-row">
         <label>Nama Lengkap</label>
-        <input type="text" name="nama" placeholder="Contoh: Sri Utami" required>
+        <input type="text" name="nama" placeholder="Contoh: Sri Utami" autocomplete="name" autocapitalize="words" required>
       </div>
       <div class="form-row" data-field="email">
         <label>Email Aktif</label>
-        <input type="email" name="email" placeholder="nama@email.com" required>
+        <input type="email" name="email" placeholder="nama@email.com" autocomplete="email" autocapitalize="off" spellcheck="false" required>
         <span class="field-error">Email belum valid. Gunakan format seperti <strong>nama@email.com</strong></span>
       </div>
       <div class="form-row" data-field="whatsapp">
         <label>Nomor WhatsApp</label>
-        <input type="tel" name="whatsapp" placeholder="Contoh: 081234567890" required>
+        <input type="tel" name="whatsapp" placeholder="Contoh: 081234567890" autocomplete="tel" inputmode="tel" required>
         <span class="field-error">Nomor WA belum benar. Gunakan format <strong>08xx</strong> atau <strong>+62 8xx</strong>, minimal 10 digit</span>
       </div>
       <div class="form-row">
         <label>Usia Anda</label>
         <span class="form-label-hint">Isi dengan angka — misalnya 47</span>
-        <input type="text" name="usia" inputmode="numeric" pattern="[0-9]{1,3}" placeholder="Contoh: 47" required>
+        <input type="text" name="usia" inputmode="numeric" pattern="[0-9]{1,3}" placeholder="Contoh: 47" autocomplete="off" required>
       </div>
       <div class="form-row">
         <label>Dari mana Anda tahu webinar ini?</label>
