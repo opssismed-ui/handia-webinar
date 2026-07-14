@@ -431,16 +431,24 @@
     max-width:1000px;margin:0 auto;
     display:grid;grid-template-columns:.85fr 1fr;gap:3rem;align-items:center;
   }
-  .speaker-photo{position:relative;text-align:center;min-height:320px;display:flex;align-items:flex-end;justify-content:center}
+  .speaker-photo{
+    position:relative;width:100%;max-width:330px;margin:0 auto;
+    height:380px;overflow:hidden;
+    display:flex;justify-content:center;align-items:flex-start;
+    -webkit-mask-image:linear-gradient(to bottom,#000 80%,transparent 100%);
+    mask-image:linear-gradient(to bottom,#000 80%,transparent 100%);
+  }
   .speaker-photo::before{
-    content:"";position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);
-    width:88%;aspect-ratio:1;border-radius:50%;
-    background:radial-gradient(circle,var(--white) 0%,rgba(255,255,255,.55) 52%,transparent 72%);
+    content:"";position:absolute;left:50%;top:42%;transform:translate(-50%,-50%);
+    width:100%;aspect-ratio:1;border-radius:50%;
+    background:radial-gradient(circle,var(--white) 0%,rgba(255,255,255,.5) 50%,transparent 70%);
     z-index:0;
   }
   .speaker-photo img{
-    position:relative;z-index:1;max-width:100%;max-height:440px;
-    filter:drop-shadow(0 26px 44px rgba(155,126,200,.3));
+    position:relative;z-index:1;
+    height:520px;width:auto;max-width:none;
+    object-fit:contain;object-position:center top;
+    filter:drop-shadow(0 18px 26px rgba(155,126,200,.25));
   }
   .speaker-info{text-align:left}
   .speaker-badge{
@@ -672,8 +680,8 @@
     .materi-grid{grid-template-columns:1fr;gap:0}
     .speaker-grid{grid-template-columns:1fr;gap:1.5rem;max-width:480px;text-align:center}
     .speaker-info{text-align:center}
-    .speaker-photo{min-height:auto}
-    .speaker-photo img{max-height:320px}
+    .speaker-photo{height:360px;max-width:300px}
+    .speaker-photo img{height:490px}
     .speaker-schedule{max-width:340px;margin:0 auto}
     .disclaimer-card{grid-template-columns:1fr;text-align:center;padding:2rem 1.5rem}
     .disclaimer-icon{margin:0 auto}
@@ -719,7 +727,8 @@
     .divider .ornament{font-size:.95rem;gap:.8rem}
     .divider .ornament::before,.divider .ornament::after{width:30px}
     .section-eyebrow{font-size:.66rem;letter-spacing:.24em}
-    .speaker-photo img{max-height:280px}
+    .speaker-photo{height:330px}
+    .speaker-photo img{height:450px}
     .sched-item{font-size:.96rem;padding:.8rem 1rem}
     .success-modal-card{padding:2.4rem 1.5rem 1.8rem}
     .success-modal-card h3{font-size:1.5rem}
