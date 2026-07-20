@@ -546,6 +546,10 @@
   }
   .form-submit:hover:not(:disabled){transform:translateY(-3px);box-shadow:0 20px 42px rgba(194,68,122,.4)}
   .form-submit:disabled{cursor:wait}
+  .form-consent{
+    font-size:.84rem;color:var(--ink-soft);line-height:1.5;
+    margin-top:.4rem;text-align:center;
+  }
   .form-note{
     text-align:center;font-size:.8rem;color:var(--ink-soft);margin-top:1.3rem;
     font-style:italic;font-family:'Cormorant Garamond',serif;
@@ -1295,8 +1299,9 @@
         <span class="form-label-hint">Opsional — pertanyaan Anda akan dibacakan anonim saat sesi tanya-jawab</span>
         <textarea name="pertanyaan" placeholder="Contoh: Saya sering merasa panas mendadak dan sulit tidur sejak usia 46. Apakah terapi hormon aman untuk saya yang punya riwayat hipertensi?"></textarea>
       </div>
+      <p class="form-consent">Dengan menekan tombol di bawah, Anda setuju data Anda digunakan untuk keperluan webinar ini dan menerima informasi kegiatan HANDIA berikutnya.</p>
       <button type="submit" class="form-submit">Konfirmasi Pendaftaran →</button>
-      <p class="form-note">Data Anda hanya digunakan untuk keperluan webinar ini. Kami menjaga kerahasiaannya.</p>
+      <p class="form-note">Data Anda kami jaga kerahasiaannya dan tidak dibagikan ke pihak lain.</p>
     </form>
   </div>
 </section>
