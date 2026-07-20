@@ -1503,12 +1503,26 @@
     }
 
     try {
-      await fetch(FORM_ENDPOINT, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-        body: JSON.stringify(data)
-      });
+      // Dikirim SEKALI saja (tidak pernah dobel), lalu coba baca balasan server.
+      // confirmed: true = server konfirmasi tersimpan | false = server error | null = balasan tak terbaca (CORS)
+      let confirmed = null;
+      try {
+        const res = await fetch(FORM_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify(data)
+        });
+        const txt = await res.text();
+        confirmed = txt.includes('"status":"ok"');
+      } catch (readErr) {
+        // Balasan diblokir browser — request tetap terkirim.
+        // Kalau perangkat memang offline, itu kegagalan asli.
+        if (!navigator.onLine) throw readErr;
+        confirmed = null;
+      }
+
+      // Hanya gagal bila server eksplisit bilang error
+      if (confirmed === false) throw new Error('Gagal menyimpan data');
 
       btn.textContent = 'Berhasil ✓';
       btn.style.opacity = '1';
