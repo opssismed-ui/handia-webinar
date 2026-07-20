@@ -520,6 +520,7 @@
     box-shadow:0 0 0 4px rgba(229,107,159,.12);
   }
   .form-row input::placeholder,.form-row textarea::placeholder{color:#B7A9B5;font-weight:300}
+  .label-opt{text-transform:none;font-weight:400;color:var(--ink-soft);letter-spacing:0;font-style:italic}
   .form-label-hint{
     font-size:.86rem;color:var(--ink-soft);font-style:italic;
     margin-top:-.05rem;margin-bottom:.5rem;font-family:'Cormorant Garamond',serif;
@@ -938,6 +939,37 @@
   </p>
 </section>
 
+<!-- ===== SPEAKER ===== -->
+<section class="speaker">
+  <div class="speaker-grid" data-reveal>
+    <div class="speaker-photo">
+      <img src="image/dr-amira.png" alt="dr. Amira Abdat, Sp.OG — Dokter Spesialis Kandungan dan Kebidanan" loading="lazy">
+    </div>
+    <div class="speaker-info">
+      <div class="speaker-badge">Narasumber</div>
+      <h2 class="h-serif">dr. Amira Abdat, <span class="italic">Sp.OG</span></h2>
+      <div class="speaker-role">Dokter Spesialis Kandungan dan Kebidanan</div>
+      <p>
+        Materi disampaikan langsung oleh dokter spesialis Kandungan &amp; Kebidanan yang berpengalaman menangani perempuan di fase perimenopause dan menopause.
+      </p>
+      <div class="speaker-schedule">
+        <div class="sched-item">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span><strong>Sabtu, 8 Agustus 2026</strong></span>
+        </div>
+        <div class="sched-item">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Pukul <strong>15.30 WIB</strong></span>
+        </div>
+        <div class="sched-item">
+          <svg viewBox="0 0 24 24"><rect x="2" y="6" width="14" height="12" rx="2"/><polygon points="22 8 16 12 22 16 22 8"/></svg>
+          <span>Zoom Meeting (Online)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== MANFAAT ===== -->
 <section class="manfaat">
   <div class="manfaat-header" data-reveal>
@@ -1104,37 +1136,6 @@
   </div>
 </section>
 
-<!-- ===== SPEAKER ===== -->
-<section class="speaker">
-  <div class="speaker-grid" data-reveal>
-    <div class="speaker-photo">
-      <img src="image/dr-amira.png" alt="dr. Amira Abdat, Sp.OG — Dokter Spesialis Kandungan dan Kebidanan" loading="lazy">
-    </div>
-    <div class="speaker-info">
-      <div class="speaker-badge">Narasumber</div>
-      <h2 class="h-serif">dr. Amira Abdat, <span class="italic">Sp.OG</span></h2>
-      <div class="speaker-role">Dokter Spesialis Kandungan dan Kebidanan</div>
-      <p>
-        Materi disampaikan langsung oleh dokter spesialis Kandungan &amp; Kebidanan yang berpengalaman menangani perempuan di fase perimenopause dan menopause.
-      </p>
-      <div class="speaker-schedule">
-        <div class="sched-item">
-          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          <span><strong>Sabtu, 8 Agustus 2026</strong></span>
-        </div>
-        <div class="sched-item">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          <span>Pukul <strong>15.30 WIB</strong></span>
-        </div>
-        <div class="sched-item">
-          <svg viewBox="0 0 24 24"><rect x="2" y="6" width="14" height="12" rx="2"/><polygon points="22 8 16 12 22 16 22 8"/></svg>
-          <span>Zoom Meeting (Online)</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ===== CARA IKUT ===== -->
 <section class="cara">
   <div class="cara-header" data-reveal>
@@ -1151,7 +1152,7 @@
     <div class="cara-step" data-reveal data-delay="2">
       <div class="cara-num">2</div>
       <h3>Terima Link</h3>
-      <p>Link Zoom dikirim ke WhatsApp &amp; email Anda, H-1 sebelum acara.</p>
+      <p>Link Zoom dikirim ke <strong>WhatsApp</strong> Anda, H-1 sebelum acara.</p>
     </div>
     <div class="cara-step" data-reveal data-delay="3">
       <div class="cara-num">3</div>
@@ -1211,30 +1212,13 @@
   </div>
 </section>
 
-<!-- ===== DISCLAIMER ===== -->
-<section class="disclaimer" data-reveal>
-  <div class="disclaimer-card">
-    <div class="disclaimer-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M20 7 9 18l-5-5"/>
-      </svg>
-    </div>
-    <div class="disclaimer-content">
-      <h4>Ini edukasi umum — bukan diagnosis atau konsultasi personal.</h4>
-      <p>
-        Webinar ini tidak menggantikan pemeriksaan dokter, bukan konsultasi medis individual, dan <strong>bukan endorsement produk apapun</strong>. Untuk keluhan yang membutuhkan pemeriksaan langsung, Anda tetap perlu berkonsultasi ke fasilitas kesehatan terdekat.
-      </p>
-    </div>
-  </div>
-</section>
-
 <!-- ===== CTA REGISTRATION ===== -->
 <section class="cta-section" id="daftar">
   <div class="cta-container">
     <div class="cta-header" data-reveal>
       <div class="section-eyebrow">Pendaftaran</div>
       <h2 class="h-serif">Amankan kursi Anda, <span class="italic">gratis</span></h2>
-      <p>Webinar <strong>Sabtu, 8 Agustus 2026 · 15.30 WIB</strong>. Kuota terbatas — link Zoom dikirim H-1 ke email &amp; WhatsApp yang Anda daftarkan.</p>
+      <p>Webinar <strong>Sabtu, 8 Agustus 2026 · 15.30 WIB</strong>. Kuota terbatas — link Zoom dikirim H-1 ke <strong>WhatsApp</strong> yang Anda daftarkan.</p>
     </div>
 
     <div class="countdown-note" data-reveal>Webinar dimulai dalam:</div>
@@ -1259,15 +1243,17 @@
         <label>Nama Lengkap</label>
         <input type="text" name="nama" placeholder="Contoh: Sri Utami" autocomplete="name" autocapitalize="words" required>
       </div>
-      <div class="form-row" data-field="email">
-        <label>Email Aktif</label>
-        <input type="email" name="email" placeholder="nama@email.com" autocomplete="email" autocapitalize="off" spellcheck="false" required>
-        <span class="field-error">Email belum valid. Gunakan format seperti <strong>nama@email.com</strong></span>
-      </div>
       <div class="form-row" data-field="whatsapp">
         <label>Nomor WhatsApp</label>
+        <span class="form-label-hint">Link Zoom &amp; pengingat dikirim ke sini</span>
         <input type="tel" name="whatsapp" placeholder="Contoh: 081234567890" autocomplete="tel" inputmode="tel" required>
         <span class="field-error">Nomor WA belum benar. Gunakan format <strong>08xx</strong> atau <strong>+62 8xx</strong>, minimal 10 digit</span>
+      </div>
+      <div class="form-row" data-field="email">
+        <label>Email <span class="label-opt">(opsional)</span></label>
+        <span class="form-label-hint">Boleh dikosongkan bila tidak punya</span>
+        <input type="email" name="email" placeholder="nama@email.com" autocomplete="email" autocapitalize="off" spellcheck="false">
+        <span class="field-error">Email belum valid. Gunakan format seperti <strong>nama@email.com</strong></span>
       </div>
       <div class="form-row">
         <label>Usia Anda</label>
@@ -1294,6 +1280,23 @@
       <button type="submit" class="form-submit">Konfirmasi Pendaftaran →</button>
       <p class="form-note">Data Anda hanya digunakan untuk keperluan webinar ini. Kami menjaga kerahasiaannya.</p>
     </form>
+  </div>
+</section>
+
+<!-- ===== DISCLAIMER ===== -->
+<section class="disclaimer" data-reveal>
+  <div class="disclaimer-card">
+    <div class="disclaimer-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 7 9 18l-5-5"/>
+      </svg>
+    </div>
+    <div class="disclaimer-content">
+      <h4>Ini edukasi umum — bukan diagnosis atau konsultasi personal.</h4>
+      <p>
+        Webinar ini tidak menggantikan pemeriksaan dokter, bukan konsultasi medis individual, dan <strong>bukan endorsement produk apapun</strong>. Untuk keluhan yang membutuhkan pemeriksaan langsung, Anda tetap perlu berkonsultasi ke fasilitas kesehatan terdekat.
+      </p>
+    </div>
   </div>
 </section>
 
@@ -1392,9 +1395,11 @@
     const contactEl = document.getElementById('successContact');
     const shareBtn = document.getElementById('shareWa');
 
-    contactEl.textContent = info.email
-      ? `${info.email} dan WhatsApp ${info.whatsapp || ''}`
-      : 'email & WhatsApp Anda';
+    const wa = (info.whatsapp || '').trim();
+    const em = (info.email || '').trim();
+    contactEl.textContent = em
+      ? `WhatsApp ${wa} dan email ${em}`
+      : (wa ? `WhatsApp ${wa}` : 'WhatsApp Anda');
 
     const shareText = `Ada webinar edukasi gratis dari HANDIA — "Tidur Susah, Mood Berantakan, Kolesterol Naik: Apakah Ini Perimenopause?"\n\n🗓️ Sabtu, 8 Agustus 2026 · 15.30 WIB\n👩‍⚕️ Bersama dr. Amira Abdat, Sp.OG (via Zoom)\n\nCocok untuk Ibu, istri, atau keluarga di usia 40+. Info & pendaftaran:\n\nhttps://handia-webinar.vercel.app`;
     shareBtn.href = 'https://wa.me/?text=' + encodeURIComponent(shareText);
@@ -1472,7 +1477,8 @@
 
     // Validasi email & whatsapp
     let firstInvalid = null;
-    if (!isValidEmail(data.email || '')){
+    // Email opsional — hanya divalidasi bila diisi
+    if ((data.email || '').trim() && !isValidEmail(data.email)){
       const row = form.querySelector('[data-field="email"]');
       setFieldError(row, true);
       firstInvalid = firstInvalid || row;
