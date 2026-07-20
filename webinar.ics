@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//HANDIA//Her Prime Webinar//ID
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:her-prime-20260808@handia.id
+DTSTAMP:20260714T000000Z
+DTSTART:20260808T083000Z
+DTEND:20260808T100000Z
+SUMMARY:Webinar HANDIA Her Prime - Apakah Ini Perimenopause?
+DESCRIPTION:Webinar edukasi gratis bersama dr. Amira Abdat\, Sp.OG (Dokter Spesialis Kandungan dan Kebidanan).\n\nLink Zoom akan dikirim ke WhatsApp Anda H-1 sebelum acara.\n\nInfo lengkap: https://her-prime.handia.id
+LOCATION:Zoom Meeting (Online)
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Besok pukul 15.30 WIB - Webinar HANDIA Her Prime
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:1 jam lagi - Webinar HANDIA Her Prime
+END:VALARM
+END:VEVENT
+END:VCALENDAR
