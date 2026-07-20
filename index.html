@@ -1317,10 +1317,10 @@
       </svg>
     </div>
     <div class="success-eyebrow">Pendaftaran Berhasil</div>
-    <h3 id="successTitle">Sampai jumpa di webinar! <span class="serif italic">✦</span></h3>
-    <p>Terima kasih telah mendaftar <em class="serif">HANDIA Her Prime</em>. Detail lengkap (link Zoom &amp; pengingat) akan dikirim ke <strong id="successContact">email &amp; WhatsApp Anda</strong> menjelang acara.</p>
+    <h3 id="successTitle">Sampai jumpa di webinar!</h3>
+    <p>Link Zoom dikirim ke <strong id="successContact">WhatsApp Anda</strong> sebelum acara.</p>
     <div class="success-community">
-      <strong>Satu langkah lagi:</strong> gabung grup komunitas eksklusif peserta — tempat info Zoom, pengingat, sharing, &amp; edukasi lanjutan. Akses ditutup saat kuota penuh.
+      <strong>Satu langkah lagi —</strong> gabung grup peserta untuk info Zoom &amp; sharing.
     </div>
     <div class="success-actions">
       <a href="https://chat.whatsapp.com/CVsa51aCOY15YX9SyR0EZw?s=cl&p=a&ilr=0" class="success-btn success-btn-wa" target="_blank" rel="noopener">
@@ -1403,10 +1403,7 @@
     const shareBtn = document.getElementById('shareWa');
 
     const wa = (info.whatsapp || '').trim();
-    const em = (info.email || '').trim();
-    contactEl.textContent = em
-      ? `WhatsApp ${wa} dan email ${em}`
-      : (wa ? `WhatsApp ${wa}` : 'WhatsApp Anda');
+    contactEl.textContent = wa ? `WhatsApp ${wa}` : 'WhatsApp Anda';
 
     const shareText = `Ada webinar edukasi gratis dari HANDIA — "Tidur Susah, Mood Berantakan, Kolesterol Naik: Apakah Ini Perimenopause?"\n\n🗓️ Sabtu, 8 Agustus 2026 · 15.30 WIB\n👩‍⚕️ Bersama dr. Amira Abdat, Sp.OG (via Zoom)\n\nCocok untuk Ibu, istri, atau keluarga di usia 40+. Info & pendaftaran:\n\nhttps://handia-webinar.vercel.app`;
     shareBtn.href = 'https://wa.me/?text=' + encodeURIComponent(shareText);
