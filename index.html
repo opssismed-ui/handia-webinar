@@ -521,6 +521,8 @@
   }
   .form-row input::placeholder,.form-row textarea::placeholder{color:#B7A9B5;font-weight:300}
   .label-opt{text-transform:none;font-weight:400;color:var(--ink-soft);letter-spacing:0;font-style:italic}
+  /* Perangkap spam — disembunyikan dari mata & pembaca layar */
+  .hp-field{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
   .form-label-hint{
     font-size:.86rem;color:var(--ink-soft);font-style:italic;
     margin-top:-.05rem;margin-bottom:.5rem;font-family:'Cormorant Garamond',serif;
@@ -619,6 +621,8 @@
   .success-btn-wa{background:#25D366;color:#fff;box-shadow:0 12px 28px rgba(37,211,102,.32)}
   .success-btn-wa:hover{background:#1EBE5A;transform:translateY(-2px);box-shadow:0 18px 36px rgba(37,211,102,.4)}
   .success-btn-wa svg{width:19px;height:19px;fill:currentColor}
+  .success-help{margin-top:1.1rem;font-size:.86rem;color:var(--ink-soft);text-align:center}
+  .success-help a{color:var(--pink-deep);font-weight:600;text-decoration:none;border-bottom:1px solid var(--pink-soft)}
   .success-btn-cal{background:var(--blush);color:var(--pink-deep);border:1px solid var(--pink-soft)}
   .success-btn-cal:hover{background:var(--pink-soft);transform:translateY(-2px)}
   .success-btn-cal svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
@@ -771,9 +775,15 @@
     .mitos-card{grid-template-columns:1fr;gap:.7rem}
   }
   @media(max-width:600px){
-    .fab-daftar{left:50%;right:auto;transform:translateX(-50%) translateY(80px);bottom:16px}
+    .fab-daftar{
+      left:50%;right:auto;bottom:calc(12px + env(safe-area-inset-bottom,0px));
+      transform:translateX(-50%) translateY(90px);
+      padding:.85rem 1.5rem;font-size:.74rem;
+    }
     .fab-daftar.visible{transform:translateX(-50%) translateY(0)}
     .fab-daftar:hover{transform:translateX(-50%) translateY(-3px) scale(1.03)}
+    /* Beri ruang di bawah tiap section supaya tombol ngambang tidak menutupi isi */
+    .cara,.faq,.community,.speaker,.mitos{padding-bottom:5rem}
   }
   @media(max-width:480px){
     html{font-size:16px}
@@ -934,9 +944,9 @@
 <!-- ===== ABOUT ===== -->
 <section class="about" data-reveal>
   <div class="section-eyebrow">Tentang Webinar</div>
-  <h2 class="h-serif">Perubahan tubuh di usia matang punya penjelasan medis<br><span class="italic">— dan solusinya nyata.</span></h2>
+  <h2 class="h-serif">Perubahan tubuh di usia matang punya penjelasan medis<br><span class="italic">— dan dapat dikelola dengan pendekatan yang tepat.</span></h2>
   <p>
-    Banyak perempuan mengalami perubahan yang tidak selalu langsung dikenali sebagai perimenopause. <strong>Rasa panas mendadak, sulit tidur, mood yang tak menentu, jantung berdebar, sulit fokus, nyeri sendi, hingga kolesterol meningkat</strong> — semua punya penjelasan medis dan bisa ditangani.
+    Banyak perempuan mengalami perubahan yang tidak selalu langsung dikenali sebagai perimenopause. <strong>Rasa panas mendadak, sulit tidur, mood yang tak menentu, jantung berdebar, sulit fokus, nyeri sendi, hingga kolesterol meningkat</strong> — keluhan seperti ini dapat dievaluasi secara medis, dan pilihan penanganannya dapat dipertimbangkan bersama dokter.
     <br><br>
     HER PRIME hadir sebagai ruang edukasi yang <em class="serif italic">aman, empatik, dan berbasis bukti</em> — agar Anda memahami apa yang sedang terjadi dan tahu kapan perlu berkonsultasi ke dokter.
   </p>
@@ -1031,7 +1041,7 @@
       <div class="segment-content">
         <h3>Sudah aktif mengalami gejala</h3>
         <div class="segment-age">Sekitar usia 45 – 52 tahun</div>
-        <p>Solusi praktis untuk sulit tidur, rasa panas mendadak, mood tidak stabil, nyeri sendi, dan perubahan metabolik.</p>
+        <p>Pilihan penanganan yang dapat dipertimbangkan untuk sulit tidur, rasa panas mendadak, mood tidak stabil, nyeri sendi, dan perubahan metabolik.</p>
       </div>
     </article>
 
@@ -1060,7 +1070,7 @@
   <div class="materi-header" data-reveal>
     <div class="section-eyebrow">Yang Akan Dibahas</div>
     <h2 class="h-serif">Enam topik utama <span class="italic">yang perlu Anda pahami</span></h2>
-    <p>Materi berbasis <em class="serif">bukti ilmiah</em>, dirancang untuk pemahaman awam — tanpa istilah medis yang membingungkan.</p>
+    <p>Materi berbasis <em class="serif">bukti ilmiah</em>, dirancang untuk pemahaman awam — tanpa istilah medis yang membingungkan. Topik tambahan dibahas menyesuaikan waktu dan pertanyaan peserta.</p>
   </div>
 
   <div class="materi-grid">
@@ -1232,6 +1242,11 @@
     </div>
 
     <form class="form-card" onsubmit="handleSubmit(event)">
+      <!-- Perangkap spam: tak terlihat & tak terjangkau pengguna. Bot cenderung mengisinya. -->
+      <div class="hp-field" aria-hidden="true">
+        <label for="website">Jangan diisi</label>
+        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+      </div>
       <div class="value-stack">
         <div class="value-stack-title">Dengan mendaftar, Anda dapat:</div>
         <ul>
@@ -1338,6 +1353,7 @@
         Selesai
       </button>
     </div>
+    <p class="success-help">Butuh bantuan? WhatsApp <a href="https://wa.me/6285111377736" target="_blank" rel="noopener">0851-1137-7736</a></p>
   </div>
 </div>
 
@@ -1499,6 +1515,16 @@
     btn.style.opacity = '.75';
 
     const data = Object.fromEntries(new FormData(form).entries());
+
+    // Perangkap spam terisi = bot. Hentikan diam-diam, jangan kirim ke Sheet.
+    if ((data.website || '').trim()) {
+      btn.textContent = 'Berhasil ✓';
+      btn.style.opacity = '1';
+      form.reset();
+      setTimeout(() => { btn.textContent = original; btn.disabled = false; }, 3000);
+      return;
+    }
+    delete data.website;
 
     // Validasi email & whatsapp
     let firstInvalid = null;
